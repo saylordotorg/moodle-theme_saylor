@@ -1,0 +1,149 @@
+.coursebox > .info > h3.name, .course_category_tree .category > .info .name {
+    font-size: 120%;
+    font-weight: normal;
+    margin: 0;
+}
+
+.coursebox .content {
+	clear: none;
+}
+
+.coursebox {
+	padding: 0 0;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.course-content ul li.section.main {
+	border-bottom: 1px dotted #fff;
+	padding-top: 5px;
+}
+
+.site-topic ul.section, .course-content ul.section {
+	margin: 0em 1em;
+}
+
+#newdiscussionform {
+	text-align: center;
+}
+
+#searchforums {
+	margin: 5px 0px 5px 5px;
+}
+
+.courses .coursebox {
+	background: transparent !important;
+}
+
+.course-content .current {
+    background-color: #FAFAFA;
+    margin-top: -5px !important;
+}
+
+.coursebox.panel {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.coursebox.panel:hover {
+	
+}
+
+.coursebox.panel .panel-body {
+	border: 1px solid #e2e1de !important;
+	background: #e2e1de !important;
+	overflow: hidden;
+	position: relative;
+	border-radius: 5px;
+}
+
+.cimbox {
+	height: 125px;
+	position: relative;
+	margin-right: -1px;
+	display: none;
+}
+
+.coursebox-content {
+	padding: 5px 15px 15px;
+	text-align: left;
+}
+
+.coursebox-content h3 {
+	text-align: left;
+	margin: 5px 0px 20px;
+	font-weight: 700;
+}
+
+.coursebox-content h3 a {
+	color: #469dcd;
+	font-weight: 700;
+	font-size: 1em;
+}
+
+.coursebox-content .teachers, .panel-heading {
+	display: none;
+}
+
+.panel .coursebtn.submit.btn {
+	float: right;
+	display: block;
+	margin: 0px 15px 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	clear: both;
+	text-transform: uppercase;
+	
+	background: #1d9f4a !important;
+	box-shadow: -2px 2px 3px #cbcac4;
+	color: #005320;
+}
+
+.coursebox .summary {
+ 
+}
+
+.coursebox .summary p {
+	font-size: 16px;
+}
+
+.coursebox:hover .summary p {
+
+}
+
+.coursebox:hover .summary {
+
+}
+
+.coursebox.panel .fa-chevron-right.fa.glyphicon.glyphicon-arrow-right {
+    font-size: 10px;
+}
+
+.coursebox.panel .ribbon-wrapper-green {
+	display: block !important;
+}
+
+.coursebox .enrolmenticons {
+	float: none;
+	display: inline-block; 
+	padding-left: 10px;
+}
+
+.coursebox .enrolmenticons img {
+	width: 12px;
+}
+
+
+@media (max-width: 768px) {
+	
+}
+
+.breadcrumb-button .singlebutton div input {
+    font-size: 11px;
+    padding: 3px 10px;
+}
+
+
+.section .label .mod-indent-outer, .section .activity .mod-indent-outer {
+	padding-left: 0px;
+}

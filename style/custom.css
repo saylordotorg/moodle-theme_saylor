@@ -1,0 +1,629 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	background: #f8f7f4;
+	color: #173140;
+	font-size: 105%;
+	line-height: normal;
+}
+
+body {
+padding-top: 20px;
+
+}
+
+/* background: #f1eee7 url([[pix:theme|bkg]]) no-repeat 100% 0; */
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
+	font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px 0px 10px;
+}
+
+p {
+	line-height: 1.3em;
+}
+
+/* background: #f1eee7 url([[pix:theme|bkg]]) no-repeat 100% 0; */
+
+/*link colors */
+a:link,
+a:visited, .tabtree .tabrow0 li a  {
+    color: #469dcd;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #666;
+    text-decoration: underline;
+}
+
+a:active {
+    outline: 0;
+/* for browsers that understand */
+}
+
+a:focus {
+    outline: 0;
+/* for browsers that understand */
+}
+/* Custom CSS
+-------------------------*/
+/* real main headings */
+.headingblock, .sitetopic h2, h2.main, #site-news-forum h2, #frontpage-course-list h2, #frontpage-category-names h2, #frontpage-category-combo h2 {
+  color: #173140;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: none;
+  border-bottom: 0px solid #eee;
+  margin-bottom: 15px;
+}
+
+#page {
+	max-width: 3040px;
+	padding: 0 0;
+}
+
+#page-content {
+	background: transparent;
+    box-shadow: none;
+}
+
+.used-region-side-pre #region-main {
+	
+}
+
+#padder {
+	padding: 10px 0px;
+}
+
+#page-header-wrapper {
+	background: rgba(0, 55, 69, 0.85);
+	padding: 20px 0px 25px;
+}
+
+#page-header {
+	border-bottom: 0px solid #ccc;
+	clear: both;
+	margin-bottom: 0px;
+	position: relative;
+	height: 75px;
+}
+
+#page-site-index #page-header {
+	border-bottom: 0px;
+}
+
+#page-header, #page-content, .container {
+	max-width: 2200px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#logo {
+	float: none;
+	display: block;
+	margin:0px auto;
+}
+
+.lalign #logo {
+	float: left;
+}
+
+#main-slider {
+	height: [[setting:intheight]]px;
+    overflow: hidden;
+    position: relative;
+    background: url([[setting:bannerpic]]) no-repeat top left;
+    background-size: cover;
+    width: 100%;
+}
+
+#page-site-index #main-slider {
+	height: [[setting:fpheight]]px;
+}
+
+#cname {
+	padding-top: 20px;
+}
+
+#cname h1 {
+    font-size: 2em;
+    letter-spacing: 7px;
+    line-height: normal;
+    margin: 20px 0 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.headermenu {
+	float: right;
+	padding-top: 20px;
+	font-size: 80%;
+	color: #ccc;
+	right: 0px;
+	top: 0px;
+	max-width: 40%;
+}
+
+#page-footer {
+	background: #003744;
+    margin: 10px auto 0;
+    padding: 60px 0px 40px;
+   text-align: left;
+   color: #fff;
+   border-top: 0px;
+   font-size: .83em;
+}
+
+#page-footer p {
+	line-height: 20px;
+}
+
+#page-footer a {
+    color: #70f083;
+}
+
+.footer-share {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#page-footer ul.footer-nav {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+#page-footer ul.footer-nav a {
+	padding-bottom: 0px;
+	display: inline-block;
+	line-height: 30px;
+}
+
+#page-footer ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-share .fb, .footer-share .twitter, .footer-share .gplus, .footer-share .linkedin, .footer-share .reddit, .footer-share .contact, .footer-share .share-this {
+    display: inline-block;
+    height: 32px;
+    margin: 15px 8px;
+    text-indent: -9999px;
+    width: 32px;
+}
+
+.footer-share .fb {
+    background: url([[pix:theme|footer-icon-fb]]) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.footer-share .twitter {
+    background: url([[pix:theme|footer-icon-twitter]]) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.footer-share .gplus {
+    background: url([[pix:theme|footer-icon-gplus]]) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+#navwrap {
+    background-color: #898989;
+    color: #fff;
+    padding: 1em 0;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+#page-navbar {
+	margin: 0 auto;
+	background: transparent;
+	border-bottom: 0px solid #dadada;
+}
+
+.breadcrumb {
+	padding: 0px 0px 0px;
+	margin: 0 0;
+	background: transparent;
+	font-size: 13px;
+	text-transform: uppercase;
+	text-shadow: none;
+	color: #fff;
+	color: #70f083;
+}
+
+.breadcrumb a {
+	color: #70f083;
+	text-shadow: none;
+}
+
+.breadcrumb > li {
+	text-shadow: none;
+}
+
+.breadcrumb li:last-child, .breadcrumb li:last-child a {
+	color: #fff;
+}
+
+.breadcrumb-button .singlebutton div, .breadcrumb-button .singlebutton div input, #page-navbar .breadcrumb-button {
+	margin: 0 0;
+}
+
+#page-navbar .forumsearch {
+	display: none;
+}
+
+#page-footer a {
+    
+}
+
+#page-footer .logininfo {
+	margin: 10px auto 0px;
+	font-size: 90%;
+	clear: both;
+	text-align: right;
+}
+
+#page-footer .info {
+    border-top: 0px solid rgba(255, 255, 255, 0.15);
+    line-height: 21px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+
+}
+
+#page-footer ol, #page-footer ul {
+    list-style: none outside none;
+    margin: 0 0;
+}
+
+#page-header .socials {
+	font-size: 15px;
+    padding-top: 0;
+    text-align: right;
+    color: #70f083;
+	font-weight: 600;
+	position: absolute;
+	top: -5px;
+	right: 0px;
+}
+
+#page-header .socials a {
+	color: #70f083;
+}
+
+#intro.generalbox {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    margin: 1em auto;
+    padding: 10px 0;
+    width: auto;
+}
+
+#notice,
+.redirectmessage2 {
+    text-align: center;
+    border-color: #e5e5e5;
+    padding: 5px;
+}
+
+.pagelayout-redirect #content {
+	width:60%; background: #fff; margin: 20px auto; padding: 1em;
+	border: 1px solid #dadada;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+div.redirectmessage {
+    width: 60%;
+    margin: 10px auto 0 auto;
+    border: 0px solid transparent;
+    font-size: 13px;
+    background: #fff url([[pix:theme|ajax-loader]]) no-repeat 50% 95%;
+    padding: 20px 20px 40px;  
+}
+
+/*buttons */
+input[type="submit"], input[type="button"], #searchform_button, a.submit, #accessibility_controls #block_accessibility_launchtoolbar {
+		background: #5cb85c !important;
+       
+     border: 0px;
+	 -webkit-border-radius: 0px;
+           -moz-border-radius: 0px;
+                border-radius: 3px;
+        background-size: 100% 200%;
+        text-shadow: none;
+        color: #fff;
+        cursor: pointer;    
+        font-weight: 600;
+        padding: 7px 25px 8px;
+        box-shadow: 0 -1.3px 0 0 rgba(0, 0, 0, 0.1) inset;
+        -webkit-transition: background .2s ease-out;
+           -moz-transition: background .2s ease-out;
+            -ie-transition: background .2s ease-out;
+             -o-transition: background .2s ease-out;
+                transition: background .2s ease-out;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, #searchform_button:hover, a.submit:hover{
+	 background-position: 0 -100%;
+	 text-decoration: none !important;
+	 color: #fff;
+	 background-color: [[setting:maincolor]] !important;
+	 box-shadow: 0px 0px 4px rgba(0,0,0,.25);
+}
+
+#marketblocks {
+	padding: 0px 15px;
+}
+
+#marketblocks .span4, #marketblocks .span3, #marketblocks .span6 {
+	border: 0px solid #ccc;
+	min-height: 220px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	background: transparent
+	position: relative;
+	z-index: 90;
+}
+
+.internalmarket {
+	padding: 10px 0px 0px;
+	text-align: center;
+	position: relative;
+}
+
+.internalmarket .fa {
+	color: [[setting:secondcolor]];
+	font-size: 50px;
+}
+
+.internalmarket p {
+	text-align: center;
+}
+
+#marketblocks .span4 h3, #marketblocks .span3 h3, #marketblocks .span6 h3 {
+	color: [[setting:maincolor]];
+	font-size: 1.6em;
+	display: block;
+	text-align: center;
+	margin: 0 0;
+	border-bottom: 0px solid [[setting:maincolor]];
+}
+
+#marketblocks .span4 a.submit, #marketblocks .span3 a.submit, #marketblocks .span6 a.submit {
+	display: block;
+	margin: 10px 0px;
+}
+
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  display: none;
+}
+
+.ribbon-green {
+  display: none;
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: [[setting:maincolor]];
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid [[setting:maincolor]];   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}
+
+.forumpost {
+    background-color: rgba(255,255,255, .4);
+    border: 1px solid #CCCCCC;
+    border-radius: 0;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+.forumpost .picture img {
+    border: 3px solid #FFFFFF;
+    border-radius: 6em;
+    margin: 4px;
+}
+
+.forumsearch input[type="text"] {
+    margin-bottom: 0 !important;
+    margin-left: 5px;
+    padding: 7px;
+}
+
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	border-radius: 0px;
+}
+
+.loginbox.onecolumn .loginform {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.loginbox.onecolumn .loginform .form-label {
+	float: none;
+	text-align: left;
+	width: auto;
+}
+
+.loginbox.onecolumn .loginform .form-input {
+    float: none;
+    width: auto;
+}
+
+.loginbox.onecolumn .loginform .form-input input {
+    width: 100%;
+}
+
+@media (max-width: 980px) {
+	.navbar {
+		float: none !important;
+	}
+	
+	.navbar .pull-right {
+		float: none;
+	}
+
+	
+	#page-header .socials {
+		float: none;
+		text-align: center;
+		padding: 5px 0px;
+		position: relative;
+	}
+}
+
+@media (max-width: 768px) {
+	#region-main, .used-region-side-pre #region-main {
+		padding: 0px 15px;
+	}
+	
+	#page-header, #page-header-wrapper {
+		height: auto;
+	}
+	
+	#page-header #logo {
+		float: none;
+		margin: 0px auto 10px;
+		margin-bottom: 10px !important;
+		max-width: 80%;
+	}
+	
+	.navbar.pull-left {
+		margin-top: 10px;
+		margin-left: 0px;
+	}
+	
+	.navbar .btn-navbar {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 20px;
+	}
+	
+	
+	.headermenu {
+	float: none;
+	padding: 10px 0px 0px;
+	text-align: center;
+	clear: both;
+	}
+
+	
+	.flex-caption a.submit {
+	display: block;
+    font-size: 1.5em !important;
+    margin: 5px auto 0;
+    max-width: 50%;
+    padding: 10px 0 !important;
+    text-transform: uppercase;
+    
+	}
+	
+	#page-header, #page-content, .container {
+		width: 95%;
+	}
+	
+	.block .header {
+		margin: 0px 10px !important;
+	}
+	#page-footer {
+		margin: 50px 0px 0px;
+	}
+	
+	.lalign .navbar-inner {
+		margin-left: auto !important;
+	}
+	
+	.textwrapinner .pull-left, .headermenu {
+		float: none;
+		max-width: inherit;
+	}
+}
+
+@media (max-width: 520px) {
+	#logo {
+		float: none;
+		margin-left: 0px;
+		display: block;
+		margin: 15px auto 0px;
+	}
+	.textwrapinner h2 {
+		font-size: 18px;
+	}
+	#marketblocks .span4 {
+		
+		margin: 15px auto;
+	}
+	
+	.headermenu {
+		top: -12px;
+	}
+	
+	.textwrapinner .pull-left {
+		text-align: center;
+		float: none;
+	}
+	
+	#marketblocks .span4 a.submit, #marketblocks .span3 a.submit, #marketblocks .span6 a.submit {
+		width: auto;
+	}
+	
+	div.navbar {
+		margin-left: auto;
+	}
+}
+
+
+.forumpost .row.maincontent .left {
+	display: none;
+}
+
+.forumpost .row.maincontent .content{
+	padding-top: 10px;
+}
+
+.mform fieldset.collapsible legend a.fheader {
+	margin-left: 0px;
+}
+
+/* Custom CSS Settings
+-------------------------*/
+[[setting:customcss]]

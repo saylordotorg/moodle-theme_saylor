@@ -1,0 +1,140 @@
+.navbar {
+    margin-bottom: 0;
+    min-width: 40%;
+    clear: none;
+    margin-left: 30px;
+    margin-top: 18px;
+}
+
+.navbar-inner {
+    background-color: transparent;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: 0px solid #D4D4D4;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: none;
+    min-height: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.lalign .navbar-inner {
+	margin-left: 0px;
+}
+
+.navbar-inner .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar .nav {
+	float: none;
+	text-align: center;
+}
+
+.navbar .nav > li > a {
+    color: #fff;
+    font-weight: 200;
+    font-size: 24px;
+    padding: 15px 22px 15px;
+    text-decoration: none;
+    text-shadow: none;
+	text-transform: none;
+}
+
+.navbar .nav > li:hover > a {
+	text-decoration: none;
+	box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.35) inset, -5px 0 5px -5px rgba(0, 0, 0, 0.35) inset;
+	background-color: rgba(0,0,0,.3);
+	color: #fff;
+}
+
+.navbar .btn-navbar {
+background-color:[[setting:maincolor]];
+background-image:none !important;
+background-position: top left !important;
+border-radius: 0px;
+}
+
+.navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active {
+	background-image: none !important;
+	background-color: #333 !important;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+	background-color: transparent;
+	color: #eee;
+	border-bottom: 0px solid #000;
+}
+
+.navbar .nav > li > .dropdown-menu:before, .navbar .nav > li > .dropdown-menu:after {
+	display: none;
+}
+
+.dropdown-menu {
+	border: 0px solid transparent;
+	border-radius: 0px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	font-size: 14px;
+	padding: 0px 0px;
+	background: #2d343e;
+	border-bottom: 0px solid [[setting:maincolor]];
+	margin-top: 0px;
+}
+
+.nav .dropdown-menu li a {
+    border-bottom: 0px solid #EEEEEE;
+    color: #469dcd;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 15px;
+    text-align: left;
+}
+
+.nav .dropdown-menu li a:hover {
+	background: transparent;
+	color: #fff;
+}
+
+.nav .fa.fa-caret-down {
+   color: #469dcd;
+    display: block;
+    float: right;
+    font-size: 25px;
+    padding-left: 4px;
+}
+
+
+@media only screen 
+and (min-width : 1224px) {
+/*on hover only for large screens*/
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/*end on hover hack */
+}
+
+
+.nav-collapse.active {
+    background: #fff;
+    z-index: 9999;
+}
+
+@media (max-width: 979px) {
+	.nav-collapse.collapse.active .nav > li > a {
+	color: #333 !important;
+	}
+
+}
