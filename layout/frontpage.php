@@ -153,9 +153,10 @@ echo $OUTPUT->doctype() ?>
         <div class="span4">
         <div align="center"><img border="0" id="logo" alt="Saylor" src="<?php echo $OUTPUT->pix_url('logo2', 'theme')?>"></div>
         <div class="footer-share">
-<a title="Follow us on Facebook" target="_blank" href="http://www.facebook.com/SaylorFoundation" class="fb">Facebook</a>
-<a title="Follow us on Twitter" target="_blank" href="http://twitter.com/#!/saylordotorg" class="twitter">Twitter</a>
-<a title="Follow us on Google Plus" target="_blank" href="https://plus.google.com/105426497265909285606/posts" class="gplus">Twitter</a>
+<a title="Follow us on Facebook" target="_blank" href="https://www.facebook.com/SaylorFoundation" class="fa fa-facebook">Facebook</a>
+<a title="Follow us on Twitter" target="_blank" href="https://twitter.com/#!/saylordotorg" class="fa fa-twitter">Twitter</a>
+<a title="Follow us on Google Plus" target="_blank" href="https://plus.google.com/105426497265909285606/posts" class="fa fa-google-plus">Twitter</a>
+<a title="Follow us on GitHub" target="_blank" href="https://github.com/saylordotorg" class="fa fa-github">GitHub</a>
 </div>
         </div>
         
