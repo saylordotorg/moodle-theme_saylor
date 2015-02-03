@@ -77,7 +77,7 @@ echo $OUTPUT->doctype() ?>
 <div id="page-header-wrapper" class="clearfix">
     <header id="page-header" class="clearfix <?php echo "$headerclass"; ?> lalign">
         <div class="logo">
-            <a name="logo" style="background-img: url('https://school.sylr.org/theme/image.php/saylor/theme/1422994203/logo'); width: 357px; height: 89px; margin-bottom: 10px; display: block; float: left; margin: 0px auto 10px; background-repeat: no-repeat;" href="/"></a>
+            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo', 'theme')?>'); width: 357px; height: 89px; margin-bottom: 10px; display: block; float: left; margin: 0px auto 10px; background-repeat: no-repeat;" href="/"></a>
         </div>         
         <div class="navbar pull-left">
     <nav role="navigation" class="navbar-inner">
@@ -148,7 +148,9 @@ echo $OUTPUT->doctype() ?>
         <div class="container">
         
         <div class="span4">
-        <div align="center"><img border="0" id="logo" alt="Saylor" src="<?php echo $OUTPUT->pix_url('logo2', 'theme')?>"></div>
+        <div align="center" class="logo">
+            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo2', 'theme')?>'); width: 150px; height: 153px; background-repeat: no-repeat;" href="/"></a>
+        </div>
         <div class="footer-share">
 <a title="Follow us on Facebook" target="_blank" href="https://www.facebook.com/SaylorFoundation" class="fa fa-facebook">Facebook</a>
 <a title="Follow us on Twitter" target="_blank" href="https://twitter.com/#!/saylordotorg" class="fa fa-twitter">Twitter</a>
