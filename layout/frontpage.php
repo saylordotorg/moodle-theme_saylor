@@ -76,12 +76,9 @@ echo $OUTPUT->doctype() ?>
 
 <div id="page-header-wrapper" class="clearfix">
     <header id="page-header" class="clearfix <?php echo "$headerclass"; ?> lalign">
-    <?php if ($haslogo) {
-                        echo "<img src='".$PAGE->theme->settings->logo."' alt='logo' id='logo' />";
-                    } else { ?>
-			<img src="<?php echo $OUTPUT->pix_url('logo', 'theme')?>" id="logo">
-			<?php } ?>
-                   
+        <div class="logo" style="background: color url('<?php echo $OUTPUT->pix_url('logo', 'theme')?>')">
+            <a name="logo" href="/"></a>
+        </div>         
         <div class="navbar pull-left">
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
