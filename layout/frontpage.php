@@ -149,7 +149,7 @@ echo $OUTPUT->doctype() ?>
         
         <div class="span4">
         <div align="center" class="logo">
-            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo2', 'theme')?>'); width: 150px; height: 153px; background-repeat: no-repeat;" href="/"></a>
+            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo2', 'theme')?>'); height: 190px; width: 238px; display: block; background-repeat: no-repeat; background-position: center top;" href="/"></a>
         </div>
         <div class="footer-share">
 <a title="Follow us on Facebook" target="_blank" href="https://www.facebook.com/SaylorFoundation" class="fa fa-facebook">Facebook</a>
