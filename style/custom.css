@@ -106,8 +106,6 @@ a:focus {
 	float: none;
 	display: block;
 	margin:0px auto;
-	width: 357px;
-	height: 89px;
 }
 
 #page-footer .yui_3_15_0_2_1422986188856_13 {
@@ -531,6 +529,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 		margin: 0px auto 10px;
 		margin-bottom: 10px !important;
 		max-width: 80%;
+		width: 357px;
+		height: 89px;
 	}
 	
 	.navbar.pull-left {
