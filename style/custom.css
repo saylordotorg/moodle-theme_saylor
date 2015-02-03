@@ -108,11 +108,6 @@ a:focus {
 	margin:0px auto;
 }
 
-#page-footer .yui_3_15_0_2_1422986188856_13 {
-	width: 150px;
-	height: 153px;
-}
-
 .lalign #logo {
 	float: left;
 }
@@ -279,6 +274,11 @@ a:focus {
     padding-bottom: 10px;
     padding-top: 5px;
 
+}
+
+#page-footer #logo {
+	width: 150px;
+	height: 153px;
 }
 
 #page-footer ol, #page-footer ul {

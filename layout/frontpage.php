@@ -151,7 +151,7 @@ echo $OUTPUT->doctype() ?>
         <div class="container">
         
         <div class="span4">
-        <div align="center"><img border="0" alt="Saylor" src="<?php echo $OUTPUT->pix_url('logo2', 'theme')?>"></div>
+        <div align="center"><img border="0" id="logo" alt="Saylor" src="<?php echo $OUTPUT->pix_url('logo2', 'theme')?>"></div>
         <div class="footer-share">
 <a title="Follow us on Facebook" target="_blank" href="http://www.facebook.com/SaylorFoundation" class="fb">Facebook</a>
 <a title="Follow us on Twitter" target="_blank" href="http://twitter.com/#!/saylordotorg" class="twitter">Twitter</a>
