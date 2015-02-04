@@ -112,15 +112,7 @@ a:focus {
 	margin-top: 5px;
 }
 
-#page-header .logo div {
-	float: left;
-	width: 357px;
-	max-width: 100%;
-	height: 75px;
-
-}
-
-#page-header .logo a {
+#page-header .logo-img {
 	width: 100%;
 	height: 89px;
 	display: block;
@@ -131,7 +123,8 @@ a:focus {
 #page-header .logo-div {
 	background-repeat: no-repeat;
 	float: left;
-	width: 380px;
+	width: 357px;
+	max-width: 100%;
 	height: 75px;
 }
 

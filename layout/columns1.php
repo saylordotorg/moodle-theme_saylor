@@ -77,7 +77,7 @@ echo $OUTPUT->doctype() ?>
 <div id="page-header-wrapper" class="clearfix">
     <header id="page-header" class="clearfix <?php echo "$headerclass"; ?> lalign">
         <div class="logo-div">
-            <a class="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo', 'theme')?>');" href="/"></a>
+            <a class="logo-img" style="background-image: url('<?php echo $OUTPUT->pix_url('logo', 'theme')?>');" href="/"></a>
         </div> 
                    
         <div class="navbar pull-left">
