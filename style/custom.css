@@ -171,6 +171,13 @@ a:focus {
     text-align: center;
 }
 
+.footer-share a {
+	font-size: 24px;
+	margin-left: 6px;
+	margin-right: 6px;
+
+}
+
 #page-footer ul.footer-nav {
     font-size: 1.25em;
     font-weight: 600;

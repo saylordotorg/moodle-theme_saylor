@@ -150,13 +150,13 @@ echo $OUTPUT->doctype() ?>
         
         <div class="span4">
         <div align="center" class="logo">
-            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo2', 'theme')?>'); height: 190px; width: 238px; display: block; background-repeat: no-repeat; background-position: center top;" href="/"></a>
+            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo2', 'theme')?>'); height: 190px; width: 238px; display: block; background-repeat: no-repeat; background-position: center top; margin-top: -35px; margin-bottom: -55px;" href="/"></a>
         </div>
         <div class="footer-share">
-<a title="Follow us on Facebook" target="_blank" href="https://www.facebook.com/SaylorFoundation" class="fa fa-facebook">Facebook</a>
-<a title="Follow us on Twitter" target="_blank" href="https://twitter.com/#!/saylordotorg" class="fa fa-twitter">Twitter</a>
-<a title="Follow us on Google Plus" target="_blank" href="https://plus.google.com/105426497265909285606/posts" class="fa fa-google-plus">Twitter</a>
-<a title="Follow us on GitHub" target="_blank" href="https://github.com/saylordotorg" class="fa fa-github">GitHub</a>
+<a title="Follow us on Facebook" target="_blank" href="https://www.facebook.com/SaylorFoundation" class="fa fa-facebook"></a>
+<a title="Follow us on Twitter" target="_blank" href="https://twitter.com/#!/saylordotorg" class="fa fa-twitter"></a>
+<a title="Follow us on Google Plus" target="_blank" href="https://plus.google.com/105426497265909285606/posts" class="fa fa-google-plus"></a>
+<a title="Follow us on GitHub" target="_blank" href="https://github.com/saylordotorg" class="fa fa-github"></a>
 </div>
         </div>
         
