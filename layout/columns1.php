@@ -76,8 +76,8 @@ echo $OUTPUT->doctype() ?>
 
 <div id="page-header-wrapper" class="clearfix">
     <header id="page-header" class="clearfix <?php echo "$headerclass"; ?> lalign">
-        <div class="logo">
-            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo', 'theme')?>'); width: 357px; height: 89px; display: block; float: left; margin-top: 12px; background-repeat: no-repeat;" href="/"></a>
+        <div class="logo-div">
+            <a class="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo', 'theme')?>');" href="/"></a>
         </div> 
                    
         <div class="navbar pull-left">
@@ -145,7 +145,7 @@ echo $OUTPUT->doctype() ?>
         
         <div class="span4">
         <div align="center" class="logo">
-            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo2', 'theme')?>'); height: 190px; width: 238px; display: block; background-repeat: no-repeat; background-position: center top; margin-bottom: -28px;" href="/"></a>
+            <a name="logo" style="background-image: url('<?php echo $OUTPUT->pix_url('logo2', 'theme')?>');" href="/"></a>
         </div>
         <div class="footer-share">
 <a title="Follow us on Facebook" target="_blank" href="https://www.facebook.com/SaylorFoundation" class="fa fa-facebook"></a>
