@@ -574,7 +574,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	.navbar .btn-navbar {
     display: block;
     float: none;
-    margin: 60px auto 0px;
+    margin: 80px auto 10px;
     width: 20px;
 	}
 	
