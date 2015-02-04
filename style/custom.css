@@ -282,6 +282,10 @@ a:focus {
 	margin: 0 0;
 }
 
+.sr-only {
+	margin-right: 1%;
+}
+
 #page-navbar .forumsearch {
 	display: none;
 }
@@ -346,6 +350,8 @@ a:focus {
     border-color: #e5e5e5;
     padding: 5px;
 }
+
+
 
 .pagelayout-redirect #content {
 	width:60%; background: #fff; margin: 20px auto; padding: 1em;
