@@ -145,15 +145,11 @@ a:focus {
 	height: [[setting:fpheight]]px;
 }
 
-#cname {
-	padding-top: 20px;
-}
-
 #cname h1 {
-    font-size: 2em;
-    letter-spacing: 7px;
+    font-size: 1.8em;
+    letter-spacing: 5px;
     line-height: normal;
-    margin: 20px 0 40px;
+    margin: 3% 0 3%;
     text-align: center;
     text-transform: uppercase;
 }
