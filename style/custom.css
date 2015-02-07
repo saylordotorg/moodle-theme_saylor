@@ -534,13 +534,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     width: 100%;
 }
 
-@media (width: 980px) {
-	#page-header .logo-div {
-		width: 26%;
-	}
-}
 
-@media (max-width: 980px) {
+@media (max-width: 979px) {
 	.navbar {
 		float: none !important;
 	}
