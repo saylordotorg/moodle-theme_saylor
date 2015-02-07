@@ -534,6 +534,12 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     width: 100%;
 }
 
+@media (width: 980px) {
+	#page-header .logo-div {
+		width: 26%;
+	}
+}
+
 @media (max-width: 980px) {
 	.navbar {
 		float: none !important;
@@ -568,7 +574,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 		float: none;
 		margin: 0px auto 10px;
 		margin-bottom: 15px !important;
-		max-width: 95%;
+		width: 65%;
+		max-width: 301px;
 	}
 	
 	.navbar.pull-left {
@@ -626,7 +633,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 @media (max-width: 520px) {
 	#page-header .logo-div {
 		float: none;
-		max-width: 95%;
+		width: 95%;
+		max-width: 301px;
 		margin-left: 0px;
 		display: block;
 		margin: 0px auto 10px;

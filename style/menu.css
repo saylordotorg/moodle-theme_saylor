@@ -35,8 +35,8 @@
 .navbar .nav > li > a {
     color: #fff;
     font-weight: 200;
-    font-size: 24px;
-    padding: 15px 22px 15px;
+    font-size: 22px;
+    padding: 15px 8px 15px;
     text-decoration: none;
     text-shadow: none;
 	text-transform: none;
@@ -137,4 +137,16 @@ and (min-width : 1224px) {
 	color: #333 !important;
 	}
 
+}
+
+@media (max-width: 1200px) {
+    .navbar .nav > li > a {
+    color: #fff;
+    font-weight: 200;
+    font-size: 24px;
+    padding: 15px 18px 15px;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+}
 }
