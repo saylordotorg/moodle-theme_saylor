@@ -469,7 +469,6 @@ class theme_saylor_core_renderer extends core_renderer {
 require_once($CFG->dirroot . "/course/renderer.php");
 
 class theme_saylor_core_course_renderer extends core_course_renderer {
-    include_once($CFG->dirroot . "/course/renderer.php");
 
     protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '') {
         global $CFG, $OUTPUT;
