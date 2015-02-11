@@ -22,6 +22,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+//course renderer
+require_once($CFG->dirroot . "/course/renderer.php");
+
 class theme_saylor_core_renderer extends core_renderer {
 	
 	
