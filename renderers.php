@@ -22,11 +22,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-//course renderer
-require_once($CFG->dirroot . "/course/renderer.php");
 
 class theme_saylor_core_renderer extends core_renderer {
-	
 	
 	public function user_menu() {
         global $CFG;
@@ -466,9 +463,12 @@ class theme_saylor_core_renderer extends core_renderer {
 
 
 //course renderer
-require_once($CFG->dirroot . "/course/renderer.php");
+//require_once($CFG->dirroot . "/course/renderer.php");
 
 class theme_saylor_core_course_renderer extends core_course_renderer {
+
+    //course renderer
+require_once($CFG->dirroot . "/course/renderer.php");
 
     protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '') {
         global $CFG, $OUTPUT;
