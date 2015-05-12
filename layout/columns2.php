@@ -162,7 +162,7 @@ echo $OUTPUT->doctype() ?>
         
         <div class="span4">
         
-        <div class="textwidget"><p><a href="http://creativecommons.org/licenses/by/3.0/" rel="license"><img src="<?php echo $OUTPUT->pix_url('ccby', 'theme')?>" style="border-width:0" alt="Creative Commons License"></a><br>&copy; Saylor Foundation 2015. Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">Creative Commons Attribution 3.0 Unported License</a>.</p>
+        <div class="textwidget"><p><a href="http://creativecommons.org/licenses/by/3.0/" rel="license"><img src="<?php echo $OUTPUT->pix_url('ccby', 'theme')?>" style="border-width:0" alt="Creative Commons License"></a><br>&copy; Saylor Academy 2015. Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">Creative Commons Attribution 3.0 Unported License</a>.</p>
 <p>Saylor Academy and Saylor.org&reg; are trade names of the Constitution Foundation, a 501(c)(3) organization through which our educational activities are conducted.</p>
 <p><a href="http://www.saylor.org/sitemap">Sitemap</a> | <a href="http://www.saylor.org/terms-of-use">Terms of Use</a> | <a href="http://www.saylor.org/privacy-policy">Privacy Policy</a></p>
 </div>   
