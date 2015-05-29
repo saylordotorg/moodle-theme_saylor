@@ -28,13 +28,18 @@ require_once($CFG->dirroot . "/course/renderer.php");
 class theme_saylor_core_renderer extends core_renderer {
 	
 	
-	public function user_menu() {
-        global $CFG;
+	public function user_menu($user = null, $withlinks = null) {
+        global $CFG, $USER;
+        
+        if (is_null($user)) {
+            $user = $USER;
+        }
+        
         $usermenu = new custom_menu('', current_language());
-        return $this->render_user_menu($usermenu);
+        return $this->render_user_menu($usermenu, $user);
     }
     
-     protected function render_user_menu(custom_menu $menu) {
+     protected function render_user_menu(custom_menu $menu, $user) {
         global $CFG, $USER, $DB, $PAGE;
 
         $addusermenu = true;
@@ -90,7 +95,7 @@ class theme_saylor_core_renderer extends core_renderer {
                 $messagecontent .= html_writer::tag('span', $message->date);
                 $messagecontent .= html_writer::end_tag('span');
 
-                $messagemenu->add($messagecontent, new moodle_url('/message/index.php', array('user1' => $USER->id, 'user2' => $message->from->id)));
+                $messagemenu->add($messagecontent, new moodle_url('/message/index.php', array('user1' => $user->id, 'user2' => $message->from->id)));
             }
         }
 
