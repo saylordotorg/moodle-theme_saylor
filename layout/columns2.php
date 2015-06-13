@@ -154,7 +154,7 @@ echo $OUTPUT->doctype() ?>
         </div>
         <div class="footer-share">
 <a title="Follow us on Facebook" target="_blank" href="https://www.facebook.com/SaylorFoundation" class="fa fa-facebook"></a>
-<a title="Follow us on Twitter" target="_blank" href="https://twitter.com/#!/saylordotorg" class="fa fa-twitter"></a>
+<a title="Follow us on Twitter" target="_blank" href="https://twitter.com/saylordotorg" class="fa fa-twitter"></a>
 <a title="Follow us on Google Plus" target="_blank" href="https://plus.google.com/105426497265909285606/posts" class="fa fa-google-plus"></a>
 <a title="Follow us on GitHub" target="_blank" href="https://github.com/saylordotorg" class="fa fa-github"></a>
 </div>
