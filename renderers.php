@@ -24,7 +24,7 @@
 
 //course renderer
 require_once($CFG->dirroot . "/course/renderer.php");
-require_once($CFG->dirroot . "/completion/completion_completion.php")
+require_once($CFG->dirroot . "/completion/completion_completion.php");
 
 class theme_saylor_core_renderer extends core_renderer {
 	
