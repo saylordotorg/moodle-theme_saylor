@@ -642,9 +642,9 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
             }
         }
 
-        $html .= html_writer::tag('br');
-        $html .= html_writer::tag('hr');
-        $html .= html_writer::tag('br');
+        $html .= html_writer::empty_tag('br', NULL);
+        $html .= html_writer::empty_tag('hr', NULL);
+        $html .= html_writer::empty_tag('br', NULL);
 
         $html .= html_writer::start_span('completedcoursebox') . 'Completed Courses' . html_writer::end_span();
 
