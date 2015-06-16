@@ -495,10 +495,11 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
      * @return string html to be displayed in course_overview block
      */
     public function course_overview($courses, $overviews) {
+        global $USER;
         $html = '';
         $config = get_config('block_course_overview');
         if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
-            global $CFG, $USER;
+            global $CFG;
             require_once($CFG->libdir.'/coursecatlib.php');
         }
         $ismovingcourse = false;
