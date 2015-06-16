@@ -562,7 +562,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
             }
 
 
-            $html .= $this->output->box_start('activecoursebox', "course-{$course->id}");
+            $html .= $this->output->box_start('coursebox', "course-{$course->id}");
             $html .= html_writer::start_tag('div', array('class' => 'course_title'));
             // If user is editing, then add move icons.
             if ($userediting && !$ismovingcourse) {
@@ -668,7 +668,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-            $html .= $this->output->box_start('completedcoursebox', "course-{$course->id}");
+            $html .= $this->output->box_start('coursebox', "course-{$course->id}");
             $html .= html_writer::start_tag('div', array('class' => 'course_title'));
             // If user is editing, then add move icons.
             if ($userediting && !$ismovingcourse) {
