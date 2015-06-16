@@ -321,8 +321,8 @@ class theme_saylor_core_renderer extends core_renderer {
 
                     // Setting up params array for completion_completion object
                     $params = array (
-                        'userid' => $USER->id;
-                        'course' => $course->id;
+                        'userid' => $USER->id,
+                        'course' => $course->id
                         );
 
                     // Create completion_completion object; will use to check whether the course is completed before adding to the menu.
