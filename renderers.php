@@ -24,6 +24,7 @@
 
 //course renderer
 require_once($CFG->dirroot . "/course/renderer.php");
+require_once($CFG->dirroot . "/completion/completion_completion.php")
 
 class theme_saylor_core_renderer extends core_renderer {
 	
@@ -299,7 +300,7 @@ class theme_saylor_core_renderer extends core_renderer {
      * This renderer is needed to enable the Bootstrap style navigation.
      */
     protected function render_custom_menu(custom_menu $menu) {
-        global $CFG;
+        global $CFG, $USER;
 		
 		$branchurlB   = new moodle_url('/');
 		//$branch = $menu->add("<i class='fa fa-home'></i>", $branchurlB, "title", -10000);
@@ -317,7 +318,18 @@ class theme_saylor_core_renderer extends core_renderer {
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
  			if ($courses = enrol_get_my_courses(NULL, 'fullname ASC')) {
  				foreach ($courses as $course) {
- 					if ($course->visible){
+
+                    // Setting up params array for completion_completion object
+                    $params = array (
+                        'userid' => $USER->id;
+                        'course' => $course->id;
+                        );
+
+                    // Create completion_completion object; will use to check whether the course is completed before adding to the menu.
+                    $ccompletion = new completion_completion($params);
+
+                    // Only add course to menu if course is not completed and is visible.
+ 					if ($course->visible && !$ccompletion->is_complete()) {
  						$branch->add(format_string($course->fullname), new moodle_url('/course/view.php?id='.$course->id), format_string($course->shortname));
  					}
  				}
