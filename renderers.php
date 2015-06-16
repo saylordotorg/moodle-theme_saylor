@@ -540,7 +540,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
             $html .= html_writer::tag('div', $moveurl, array('class' => 'movehere'));
         }
 
-        $html .= html_writer::start_span('activecoursebox') . 'Active Courses' . html_writer::end_span();
+        $html .= html_writer::start_span('inprogresscoursebox') . 'In Progress Courses' . html_writer::end_span();
 
         // Active course box
         foreach ($courses as $key => $course) {
