@@ -135,9 +135,9 @@ echo $OUTPUT->doctype() ?>
             if (isset($CFG->shariffbuttons)) {
                 // Set some variables that we want for the course pages here.
                 // URL to share
-                $shareurl = '/course/view.php?id='.$PAGE->course; 
+                $shareurl = $CFG->wwwroot.'/course/view.php?id='.$PAGE->course->id; 
                 // Title of the page to use when sharing. Can show up as title for Twitter/WhatsApp or in message body text.
-                $sharetitle = $PAGE->title;
+                $sharetitle = $PAGE->title.": ".$PAGE->shortname;
 
 
                 $share_buttons_output = '<div class="shariff"';
