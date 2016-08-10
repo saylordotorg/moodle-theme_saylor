@@ -137,7 +137,7 @@ echo $OUTPUT->doctype() ?>
                 // URL to share
                 $shareurl = $CFG->wwwroot.'/course/view.php?id='.$PAGE->course->id; 
                 // Title of the page to use when sharing. Can show up as title for Twitter/WhatsApp or in message body text.
-                $sharetitle = $PAGE->title.": ".$PAGE->shortname;
+                $sharetitle = $PAGE->course->fullname;
 
 
                 $share_buttons_output = '<div class="shariff"';
