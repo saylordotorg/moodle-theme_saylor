@@ -58,6 +58,65 @@ function Truncate($string, $length, $stopanywhere=false) {
     return $string;
 }
 
+function course_share_buttons() {
+            if (isset($CFG->shariffbuttons)) {
+                // Set some variables that we want for the course pages here.
+                // URL to share
+                $shareurl = $CFG->wwwroot.'/course/view.php?id='.$PAGE->course->id; 
+                // Title of the page to use when sharing. Can show up as title for Twitter/WhatsApp or in message body text.
+                $sharetitle = $PAGE->course->fullname;
+
+
+                $share_buttons_output = '<div class="shariff"';
+                if (!empty($CFG->shariffbuttons['backendurl'])) {
+                    $share_buttons_output = $share_buttons_output.' data-backend-url="'.$CFG->shariffbuttons['backendurl'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['lang'])) {
+                    $share_buttons_output = $share_buttons_output.' data-lang="'.$CFG->shariffbuttons['lang'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['mailbody'])) {
+                    $share_buttons_output = $share_buttons_output.' data-mail-body="'.$CFG->shariffbuttons['mailbody'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['mailsubject'])) {
+                    $share_buttons_output = $share_buttons_output.' data-mail-subject="'.$CFG->shariffbuttons['mailsubject'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['orientation'])) {
+                    $share_buttons_output = $share_buttons_output.' data-orientation="'.$CFG->shariffbuttons['orientation'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['referertrack'])) {
+                    $share_buttons_output = $share_buttons_output.' data-referrer-track="'.$CFG->shariffbuttons['referertrack'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['services'])) {
+                    $share_buttons_output = $share_buttons_output.' data-services="'.$CFG->shariffbuttons['services'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['theme'])) {
+                    $share_buttons_output = $share_buttons_output.' data-theme="'.$CFG->shariffbuttons['theme'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['title'])) {
+                    $share_buttons_output = $share_buttons_output.' data-title="'.$CFG->shariffbuttons['title'].'"';
+                }
+                else {
+                    // Set the title to $sharetitle (defined above) unless we globally override in config.php.
+                    $share_buttons_output = $share_buttons_output.' data-title="'.$sharetitle.'"';
+                }
+                if (!empty($CFG->shariffbuttons['twittervia'])) {
+                    $share_buttons_output = $share_buttons_output.' data-twitter-via="'.$CFG->shariffbuttons['twittervia'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['url'])) {
+                    $share_buttons_output = $share_buttons_output.' data-url="'.$CFG->shariffbuttons['url'].'"';
+                }
+                else {
+                    // For these pages, we want the link shared to be that of the course page.
+                    $share_buttons_output = $share_buttons_output.' data-url="'.$shareurl.'"';
+                }
+
+                $share_buttons_output = $share_buttons_output.'></div>';
+
+                echo $share_buttons_output;
+            }
+        return $share_buttons_output;
+}
+
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
 <head>
@@ -122,6 +181,9 @@ echo $OUTPUT->doctype() ?>
                     echo $OUTPUT->main_content();
                     echo $OUTPUT->course_content_footer();
                     ?>
+
+                    <!-- Start share buttons -->
+                    <?php echo $this->course_share_buttons(); ?>
                 </section>
                 <?php
                 $classextra = '';
@@ -131,64 +193,6 @@ echo $OUTPUT->doctype() ?>
                 echo $OUTPUT->blocks('side-pre', 'span3'.$classextra);
                 ?>
         </div>
-        <?php
-            if (isset($CFG->shariffbuttons)) {
-                // Set some variables that we want for the course pages here.
-                // URL to share
-                $shareurl = $CFG->wwwroot.'/course/view.php?id='.$PAGE->course->id; 
-                // Title of the page to use when sharing. Can show up as title for Twitter/WhatsApp or in message body text.
-                $sharetitle = $PAGE->course->fullname;
-
-
-                $share_buttons_output = '<div class="shariff"';
-                if (!empty($CFG->shariffbuttons['backendurl'])) {
-                    $share_buttons_output = $share_buttons_output.' data-backend-url="'.$CFG->shariffbuttons['backendurl'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['lang'])) {
-                    $share_buttons_output = $share_buttons_output.' data-lang="'.$CFG->shariffbuttons['lang'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['mailbody'])) {
-                    $share_buttons_output = $share_buttons_output.' data-mail-body="'.$CFG->shariffbuttons['mailbody'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['mailsubject'])) {
-                    $share_buttons_output = $share_buttons_output.' data-mail-subject="'.$CFG->shariffbuttons['mailsubject'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['orientation'])) {
-                    $share_buttons_output = $share_buttons_output.' data-orientation="'.$CFG->shariffbuttons['orientation'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['referertrack'])) {
-                    $share_buttons_output = $share_buttons_output.' data-referrer-track="'.$CFG->shariffbuttons['referertrack'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['services'])) {
-                    $share_buttons_output = $share_buttons_output.' data-services="'.$CFG->shariffbuttons['services'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['theme'])) {
-                    $share_buttons_output = $share_buttons_output.' data-theme="'.$CFG->shariffbuttons['theme'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['title'])) {
-                    $share_buttons_output = $share_buttons_output.' data-title="'.$CFG->shariffbuttons['title'].'"';
-                }
-                else {
-                    // Set the title to $sharetitle (defined above) unless we globally override in config.php.
-                    $share_buttons_output = $share_buttons_output.' data-title="'.$sharetitle.'"';
-                }
-                if (!empty($CFG->shariffbuttons['twittervia'])) {
-                    $share_buttons_output = $share_buttons_output.' data-twitter-via="'.$CFG->shariffbuttons['twittervia'].'"';
-                }
-                if (!empty($CFG->shariffbuttons['url'])) {
-                    $share_buttons_output = $share_buttons_output.' data-url="'.$CFG->shariffbuttons['url'].'"';
-                }
-                else {
-                    // For these pages, we want the link shared to be that of the course page.
-                    $share_buttons_output = $share_buttons_output.' data-url="'.$shareurl.'"';
-                }
-
-                $share_buttons_output = $share_buttons_output.'></div>';
-
-                echo $share_buttons_output;
-            }
-        ?>
-
 
     <footer id="page-footer" class="clearfix">
         <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
