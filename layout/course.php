@@ -183,7 +183,7 @@ echo $OUTPUT->doctype() ?>
 
                     <!-- share buttons -->
                     <div id="share-buttons">
-                        <h2>Share this course!</h2>
+                        <br><p>Share this course!</p>
                         <?php echo course_share_buttons(); ?>
                     </div>
                 </section>
