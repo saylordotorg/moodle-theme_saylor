@@ -112,8 +112,6 @@ function course_share_buttons() {
                 }
 
                 $share_buttons_output = $share_buttons_output.'></div>';
-
-                echo $share_buttons_output;
             }
         return $share_buttons_output;
 }
