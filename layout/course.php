@@ -59,6 +59,7 @@ function Truncate($string, $length, $stopanywhere=false) {
 }
 
 function course_share_buttons() {
+    global $CFG, $PAGE;
             if (isset($CFG->shariffbuttons)) {
                 // Set some variables that we want for the course pages here.
                 // URL to share
@@ -182,8 +183,11 @@ echo $OUTPUT->doctype() ?>
                     echo $OUTPUT->course_content_footer();
                     ?>
 
-                    <!-- Start share buttons -->
-                    <?php echo $this->course_share_buttons(); ?>
+                    <!-- share buttons -->
+                    <div id="share-buttons">
+                        <h2>Share this course!</h2>
+                        <?php echo course_share_buttons(); ?>
+                    </div>
                 </section>
                 <?php
                 $classextra = '';
