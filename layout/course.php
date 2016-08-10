@@ -135,7 +135,7 @@ echo $OUTPUT->doctype() ?>
             if (isset($CFG->shariffbuttons)) {
                 // Set some variables that we want for the course pages here.
                 // URL to share
-                $shareurl = 'https://learn.saylor.org/course/view.php?id='.$PAGE->course; 
+                $shareurl = '/course/view.php?id='.$PAGE->course; 
                 // Title of the page to use when sharing. Can show up as title for Twitter/WhatsApp or in message body text.
                 $sharetitle = $PAGE->title;
 
