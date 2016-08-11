@@ -59,7 +59,7 @@ function Truncate($string, $length, $stopanywhere=false) {
 }
 
 function course_share_buttons() {
-    global $CFG, $PAGE;
+    global $CFG, $PAGE, $OUTPUT;
             if (isset($CFG->shariffbuttons)) {
                 // Set some variables that we want for the course pages here.
                 // URL to share
