@@ -81,6 +81,12 @@ function course_share_buttons() {
                 if (!empty($CFG->shariffbuttons['mailsubject'])) {
                     $share_buttons_output = $share_buttons_output.' data-mail-subject="'.$CFG->shariffbuttons['mailsubject'].'"';
                 }
+                if (!empty($CFG->shariffbuttons['mailurl'])) {
+                    $share_buttons_output = $share_buttons_output.'data-mail-url="'.$CFG->shariffbuttons['mailurl'].'"';
+                }
+                if (!empty($CFG->shariffbuttons['mediaurl'])) {
+                    $share_buttons_output = $share_buttons_output.'data-media-url="'.$CFG->shariffbuttons['mediaurl'].'"';
+                }
                 if (!empty($CFG->shariffbuttons['orientation'])) {
                     $share_buttons_output = $share_buttons_output.' data-orientation="'.$CFG->shariffbuttons['orientation'].'"';
                 }
