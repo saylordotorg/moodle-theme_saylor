@@ -85,7 +85,7 @@ function course_share_buttons() {
                     $share_buttons_output = $share_buttons_output.'data-mail-url="'.$CFG->shariffbuttons['mailurl'].'"';
                 }
                 if (!empty($CFG->shariffbuttons['mediaurl'])) {
-                    $share_buttons_output = $share_buttons_output.'data-media-url="'.$CFG->shariffbuttons['mediaurl'].'"';
+                    $share_buttons_output = $share_buttons_output.'data-media-url="'.$OUTPUT->pix_url($CFG->shariffbuttons['mediaurl'], 'theme').'"';
                 }
                 if (!empty($CFG->shariffbuttons['orientation'])) {
                     $share_buttons_output = $share_buttons_output.' data-orientation="'.$CFG->shariffbuttons['orientation'].'"';
