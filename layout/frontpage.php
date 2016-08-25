@@ -164,7 +164,7 @@ echo $OUTPUT->doctype() ?>
         
         <div class="span4">
         
-        <div class="textwidget"><p><a href="http://creativecommons.org/licenses/by/3.0/" rel="license"><img src="<?php echo $OUTPUT->pix_url('ccby', 'theme')?>" style="border-width:0" alt="Creative Commons License"></a><br>&copy; Saylor Academy 2010-2016. Except where otherwise noted, content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">Creative Commons Attribution 3.0 Unported License</a>.</p>
+        <div class="textwidget"><p><a href="http://creativecommons.org/licenses/by/3.0/" rel="license"><img src="<?php echo $OUTPUT->pix_url('ccby', 'theme')?>" style="border-width:0" alt="Creative Commons License"></a><br>&copy; Saylor Academy 2010-2016 except as otherwise noted. Excluding course final exams, content authored by Saylor Academy is available under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 Unported</a> license. Third-party materials are the copyright of their respective owners and shared under various licenses. See <a href="/open/licensinginformation" target="_blank">detailed licensing information</a>.</p>
 <p>Saylor Academy and Saylor.org&reg; are trade names of the Constitution Foundation, a 501(c)(3) organization through which our educational activities are conducted.</p>
 <p><a href="http://www.saylor.org/sitemap">Sitemap</a> | <a href="http://www.saylor.org/terms-of-use">Terms of Use</a> | <a href="http://www.saylor.org/privacy-policy">Privacy Policy</a></p>
 </div>   
@@ -174,12 +174,12 @@ echo $OUTPUT->doctype() ?>
        
        <ul class="footer-nav">
 <li><a href="/">Home</a></li>
-<li><a href="http://saylor.org/pathways">Courses</a></li>
-<li><a href="http://saylor.org/saylor-difference">Saylor Difference</a></li>
 <li><a href="http://saylor.org/about">About</a></li>
 <li><a href="http://saylor.org/donate">Donate</a></li>
-<li><a href="http://saylor.org/frequently-asked-questions">FAQ</a></li>
+<li><a href="https://sayloracademy.zendesk.com">Help</a></li>
+<li><a href="http://www.saylor.org/blog">Blog</a></li>
 <li><a href="http://saylor.org/contact">Contact</a></li>
+<li><a href="http://www.saylor.org/search">Search</a></li>
 </ul>
        
        </div>
