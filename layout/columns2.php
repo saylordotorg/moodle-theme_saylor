@@ -16,7 +16,7 @@
 
 // Get the HTML for the settings bits.
 //$html = theme_allyou_get_html_for_settings($OUTPUT, $PAGE);
-&
+
 $left = (!right_to_left());  // To know if to add 'pull-right' and 'desktop-first-column' classes in the layout for LTR.
 
 $hasfootnote = (!empty($PAGE->theme->settings->footnote));
