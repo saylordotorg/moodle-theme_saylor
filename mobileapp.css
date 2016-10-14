@@ -12,9 +12,23 @@ body {
     background-color: #25535E;
 }
 
+/*username on header*/
+
+h2.ng-binding {
+    color: #71f083;
+}
+
+/*change color of divider in nav*/
+.item-divider {
+
+}
+
 /*list on right*/
 .list {
   font-weight: bold;
+  background: #808080;
+  background: -webkit-linear-gradient(to left, #808080 , #3fada8);
+  background: linear-gradient(to right,#1d4049, #2b616e );
 }
 
 /*change nav list text and bg color*/
