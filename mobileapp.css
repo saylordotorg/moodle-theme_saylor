@@ -12,6 +12,11 @@ body {
     background-color: #25535E;
 }
 
+/*test to remove weird background prob*/
+
+.item h2 {
+background-color: #25535E;
+}
 
 /*//dunno what this is for yet*/
 ul ul {
