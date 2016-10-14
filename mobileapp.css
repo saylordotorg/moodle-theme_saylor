@@ -12,23 +12,8 @@ body {
     background-color: #25535E;
 }
 
-/*change background of sidebar nav and all boxes with content*/
 
-.item {
-  background-color: #f8f7f4;
-  color: #469dcc;
-  font-weight: bold;
-}
-
-/*text color of student name + all course titles*/
-
-/*.item h2 {
-    color: #469DCC;
-}*/
-
-
-/*//dunno what this is for
-*/
+/*//dunno what this is for yet*/
 ul ul {
 	list-style-position: inside;
 	list-style-type: circle;
