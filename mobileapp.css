@@ -26,6 +26,7 @@ h2.ng-binding {
 /*list on right*/
 .list {
   font-weight: bold;
+  background-color: #25535E;
   background: #808080;
   background: -webkit-linear-gradient(to left, #808080 , #3fada8);
   background: linear-gradient(to right,#1d4049, #2b616e );
