@@ -21,7 +21,7 @@ body {
 
 /* Saylor Academy name on header*/
 
-.bat-side-menu mm-format-text.ng-binding span{
+.bar-side-menu mm-format-text.ng-binding span{
   color: #fff;
   font-weight: bold;
 }
@@ -31,40 +31,44 @@ body {
   background-color: #fff;
 }
 
-/*list on right*/
+/*Menu + change background*/
 ul.list.dark {
   font-weight: bold;
-  color: #666;
-  background-color: #F8F7F4;
+  background-color: #FAFAFA;
 }
 
-/*change nav list text and bg color*/
-
+/*Menu + change menu text color*/
 a.item {
-    color: #469DCd;
-    /*background-color: #F8F7F4;*/
-    text-weight: bold
+    color: #666;
 }
 
-/*Bar title*/
-/*.bar-content .title {
-  color: #fff;
-}*/
-
-
-
-
-/* My Courses*/
-
-/**/
-item h2, .item .item-heading {
-  color:#444;
+/* Header title for each tab selected*/
+.bar-content .title {
+  color: #F8F7F4;
 }
 
-/*change the bottom icons in my courses*/
-/*.items.tabs{
-  color: #469DCd;
-}*/
+
+
+
+/* MY COURSES*/
+
+/*title of each course*/
+.item h2, .item .item-heading {
+  color:#469DCD;
+  text-align: center;
+}
+
+
+/*title of each unit and sub-unit*/
+.item-button-right, a.item.item-button-right, button.item.item-button-right{
+  color: ;
+}
+
+/*color of icons + text*/
+div.item.tabs.tabs-icon-left{
+  color: #666;
+}
+
 /*//dunno what this is for yet*/
 /*ul ul {
 list-style-position: inside;
