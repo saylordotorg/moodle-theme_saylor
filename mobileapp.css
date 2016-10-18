@@ -14,7 +14,7 @@ body {
 
 /*username on header*/
 
-h2.ng-binding {
+.bar-side-menu .item-avatar h2 {
     color: #71f083;
     font-weight: bold;
 }
