@@ -34,12 +34,13 @@ li.item.item-divider {
 /*Menu + change background*/
 ul.list.dark {
   font-weight: bold;
-  background-color: #eee;
 }
 
 /* Menu + change menu text color*/
 a.item {
     color: #666;
+    border-color: #ddd;
+    background-color: #fafafa;
 }
 
 /* Header title for each tab selected*/
@@ -66,16 +67,17 @@ a.item {
     font-size: 13px;
 }
 
-/*title of each unit and sub-unit*/
+/*title of each unit and sub-unit ex. 'content'*/
 .item-button-right, a.item.item-button-right, button.item.item-button-right{
-  color: ;
+  color: #333;
 }
 
 /*color of icons + text*/
 div.item.tabs.tabs-icon-left{
-  color: #666;
-  background-color: #eee;
+  color: #555;
+  background-color: #ddd;
 }
+
 
 /*//dunno what this is for yet*/
 /*ul ul {
