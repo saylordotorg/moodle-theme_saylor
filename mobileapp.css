@@ -28,7 +28,7 @@ body {
 
 /*change color of divider in nav*/
 li.item.item-divider {
-  background-color: #eee;
+  background-color: #ddd;
 }
 
 /*Menu + change background*/
@@ -70,12 +70,28 @@ a.item {
 /*title of each unit and sub-unit ex. 'content'*/
 .item-button-right, a.item.item-button-right, button.item.item-button-right{
   color: #333;
+  font-size: 14px;
 }
 
 /*color of icons + text*/
 div.item.tabs.tabs-icon-left{
   color: #555;
   background-color: #ddd;
+}
+
+/*ALL SECTIONS*/
+
+/* change paragraph*/
+.item p {
+  color: #222;
+  font-size: 15px;
+}
+
+/* change the ordered list spacing in relation to rest of text in course intro*/
+mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
+  -webkit-padding-start: 30px;
+  font-size: 14px;
+  color: #444;
 }
 
 
