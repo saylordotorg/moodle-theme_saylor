@@ -95,8 +95,8 @@ mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol
 }
 
 
-/*//dunno what this is for yet*/
-/*ul ul {
-list-style-position: inside;
-list-style-type: circle;
-}*/
+/* style the bullet points*/
+ul ul {
+  list-style-position: inside;;
+  list-style-type: circle;
+}
