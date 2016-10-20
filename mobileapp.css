@@ -31,7 +31,7 @@ li.item.item-divider {
   background-color: #ddd;
 }
 
-/*Menu + change background*/
+/*Menu text*/
 ul.list.dark {
   font-weight: bold;
 }
@@ -85,6 +85,11 @@ div.item.tabs.tabs-icon-left{
 .item p {
   color: #222;
   font-size: 15px;
+}
+
+/* change format of paragraphs*/
+ion-content.scroll-content.ionic-scroll.mm-site_mod_page.has_header {
+  text-align: justify;
 }
 
 /* change the ordered list spacing in relation to rest of text in course intro*/
