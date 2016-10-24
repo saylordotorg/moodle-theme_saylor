@@ -88,9 +88,9 @@ div.item.tabs.tabs-icon-left{
 }
 
 /* change format of paragraphs*/
-mm-format-text.mm-content-with-float.ng-binding {
-  
-}
+/*mm-format-text.mm-content-with-float.ng-binding {
+
+}*/
 
 /* change the ordered list spacing in relation to rest of text in course intro*/
 mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
@@ -104,4 +104,14 @@ mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol
 ul ul {
   list-style-position: inside;;
   list-style-type: circle;
+}
+
+/*MEDIA QUEIRES*/
+
+/*mobiles*/
+
+@media screen and (max-width: 480px) {
+  img.mm-media-adapt-width {
+    display: none;
+  }
 }
