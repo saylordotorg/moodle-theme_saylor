@@ -88,8 +88,8 @@ div.item.tabs.tabs-icon-left{
 }
 
 /* change format of paragraphs*/
-ion-content.scroll-content.ionic-scroll.mm-site_mod_page.has_header {
-  text-align: justify;
+mm-format-text.mm-content-with-float.ng-binding {
+  
 }
 
 /* change the ordered list spacing in relation to rest of text in course intro*/
