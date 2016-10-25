@@ -115,14 +115,11 @@ ul ul {
     display: none;
   }
 
-  mm-format-text mm-content-with-float ng-binding{
-    margin: 0 !important;
-  }
-  /*div.editor-indent {
+  div.editor-indent {
     margin: 0 !important;
   }
 
-  div.editor-indent p {
+  /*div.editor-indent p {
     position: relative;
     border: 1px #0a9dc7 solid;
     float: left;
