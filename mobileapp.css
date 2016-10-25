@@ -110,19 +110,23 @@ ul ul {
 
 /*mobiles*/
 
-@media screen and (max-width: 326px) {
+@media screen and (max-width: 500px) {
   img.mm-media-adapt-width {
     display: none;
   }
 
-div.editor-indent {
-  margin: 0 !important;
-}
+  mm-format-text mm-content-with-float ng-binding{
+    margin: 0 !important;
+  }
+  /*div.editor-indent {
+    margin: 0 !important;
+  }
+
   div.editor-indent p {
     position: relative;
     border: 1px #0a9dc7 solid;
     float: left;
     padding: 15px;
     margin: 5px;
-  }
+  }*/
 }
