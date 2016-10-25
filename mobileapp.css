@@ -120,7 +120,7 @@ ul ul {
   }
 
   mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
-    -webkit padding-start: 2px;
+    -webkit-padding-start: 2px;
     position: relative;
     float: left;
   }
