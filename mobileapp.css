@@ -110,9 +110,13 @@ ul ul {
 
 /*mobiles*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 430px) {
   img.mm-media-adapt-width {
     /*display: none;*/
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+    padding: 0px;
   }
 
   div.editor-indent {
