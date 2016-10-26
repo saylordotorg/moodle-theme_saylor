@@ -107,6 +107,14 @@ ul ul {
   list-style-type: circle;
 }
 
+/*align icons with text in each unit*/
+a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button-right.item-media span{
+  display: inline-block;
+  vertical-align: -5px;
+}
+
+
+
 /*MEDIA QUEIRES*/
 
 /*mobiles*/
