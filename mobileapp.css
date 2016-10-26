@@ -113,10 +113,10 @@ ul ul {
 @media screen and (max-width: 430px) {
   img.mm-media-adapt-width {
     /*display: none;*/
-    float: none;
+    float: none !important;
     width: 50%;
     margin: 2px 25%;
-    padding: : 0 5% 5% 5%;
+    padding: : 0 5% 5% 5% !important;
   }
 
   div.editor-indent {
