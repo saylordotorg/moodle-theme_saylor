@@ -137,9 +137,21 @@ ul ul {
 
   }
 
+  div.no-overflow h5 {
+    width: 100%;
+  }
+
+  div.no-overflow p {
+    padding: 0px;
+    display: inline-block;
+    width: 100%
+  }
+
   div.no-overflow ul {
     margin-left: 20px;
   }
+
+
 
   /*div.editor-indent p {
     position: relative;
