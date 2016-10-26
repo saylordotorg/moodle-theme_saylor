@@ -112,7 +112,6 @@ ul ul {
 
 @media screen and (max-width: 430px) {
   img.mm-media-adapt-width {
-    /*display: none;*/
     float: none !important;
     width: 50%;
     margin: 2px 25%;
@@ -121,6 +120,12 @@ ul ul {
 
   div.editor-indent {
     margin: 0 !important;
+  }
+
+  .item p {
+    text-align: justify;
+    letter-spacing: -0.2px;
+    padding: 5px;
   }
 
   mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
