@@ -149,6 +149,8 @@ ul ul {
 
   div.no-overflow ul {
     margin-left: 20px;
+    width: 100%;
+    padding: 3px;
   }
 
 
