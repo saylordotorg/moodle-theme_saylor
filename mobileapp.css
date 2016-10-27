@@ -71,7 +71,7 @@ a.item {
 /*title of each unit and sub-unit ex. 'content'*/
 .item-button-right, a.item.item-button-right, button.item.item-button-right{
   color: #333;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 
 /*color of icons + text*/
