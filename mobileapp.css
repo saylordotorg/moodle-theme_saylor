@@ -85,6 +85,8 @@ div.item.tabs.tabs-icon-left{
 /* change paragraph*/
 .item p {
   color: #222;
+  font-size: inherit;
+  padding-bottom: 0.3em;
 }
 
 
@@ -122,7 +124,6 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
 
   div.editor-indent {
     margin: 0 !important;
-    font-size: 1.2em;
   }
 
   div.item.item-text-wrap {
