@@ -71,7 +71,7 @@ a.item {
 /*title of each unit and sub-unit ex. 'content'*/
 .item-button-right, a.item.item-button-right, button.item.item-button-right{
   color: #333;
-  font-size: 14px;
+  font-size: 0.8em;
 }
 
 /*color of icons + text*/
@@ -85,14 +85,12 @@ div.item.tabs.tabs-icon-left{
 /* change paragraph*/
 .item p {
   color: #222;
-  font-size: 15px;
 }
 
 
 /* change the ordered list spacing in relation to rest of text in course intro*/
 mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
   -webkit-padding-start: 30px;
-  font-size: 14px;
   color: #444;
 }
 
@@ -114,7 +112,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
 
 /*mobiles*/
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 40em) {
   img.mm-media-adapt-width {
     float: none !important;
     width: 50%;
