@@ -147,6 +147,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
 
   div.no-overflow h5 {
     width: 100%;
+    font-size: inherit;
   }
 
   div.no-overflow p {
