@@ -88,10 +88,6 @@ div.item.tabs.tabs-icon-left{
   font-size: 15px;
 }
 
-/* change format of paragraphs*/
-/*mm-format-text.mm-content-with-float.ng-binding {
-
-}*/
 
 /* change the ordered list spacing in relation to rest of text in course intro*/
 mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
@@ -130,7 +126,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
     margin: 0 !important;
   }
 
-  .item p {
+  div.item.item-text-wrap {
     text-align: justify;
     hyphens: auto;
   }
@@ -159,13 +155,4 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
     padding: 3px;
   }
 
-
-
-  /*div.editor-indent p {
-    position: relative;
-    border: 1px #0a9dc7 solid;
-    float: left;
-    padding: 15px;
-    margin: 5px;
-  }*/
 }
