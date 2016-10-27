@@ -137,6 +137,12 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
 
   }
 
+  div.no-overflow {
+    text-align: justify;
+    hyphens: auto;
+    font-size: 1.2em;
+  }
+
   div.no-overflow h5 {
     width: 100%;
   }
@@ -144,7 +150,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
   div.no-overflow p {
     padding: 0px;
     display: inline-block;
-    width: 100%
+    width: 100%;
   }
 
   div.no-overflow ul {
