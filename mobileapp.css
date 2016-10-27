@@ -117,6 +117,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
 a.item.item-text-wrap.mm-course-module-handler.mm-course-default-handler.mm-course-module-accredible-handler.item-button-right.item-media span {
   display: inline-block;
   vertical-align: -5px;
+  width: 90%;
 }
 
 /*vertically align the after icon with other icons*/
