@@ -113,12 +113,6 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
   vertical-align: -5px;
 }
 
-/*idem*/
-a.item.item-text-wrap.mm-course-module-handler.item-button-right.item-media.item-completion span {
-  display: inline-block;
-  vertical-align: -5px;
-}
-
 
 /*MEDIA QUEIRES*/
 
@@ -138,8 +132,7 @@ a.item.item-text-wrap.mm-course-module-handler.item-button-right.item-media.item
 
   .item p {
     text-align: justify;
-    letter-spacing: -0.2px;
-    padding: 5px;
+    hyphens: auto;
   }
 
   mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
@@ -147,7 +140,6 @@ a.item.item-text-wrap.mm-course-module-handler.item-button-right.item-media.item
     position: relative;
     float: left;
     margin-left: 1.5px;
-
 
   }
 
