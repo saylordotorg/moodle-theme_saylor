@@ -107,8 +107,15 @@ ul ul {
   list-style-type: circle;
 }
 
+
 /*align text & download icons with text */
 a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button-right.item-media.item-completion span {
+  display: inline-block;
+  vertical-align: -5px;
+}
+
+/*idem*/
+a.item.item-text-wrap.mm-course-module-handler.item-button-right.item-media.item-completion span {
   display: inline-block;
   vertical-align: -5px;
 }
@@ -122,7 +129,7 @@ a.item.item-text-wrap.mm-course-module-handler.mm-course-default-handler.mm-cour
 
 /*vertically align the after icon with other icons*/
 .item-media.item-button-right > .button, .item-media.item-button-right > .buttons, .item-media.item-button-right > .spinner {
-  margin-right: 48px;
+  margin-right: 4px;
 }
 
 
