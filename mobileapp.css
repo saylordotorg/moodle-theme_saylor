@@ -112,7 +112,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
 
 /*mobiles*/
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 30em) {
   img.mm-media-adapt-width {
     float: none !important;
     width: 50%;
@@ -122,6 +122,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
 
   div.editor-indent {
     margin: 0 !important;
+    font-size: 1.2em;
   }
 
   div.item.item-text-wrap {
