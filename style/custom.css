@@ -72,7 +72,7 @@ a:focus {
 }
 
 .used-region-side-pre #region-main {
-	
+
 }
 
 #padder {
@@ -291,7 +291,7 @@ a:focus {
 }
 
 #page-footer a {
-    
+
 }
 
 #page-footer .logininfo {
@@ -366,13 +366,13 @@ div.redirectmessage {
     border: 0px solid transparent;
     font-size: 13px;
     background: #fff url([[pix:theme|ajax-loader]]) no-repeat 50% 95%;
-    padding: 20px 20px 40px;  
+    padding: 20px 20px 40px;
 }
 
 /*buttons */
 input[type="submit"], input[type="button"], #searchform_button, a.submit, #accessibility_controls #block_accessibility_launchtoolbar {
 		background: #5cb85c !important;
-       
+
      border: 0px;
 	 -webkit-border-radius: 0px;
            -moz-border-radius: 0px;
@@ -380,7 +380,7 @@ input[type="submit"], input[type="button"], #searchform_button, a.submit, #acces
         background-size: 100% 200%;
         text-shadow: none;
         color: #fff;
-        cursor: pointer;    
+        cursor: pointer;
         font-weight: 600;
         padding: 7px 25px 8px;
         box-shadow: 0 -1.3px 0 0 rgba(0, 0, 0, 0.1) inset;
@@ -475,7 +475,7 @@ input[type="submit"]:hover, input[type="button"]:hover, #searchform_button:hover
 
 .ribbon-green:before, .ribbon-green:after {
   content: "";
-  border-top:   3px solid [[setting:maincolor]];   
+  border-top:   3px solid [[setting:maincolor]];
   border-left:  3px solid transparent;
   border-right: 3px solid transparent;
   position:absolute;
@@ -539,7 +539,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	.navbar {
 		float: none !important;
 	}
-	
+
 	.navbar .pull-right {
 		float: none;
 	}
@@ -547,7 +547,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	#page-header .logo-div {
 		width: 301px;
 	}
-	
+
 	#page-header .socials {
 		float: none;
 		text-align: center;
@@ -560,11 +560,11 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	#region-main, .used-region-side-pre #region-main {
 		padding: 0px 15px;
 	}
-	
+
 	#page-header, #page-header-wrapper {
 		height: auto;
 	}
-	
+
 	#page-header .logo-div {
 		float: none;
 		margin: 0px auto 10px;
@@ -572,20 +572,20 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 		width: 65%;
 		max-width: 301px;
 	}
-	
+
 	.navbar.pull-left {
 		margin-top: 10px;
 		margin-left: 0px;
 	}
-	
+
 	.navbar .btn-navbar {
     display: block;
     float: none;
     margin: 0px auto 10px;
     width: 20px;
 	}
-	
-	
+
+
 	.headermenu {
 	float: none;
 	padding: 10px 0px 0px;
@@ -593,7 +593,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 	clear: both;
 	}
 
-	
+
 	.flex-caption a.submit {
 	display: block;
     font-size: 1.5em !important;
@@ -601,24 +601,24 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     max-width: 50%;
     padding: 10px 0 !important;
     text-transform: uppercase;
-    
+
 	}
-	
+
 	#page-header, #page-content, .container {
 		width: 95%;
 	}
-	
+
 	.block .header {
 		margin: 0px 10px !important;
 	}
 	#page-footer {
 		margin: 50px 0px 0px;
 	}
-	
+
 	.lalign .navbar-inner {
 		margin-left: auto !important;
 	}
-	
+
 	.textwrapinner .pull-left, .headermenu {
 		float: none;
 		max-width: inherit;
@@ -634,27 +634,28 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 		display: block;
 		margin: 0px auto 10px;
 	}
+
 	.textwrapinner h2 {
 		font-size: 18px;
 	}
 	#marketblocks .span4 {
-		
+
 		margin: 15px auto;
 	}
-	
+
 	.headermenu {
 		top: -12px;
 	}
-	
+
 	.textwrapinner .pull-left {
 		text-align: center;
 		float: none;
 	}
-	
+
 	#marketblocks .span4 a.submit, #marketblocks .span3 a.submit, #marketblocks .span6 a.submit {
 		width: auto;
 	}
-	
+
 	div.navbar {
 		margin-left: auto;
 	}
@@ -672,6 +673,57 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .mform fieldset.collapsible legend a.fheader {
 	margin-left: 0px;
 }
+
+@media screen and (max-width: 30em) {
+  img.mm-media-adapt-width {
+    float: none !important;
+    width: 50%;
+    margin: 2px 25%;
+    padding: : 5px;
+  }
+
+  div.editor-indent {
+    margin: 0 !important;
+  }
+
+  div.item.item-text-wrap {
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
+    -webkit-padding-start: 2px;
+    position: relative;
+    float: left;
+    margin-left: 1.5px;
+
+  }
+
+  div.no-overflow {
+    text-align: justify;
+    hyphens: auto;
+    font-size: 1.2em;
+  }
+
+  div.no-overflow h5 {
+    width: 100%;
+    font-size: inherit;
+  }
+
+  div.no-overflow p {
+    padding: 0px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  div.no-overflow ul {
+    margin-left: 20px;
+    width: 100%;
+    padding: 3px;
+  }
+
+}
+
 
 /* Custom CSS Settings
 -------------------------*/
