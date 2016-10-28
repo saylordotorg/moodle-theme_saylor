@@ -143,6 +143,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
     text-align: justify;
     hyphens: auto;
     font-size: 1.2em;
+    padding-right:10px;
   }
 
   div.no-overflow h5 {
