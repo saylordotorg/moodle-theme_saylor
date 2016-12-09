@@ -724,6 +724,46 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 }
 
+/*** widens search box on main page ***/
+.coursesearchbox textarea[cols], input[size] {
+    width: 25em;
+}
+
+/*** widens login inputs on login page ***/
+.loginbox .loginform .form-input input {
+    width: 12em;
+}
+
+/*** styles items in blog RSS feed(s) ***/
+.block_rss_client .content li {
+    border: none;
+    font-size: 1.125em;
+}
+
+/** hides guest login on login page **/
+div.guestsub {
+    display: none;
+}
+
+/*** Adjusts sizing for images and descriptions in course catalog ***/
+.coursebox .content .summary {
+  width: 85%;
+}
+
+.coursebox .content .courseimage {
+  width: 10%;
+}
+
+@media (max-width: 1200px) {
+  .coursebox .content .summary {
+  width: 100%;
+}
+
+.coursebox .content .courseimage {
+  display: none;
+}
+}
+
 
 /* Custom CSS Settings
 -------------------------*/
