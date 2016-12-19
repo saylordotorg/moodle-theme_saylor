@@ -740,10 +740,6 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     font-size: 1.125em;
 }
 
-/** hides guest login on login page **/
-div.guestsub {
-    display: none;
-}
 
 /*** Adjusts sizing for images and descriptions in course catalog ***/
 .coursebox .content .summary {
