@@ -8,8 +8,6 @@ cache:
     - $HOME/.composer/cache
 
 php:
-  - 5.4
-  - 5.5
   - 5.6
   - 7.0
 
@@ -30,11 +28,58 @@ env:
 matrix:
   exclude:
     - php: 7.0
-      env: MOODLE_BRANCH=MOODLE_27_STABLE
+      env: MOODLE_BRANCH=MOODLE_27_STABLE DB=mysqli
     - php: 7.0
-      env: MOODLE_BRANCH=MOODLE_28_STABLE
+      env: MOODLE_BRANCH=MOODLE_28_STABLE DB=mysqli
     - php: 7.0
-      env: MOODLE_BRANCH=MOODLE_29_STABLE
+      env: MOODLE_BRANCH=MOODLE_29_STABLE DB=mysqli
+    - php: 7.0
+      env: MOODLE_BRANCH=MOODLE_27_STABLE DB=pgsql
+    - php: 7.0
+      env: MOODLE_BRANCH=MOODLE_28_STABLE DB=pgsql
+    - php: 7.0
+      env: MOODLE_BRANCH=MOODLE_29_STABLE DB=pgsql
+  include:
+    - php: 5.4
+      env: MOODLE_BRANCH=MOODLE_27_STABLE DB=mysqli
+    - php: 5.4
+      env: MOODLE_BRANCH=MOODLE_28_STABLE DB=mysqli
+    - php: 5.4
+      env: MOODLE_BRANCH=MOODLE_29_STABLE DB=mysqli
+    - php: 5.4
+      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=mysqli
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=mysqli
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_27_STABLE DB=mysqli
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_28_STABLE DB=mysqli
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_29_STABLE DB=mysqli
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=mysqli
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=mysqli
+    - php: 5.4
+      env: MOODLE_BRANCH=MOODLE_27_STABLE DB=pgsql
+    - php: 5.4
+      env: MOODLE_BRANCH=MOODLE_28_STABLE DB=pgsql
+    - php: 5.4
+      env: MOODLE_BRANCH=MOODLE_29_STABLE DB=pgsql
+    - php: 5.4
+      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=pgsql
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=pgsql
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_27_STABLE DB=pgsql
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_28_STABLE DB=pgsql
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_29_STABLE DB=pgsql
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=pgsql
+    - php: 5.5
+      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=pgsql
 
 before_install:
   - phpenv config-rm xdebug.ini
@@ -48,7 +93,7 @@ install:
 
 script:
   - moodle-plugin-ci phplint
-  - moodle-plugin-ci phpcpd
+  - moodle-plugin-ci phpcpd --exclude ./layout
   - moodle-plugin-ci phpmd
   - moodle-plugin-ci codechecker
   - moodle-plugin-ci csslint
