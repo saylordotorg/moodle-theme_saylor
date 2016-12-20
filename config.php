@@ -38,7 +38,7 @@ $THEME->name = 'saylor';
 //
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
-$THEME->sheets = array('custom','blocks','menu','course','slider','shariff.min');
+$THEME->sheets = array('custom','blocks','menu','course','slider');
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 
@@ -166,7 +166,7 @@ $THEME->layouts = array(
 
 $THEME->csspostprocess = 'theme_saylor_process_css';
 $THEME->javascripts = array('jquery-1.7.2.min','jquery.flexslider-min','jquery.easing-1.3.min','custom');
-$THEME->javascripts_footer = array('shariff.min');
+$THEME->javascripts_footer = array('');
 $THEME->blockrtlmanipulations = array(
     'side-pre' => 'side-post',
     'side-post' => 'side-pre'
