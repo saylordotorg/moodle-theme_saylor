@@ -41,22 +41,6 @@ if ($headeralign == 1) {
 	$headerclass = " ";
 }
 
-function Truncate($string, $length, $stopanywhere=false) {
-    //truncates a string to a certain char length, stopping on a word if not specified otherwise.
-    $string = strip_tags($string);
-    if (strlen($string) > $length) {
-        //limit hit!
-        $string = substr($string,0,($length -3));
-        if ($stopanywhere) {
-            //stop anywhere
-            $string .= '...';
-        } else{
-            //stop on a word.
-            $string = substr($string,0,strrpos($string,' ')).'...';
-        }
-    }
-    return $string;
-}
 
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
