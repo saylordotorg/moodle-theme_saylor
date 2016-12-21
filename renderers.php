@@ -31,7 +31,7 @@ class theme_saylor_core_renderer extends core_renderer
 {
     
     
-    public function user_menu($user = null, $withlinks = null) 
+    public function user_menu($user = null, $withlinks = null)
     {
         global $CFG, $USER;
         
@@ -43,7 +43,7 @@ class theme_saylor_core_renderer extends core_renderer
         return $this->render_user_menu($usermenu, $user);
     }
     
-    protected function render_user_menu(custom_menu $menu, $user) 
+    protected function render_user_menu(custom_menu $menu, $user)
     {
         global $CFG, $USER, $DB, $PAGE;
 
@@ -68,7 +68,7 @@ class theme_saylor_core_renderer extends core_renderer
             // Check whether or not the "popup" message output is enabled
             // This is after we check if messaging is enabled to possibly save a DB query
             $popup = $DB->get_record('message_processors', array('name'=>'popup'));
-            if(!$popup) {
+            if (!$popup) {
                 $addmessagemenu = false;
             }
         }
@@ -78,13 +78,11 @@ class theme_saylor_core_renderer extends core_renderer
             $messagecount = count($messages);
             
             if ($messagecount == 0) {
-                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '', new moodle_url('/message/'),  get_string('messages', 'message'), 9999);
+                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '', new moodle_url('/message/'), get_string('messages', 'message'), 9999);
             } else {
-            
-                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '<span id="messagebubble">' . $messagecount . '</span>', new moodle_url('#'),  get_string('messages', 'message'), 9999);
+                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '<span id="messagebubble">' . $messagecount . '</span>', new moodle_url('#'), get_string('messages', 'message'), 9999);
             }
             foreach ($messages as $message) {
-
                 $senderpicture = new user_picture($message->from);
                 $senderpicture->link = false;
                 $senderpicture = $this->render($senderpicture);
@@ -114,12 +112,10 @@ class theme_saylor_core_renderer extends core_renderer
         }
 
         if ($addlangmenu) {
-           
         }
 
         if ($addusermenu) {
             if (isloggedin() && !isguestuser()) {
-                
             } else {
                 //$usermenu = $menu->add('<i class="fa fa-key"></i>' .get_string('login'), new moodle_url('/login/index.php'), get_string('login'), 10001);
             }
@@ -134,7 +130,7 @@ class theme_saylor_core_renderer extends core_renderer
     }
     
     
-    protected function process_user_messages() 
+    protected function process_user_messages()
     {
 
         $messagelist = array();
@@ -156,7 +152,7 @@ class theme_saylor_core_renderer extends core_renderer
         return $messagelist;
     }
 
-    protected function get_user_messages() 
+    protected function get_user_messages()
     {
         global $USER, $DB;
         $messagelist = array();
@@ -190,7 +186,7 @@ class theme_saylor_core_renderer extends core_renderer
         return $messagelist;
     }
 
-    protected function saylor_process_message($message, $state) 
+    protected function saylor_process_message($message, $state)
     {
         global $DB;
         $messagecontent = new stdClass();
@@ -216,7 +212,7 @@ class theme_saylor_core_renderer extends core_renderer
         return $messagecontent;
     }
     
-    protected function bootstrap_process_message($message) 
+    protected function bootstrap_process_message($message)
     {
         global $DB;
         $messagecontent = new stdClass();
@@ -246,7 +242,7 @@ class theme_saylor_core_renderer extends core_renderer
     //end usermenu
     
     /**
- * @var custom_menu_item language The language menu if created 
+ * @var custom_menu_item language The language menu if created
 */
     protected $language = null;
 
@@ -254,7 +250,7 @@ class theme_saylor_core_renderer extends core_renderer
      * This renders a notification message.
      * Uses bootstrap compatible html.
      */
-    public function notification($message, $classes = 'notifyproblem') 
+    public function notification($message, $classes = 'notifyproblem')
     {
         $message = clean_text($message);
         $type = '';
@@ -278,7 +274,7 @@ class theme_saylor_core_renderer extends core_renderer
      * This renders the navbar.
      * Uses bootstrap compatible html.
      */
-    public function navbar() 
+    public function navbar()
     {
         $items = $this->page->navbar->get_items();
         $breadcrumbs = array();
@@ -297,7 +293,7 @@ class theme_saylor_core_renderer extends core_renderer
      * always shown, even if no menu items are configured in the global
      * theme settings page.
      */
-    public function custom_menu($custommenuitems = '') 
+    public function custom_menu($custommenuitems = '')
     {
         global $CFG;
 
@@ -313,7 +309,7 @@ class theme_saylor_core_renderer extends core_renderer
      *
      * This renderer is needed to enable the Bootstrap style navigation.
      */
-    protected function render_custom_menu(custom_menu $menu) 
+    protected function render_custom_menu(custom_menu $menu)
     {
         global $CFG, $USER;
         
@@ -321,9 +317,6 @@ class theme_saylor_core_renderer extends core_renderer
         //$branch = $menu->add("<i class='fa fa-home'></i>", $branchurlB, "title", -10000);
         
         if (isloggedin() && !isguestuser()) {
-        
-    
-        
                $mycoursetitle = "My Courses";
                  $branchtitle ="My Courses";
                $branchlabel = ''.$branchtitle;
@@ -333,7 +326,6 @@ class theme_saylor_core_renderer extends core_renderer
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
             if ($courses = enrol_get_my_courses(null, 'fullname ASC')) {
                 foreach ($courses as $course) {
-
                     // Setting up params array for completion_completion object
                     $params = array (
                     'userid' => $USER->id,
@@ -352,7 +344,6 @@ class theme_saylor_core_renderer extends core_renderer
                   $noenrolments = get_string('noenrolments', 'theme_saylor');
                 $branch->add('<em>'.$noenrolments.'</em>', new moodle_url('/'), $noenrolments);
             }
-            
         }
 
 
@@ -391,12 +382,11 @@ class theme_saylor_core_renderer extends core_renderer
      * This code renders the custom menu items for the
      * bootstrap dropdown menu.
      */
-    protected function render_custom_menu_item(custom_menu_item $menunode, $level = 0 ) 
+    protected function render_custom_menu_item(custom_menu_item $menunode, $level = 0)
     {
         static $submenucount = 0;
 
         if ($menunode->has_children()) {
-
             if ($level == 1) {
                 $class = 'dropdown';
             } else {
@@ -444,7 +434,7 @@ class theme_saylor_core_renderer extends core_renderer
      * @param  tabtree $tabtree
      * @return string
      */
-    protected function render_tabtree(tabtree $tabtree) 
+    protected function render_tabtree(tabtree $tabtree)
     {
         if (empty($tabtree->subtree)) {
             return '';
@@ -468,11 +458,11 @@ class theme_saylor_core_renderer extends core_renderer
      * @param  tabobject $tabobject
      * @return string HTML fragment
      */
-    protected function render_tabobject(tabobject $tab) 
+    protected function render_tabobject(tabobject $tab)
     {
         if ($tab->selected or $tab->activated) {
             return html_writer::tag('li', html_writer::tag('a', $tab->text), array('class' => 'active'));
-        } else if ($tab->inactive) {
+        } elseif ($tab->inactive) {
             return html_writer::tag('li', html_writer::tag('a', $tab->text), array('class' => 'disabled'));
         } else {
             if (!($tab->link instanceof moodle_url)) {
@@ -486,7 +476,7 @@ class theme_saylor_core_renderer extends core_renderer
     }
     
     
-    public function saylorblocks($region, $classes = array(), $tag = 'aside') 
+    public function saylorblocks($region, $classes = array(), $tag = 'aside')
     {
         $classes = (array)$classes;
         $classes[] = 'block-region';
@@ -498,7 +488,6 @@ class theme_saylor_core_renderer extends core_renderer
         );
         return html_writer::tag($tag, $this->blocks_for_region($region), $attributes);
     }
-    
 }
 
 class theme_saylor_block_course_overview_renderer extends block_course_overview_renderer
@@ -507,13 +496,13 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
     /**
      * Construct contents of course_overview block
      *
-     * Override 
+     * Override
      *
      * @param  array $courses   list of courses in sorted order
      * @param  array $overviews list of course overviews
      * @return string html to be displayed in course_overview block
      */
-    public function course_overview($courses, $overviews) 
+    public function course_overview($courses, $overviews)
     {
         global $USER;
         $html = '';
@@ -599,7 +588,6 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
                 $moveurl = html_writer::link($moveurl, $moveicon);
                 $html .= html_writer::tag('div', $moveurl, array('class' => 'move'));
-
             }
 
             // No need to pass title through s() here as it will be done automatically by html_writer.
@@ -616,8 +604,11 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 $html .= $this->output->heading(
                     html_writer::link(
                         new moodle_url('/auth/mnet/jump.php', array('hostid' => $course->hostid, 'wantsurl' => '/course/view.php?id='.$course->remoteid)),
-                        format_string($course->shortname, true), $attributes
-                    ) . ' (' . format_string($course->hostname) . ')', 2, 'title'
+                        format_string($course->shortname, true),
+                        $attributes
+                    ) . ' (' . format_string($course->hostname) . ')',
+                    2,
+                    'title'
                 );
             }
             $html .= $this->output->box('', 'flush');
@@ -714,7 +705,6 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
                 $moveurl = html_writer::link($moveurl, $moveicon);
                 $html .= html_writer::tag('div', $moveurl, array('class' => 'move'));
-
             }
 
             // No need to pass title through s() here as it will be done automatically by html_writer.
@@ -731,8 +721,11 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 $html .= $this->output->heading(
                     html_writer::link(
                         new moodle_url('/auth/mnet/jump.php', array('hostid' => $course->hostid, 'wantsurl' => '/course/view.php?id='.$course->remoteid)),
-                        format_string($course->shortname, true), $attributes
-                    ) . ' (' . format_string($course->hostname) . ')', 2, 'title'
+                        format_string($course->shortname, true),
+                        $attributes
+                    ) . ' (' . format_string($course->hostname) . ')',
+                    2,
+                    'title'
                 );
             }
             $html .= $this->output->box('', 'flush');
@@ -793,5 +786,4 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
         // Wrap course list in a div and return.
         return html_writer::tag('div', $html, array('class' => 'course_list'));
     }
-
 }

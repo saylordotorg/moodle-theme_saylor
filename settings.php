@@ -31,7 +31,6 @@
 defined('MOODLE_INTERNAL') || die;
 
 if ($ADMIN->fulltree) {
-
     // Invert Navbar to dark background.
     
 
@@ -193,5 +192,4 @@ if ($ADMIN->fulltree) {
     $description = get_string('socialfourdesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
     $settings->add($setting);
-    
 }

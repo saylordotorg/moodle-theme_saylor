@@ -1,10 +1,10 @@
 jQuery(document).ready(
-    function($) {
+    function ($) {
 
         var $pArr = $('.coursebox.panel2');
         var pArrLen = $pArr.length;
         var pPerDiv = 2;
-        for (var i = 0;i < pArrLen;i+=pPerDiv){
+        for (var i = 0; i < pArrLen; i+=pPerDiv) {
             $pArr.filter(':eq('+i+'),:lt('+(i+pPerDiv)+'):gt('+i+')').wrapAll('<div class="row-fluid clearfix" />');
         }
 

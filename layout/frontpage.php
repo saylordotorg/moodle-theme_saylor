@@ -110,8 +110,9 @@ echo $OUTPUT->doctype() ?>
 
  <div id="page-content" class="row-fluid">
     
-        <section id="region-main" class="span9<?php if ($left) { echo ' pull-right'; 
-       } ?>">
+        <section id="region-main" class="span9<?php if ($left) {
+            echo ' pull-right';
+} ?>">
             <?php
             echo $OUTPUT->course_content_header();
             echo $OUTPUT->main_content();
