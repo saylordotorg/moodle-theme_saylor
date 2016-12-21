@@ -12,35 +12,33 @@ php:
   - 7.0
 
 env:
-  - MOODLE_BRANCH=MOODLE_30_STABLE DB=mysqli
-  - MOODLE_BRANCH=MOODLE_31_STABLE DB=mysqli
-  - MOODLE_BRANCH=MOODLE_32_STABLE DB=mysqli
-  - MOODLE_BRANCH=MOODLE_27_STABLE DB=pgsql
-  - MOODLE_BRANCH=MOODLE_28_STABLE DB=pgsql
-  - MOODLE_BRANCH=MOODLE_29_STABLE DB=pgsql
-  - MOODLE_BRANCH=MOODLE_30_STABLE DB=pgsql
-  - MOODLE_BRANCH=MOODLE_31_STABLE DB=pgsql
-  - MOODLE_BRANCH=MOODLE_32_STABLE DB=pgsql
-  global:
-    - IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_30_STABLE DB=mysqli IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_31_STABLE DB=mysqli IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_32_STABLE DB=mysqli IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_27_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_28_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_29_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_30_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_31_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
+  - MOODLE_BRANCH=MOODLE_32_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
 matrix:
   include:
     - php: 5.4
-      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=mysqli
+      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=mysqli IGNORE_NAMES=columns*.php,*course.php
     - php: 5.5
-      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=mysqli
+      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=mysqli IGNORE_NAMES=columns*.php,*course.php
     - php: 5.5
-      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=mysqli
+      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=mysqli IGNORE_NAMES=columns*.php,*course.php
     - php: 5.5
-      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=mysqli
+      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=mysqli IGNORE_NAMES=columns*.php,*course.php
     - php: 5.4
-      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=pgsql
+      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
     - php: 5.5
-      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=pgsql
+      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
     - php: 5.5
-      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=pgsql
+      env: MOODLE_BRANCH=MOODLE_30_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
     - php: 5.5
-      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=pgsql
+      env: MOODLE_BRANCH=MOODLE_31_STABLE DB=pgsql IGNORE_NAMES=columns*.php,*course.php
 
 before_install:
   - phpenv config-rm xdebug.ini
