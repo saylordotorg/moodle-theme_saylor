@@ -30,15 +30,15 @@ $hasmarket4 = (!empty($PAGE->theme->settings->market4));
 
 //headeralignment
 if (empty($PAGE->theme->settings->headeralign)) {
-	$headeralign = "0";
+    $headeralign = "0";
 } else {
-$headeralign = $PAGE->theme->settings->headeralign;
+    $headeralign = $PAGE->theme->settings->headeralign;
 }
 
 if ($headeralign == 1) {
-	$headerclass = "lalign";
+    $headerclass = "lalign";
 } else {
-	$headerclass = " ";
+    $headerclass = " ";
 }
 
 
@@ -84,11 +84,11 @@ echo $OUTPUT->doctype() ?>
         
         
 <div class="pull-right socials">
-				<?php
-	        	    echo $OUTPUT->login_info();
-    	        	//echo $OUTPUT->lang_menu();
-	        	    echo $PAGE->headingmenu;
-		        ?>	
+                <?php
+                    echo $OUTPUT->login_info();
+                    //echo $OUTPUT->lang_menu();
+                    echo $PAGE->headingmenu;
+            ?>    
 </div>
         
         
@@ -110,7 +110,7 @@ echo $OUTPUT->doctype() ?>
 
  <div id="page-content" class="row-fluid">
    
-    	<div id="padder" class="clearfix">
+        <div id="padder" class="clearfix">
         <section id="region-main" class="span12">
             <?php
             echo $OUTPUT->course_content_header();
@@ -166,7 +166,7 @@ echo $OUTPUT->doctype() ?>
         <?php
         //echo $html->footnote;
         echo $OUTPUT->login_info();
-       // echo $OUTPUT->home_link();
+        // echo $OUTPUT->home_link();
         echo $OUTPUT->standard_footer_html();
         ?>
         </div>

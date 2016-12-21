@@ -5,34 +5,34 @@
 }
 
 .coursebox .content {
-	clear: none;
+    clear: none;
 }
 
 .coursebox {
-	padding: 0 0;
-	border: 0px;
-	border-radius: 0px;
+    padding: 0 0;
+    border: 0px;
+    border-radius: 0px;
 }
 
 .course-content ul li.section.main {
-	border-bottom: 1px dotted #fff;
-	padding-top: 5px;
+    border-bottom: 1px dotted #fff;
+    padding-top: 5px;
 }
 
 .site-topic ul.section, .course-content ul.section {
-	margin: 0em 1em;
+    margin: 0em 1em;
 }
 
 #newdiscussionform {
-	text-align: center;
+    text-align: center;
 }
 
 #searchforums {
-	margin: 5px 0px 5px 5px;
+    margin: 5px 0px 5px 5px;
 }
 
 .courses .coursebox {
-	background: transparent !important;
+    background: transparent !important;
 }
 
 .course-content .current {
@@ -41,62 +41,62 @@
 }
 
 .coursebox.panel {
-	position: relative;
-	margin-bottom: 25px;
+    position: relative;
+    margin-bottom: 25px;
 }
 
 .coursebox.panel:hover {
-	
+    
 }
 
 .coursebox.panel .panel-body {
-	border: 1px solid #e2e1de !important;
-	background: #e2e1de !important;
-	overflow: hidden;
-	position: relative;
-	border-radius: 5px;
+    border: 1px solid #e2e1de !important;
+    background: #e2e1de !important;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
 }
 
 .cimbox {
-	height: 125px;
-	position: relative;
-	margin-right: -1px;
-	display: none;
+    height: 125px;
+    position: relative;
+    margin-right: -1px;
+    display: none;
 }
 
 .coursebox-content {
-	padding: 5px 15px 15px;
-	text-align: left;
+    padding: 5px 15px 15px;
+    text-align: left;
 }
 
 .coursebox-content h3 {
-	text-align: left;
-	margin: 5px 0px 20px;
-	font-weight: 700;
+    text-align: left;
+    margin: 5px 0px 20px;
+    font-weight: 700;
 }
 
 .coursebox-content h3 a {
-	color: #469dcd;
-	font-weight: 700;
-	font-size: 1em;
+    color: #469dcd;
+    font-weight: 700;
+    font-size: 1em;
 }
 
 .coursebox-content .teachers, .panel-heading {
-	display: none;
+    display: none;
 }
 
 .panel .coursebtn.submit.btn {
-	float: right;
-	display: block;
-	margin: 0px 15px 15px;
-	padding-left: 20px;
-	padding-right: 20px;
-	clear: both;
-	text-transform: uppercase;
-	
-	background: #1d9f4a !important;
-	box-shadow: -2px 2px 3px #cbcac4;
-	color: #005320;
+    float: right;
+    display: block;
+    margin: 0px 15px 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    clear: both;
+    text-transform: uppercase;
+    
+    background: #1d9f4a !important;
+    box-shadow: -2px 2px 3px #cbcac4;
+    color: #005320;
 }
 
 .coursebox .summary {
@@ -104,7 +104,7 @@
 }
 
 .coursebox .summary p {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .coursebox:hover .summary p {
@@ -120,22 +120,22 @@
 }
 
 .coursebox.panel .ribbon-wrapper-green {
-	display: block !important;
+    display: block !important;
 }
 
 .coursebox .enrolmenticons {
-	float: none;
-	display: inline-block; 
-	padding-left: 10px;
+    float: none;
+    display: inline-block; 
+    padding-left: 10px;
 }
 
 .coursebox .enrolmenticons img {
-	width: 12px;
+    width: 12px;
 }
 
 
 @media (max-width: 768px) {
-	
+    
 }
 
 .breadcrumb-button .singlebutton div input {
@@ -145,5 +145,5 @@
 
 
 .section .label .mod-indent-outer, .section .activity .mod-indent-outer {
-	padding-left: 0px;
+    padding-left: 0px;
 }

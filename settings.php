@@ -43,72 +43,72 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
-	
-	// footerline setting
+    
+    // footerline setting
     $name = 'theme_saylor/fsize';
-    $title = get_string('fsize','theme_saylor');
+    $title = get_string('fsize', 'theme_saylor');
     $description = get_string('fsizedesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $settings->add($setting);
 
-//set pictures for frontpage
-$name = 'theme_saylor/p1';
-$title = get_string('p1','theme_saylor');
-$description = get_string('p1desc', 'theme_saylor');
-$setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
-$settings->add($setting);
+    //set pictures for frontpage
+    $name = 'theme_saylor/p1';
+    $title = get_string('p1', 'theme_saylor');
+    $description = get_string('p1desc', 'theme_saylor');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $settings->add($setting);
 
 
- $name = 'theme_saylor/fpheight';
-    $title = get_string('fpheight','theme_saylor');
+    $name = 'theme_saylor/fpheight';
+    $title = get_string('fpheight', 'theme_saylor');
     $description = get_string('fpheightdesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $settings->add($setting);
     
      $name = 'theme_saylor/intheight';
-    $title = get_string('intheight','theme_saylor');
+    $title = get_string('intheight', 'theme_saylor');
     $description = get_string('intheightdesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $settings->add($setting);
 
 
-//marketing spots
-$name = 'theme_saylor/market1';
-$title = get_string('market1','theme_saylor');
-$description = get_string('market1desc', 'theme_saylor');
-$default = '';
-$setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-$settings->add($setting);
+    //marketing spots
+    $name = 'theme_saylor/market1';
+    $title = get_string('market1', 'theme_saylor');
+    $description = get_string('market1desc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $settings->add($setting);
 
-$name = 'theme_saylor/market2';
-$title = get_string('market2','theme_saylor');
-$description = get_string('market2desc', 'theme_saylor');
-$default = '';
-$setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-$settings->add($setting);
+    $name = 'theme_saylor/market2';
+    $title = get_string('market2', 'theme_saylor');
+    $description = get_string('market2desc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $settings->add($setting);
 
-$name = 'theme_saylor/market3';
-$title = get_string('market3','theme_saylor');
-$description = get_string('market3desc', 'theme_saylor');
-$default = '';
-$setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-$settings->add($setting);
+    $name = 'theme_saylor/market3';
+    $title = get_string('market3', 'theme_saylor');
+    $description = get_string('market3desc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $settings->add($setting);
 
-$name = 'theme_saylor/market4';
-$title = get_string('market4','theme_saylor');
-$description = get_string('market4desc', 'theme_saylor');
-$default = '';
-$setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-$settings->add($setting);
+    $name = 'theme_saylor/market4';
+    $title = get_string('market4', 'theme_saylor');
+    $description = get_string('market4desc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $settings->add($setting);
 
-//logo
-$name = 'theme_saylor/logo';
-	$title = get_string('logo','theme_saylor');
-	$description = get_string('logodesc', 'theme_saylor');
-	$setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
-	$settings->add($setting);
-	
-	// Turn on fluid width
+    //logo
+    $name = 'theme_saylor/logo';
+    $title = get_string('logo', 'theme_saylor');
+    $description = get_string('logodesc', 'theme_saylor');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $settings->add($setting);
+    
+    // Turn on fluid width
     $name = 'theme_saylor/headeralign';
     $title = get_string('headeralign', 'theme_saylor');
     $description = get_string('headeraligndesc', 'theme_saylor');
@@ -116,82 +116,82 @@ $name = 'theme_saylor/logo';
     $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
     $settings->add($setting);
 
-// link color setting
-	$name = 'theme_saylor/linkcolor';
-	$title = get_string('linkcolor','theme_saylor');
-	$description = get_string('linkcolordesc', 'theme_saylor');
-	$default = '#033e55';
-	$previewconfig = NULL;
-	$setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
-	$settings->add($setting);
+    // link color setting
+    $name = 'theme_saylor/linkcolor';
+    $title = get_string('linkcolor', 'theme_saylor');
+    $description = get_string('linkcolordesc', 'theme_saylor');
+    $default = '#033e55';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
 
-	// link hover color setting
-	$name = 'theme_saylor/linkhover';
-	$title = get_string('linkhover','theme_saylor');
-	$description = get_string('linkhoverdesc', 'theme_saylor');
-	$default = '#666666';
-	$previewconfig = NULL;
-	$setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
-	$settings->add($setting);
+    // link hover color setting
+    $name = 'theme_saylor/linkhover';
+    $title = get_string('linkhover', 'theme_saylor');
+    $description = get_string('linkhoverdesc', 'theme_saylor');
+    $default = '#666666';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
 
-	// main color setting
-	$name = 'theme_saylor/maincolor';
-	$title = get_string('maincolor','theme_saylor');
-	$description = get_string('maincolordesc', 'theme_saylor');
-	$default = '#173140';
-	$previewconfig = NULL;
-	$setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
-	$settings->add($setting);
-	
-	// main color setting
-	$name = 'theme_saylor/secondcolor';
-	$title = get_string('secondcolor','theme_saylor');
-	$description = get_string('secondcolordesc', 'theme_saylor');
-	$default = '#9b7b2a';
-	$previewconfig = NULL;
-	$setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
-	$settings->add($setting);
-	
-	// heading color setting
-	$name = 'theme_saylor/backcolor';
-	$title = get_string('backcolor','theme_saylor');
-	$description = get_string('backcolordesc', 'theme_saylor');
-	$default = '#eeeeee';
-	$previewconfig = NULL;
-	$setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
-	$settings->add($setting);
+    // main color setting
+    $name = 'theme_saylor/maincolor';
+    $title = get_string('maincolor', 'theme_saylor');
+    $description = get_string('maincolordesc', 'theme_saylor');
+    $default = '#173140';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    
+    // main color setting
+    $name = 'theme_saylor/secondcolor';
+    $title = get_string('secondcolor', 'theme_saylor');
+    $description = get_string('secondcolordesc', 'theme_saylor');
+    $default = '#9b7b2a';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
+    
+    // heading color setting
+    $name = 'theme_saylor/backcolor';
+    $title = get_string('backcolor', 'theme_saylor');
+    $description = get_string('backcolordesc', 'theme_saylor');
+    $default = '#eeeeee';
+    $previewconfig = null;
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
+    $settings->add($setting);
 
-	// Foot note setting
- // footerline setting
+    // Foot note setting
+    // footerline setting
     $name = 'theme_saylor/footnote';
-    $title = get_string('footnote','theme_saylor');
+    $title = get_string('footnote', 'theme_saylor');
     $description = get_string('footnotedesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $settings->add($setting);
     
     //social settings
     $name = 'theme_saylor/socialone';
-	$title = get_string('socialone','theme_saylor');
-	$description = get_string('socialonedesc', 'theme_saylor');
-	$setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
-	$settings->add($setting);
-	
-	 $name = 'theme_saylor/socialtwo';
-	$title = get_string('socialtwo','theme_saylor');
-	$description = get_string('socialtwodesc', 'theme_saylor');
-	$setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
-	$settings->add($setting);
-	
-	 $name = 'theme_saylor/socialthree';
-	$title = get_string('socialthree','theme_saylor');
-	$description = get_string('socialthreedesc', 'theme_saylor');
-	$setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
-	$settings->add($setting);
-	
-	 $name = 'theme_saylor/socialfour';
-	$title = get_string('socialfour','theme_saylor');
-	$description = get_string('socialfourdesc', 'theme_saylor');
-	$setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
-	$settings->add($setting);
-	
+    $title = get_string('socialone', 'theme_saylor');
+    $description = get_string('socialonedesc', 'theme_saylor');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $settings->add($setting);
+    
+    $name = 'theme_saylor/socialtwo';
+    $title = get_string('socialtwo', 'theme_saylor');
+    $description = get_string('socialtwodesc', 'theme_saylor');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $settings->add($setting);
+    
+    $name = 'theme_saylor/socialthree';
+    $title = get_string('socialthree', 'theme_saylor');
+    $description = get_string('socialthreedesc', 'theme_saylor');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $settings->add($setting);
+    
+    $name = 'theme_saylor/socialfour';
+    $title = get_string('socialfour', 'theme_saylor');
+    $description = get_string('socialfourdesc', 'theme_saylor');
+    $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
+    $settings->add($setting);
+    
 }

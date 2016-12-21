@@ -19,7 +19,7 @@
 }
 
 .lalign .navbar-inner {
-	margin-left: 0px;
+    margin-left: 0px;
 }
 
 .navbar-inner .container-fluid {
@@ -28,8 +28,8 @@
 }
 
 .navbar .nav {
-	float: none;
-	text-align: center;
+    float: none;
+    text-align: center;
 }
 
 .navbar .nav > li > a {
@@ -43,10 +43,10 @@
 }
 
 .navbar .nav > li:hover > a {
-	text-decoration: none;
-	box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.35) inset, -5px 0 5px -5px rgba(0, 0, 0, 0.35) inset;
-	background-color: rgba(0,0,0,.3);
-	color: #fff;
+    text-decoration: none;
+    box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.35) inset, -5px 0 5px -5px rgba(0, 0, 0, 0.35) inset;
+    background-color: rgba(0,0,0,.3);
+    color: #fff;
 }
 
 .navbar .btn-navbar {
@@ -57,29 +57,29 @@ border-radius: 0px;
 }
 
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-	background-image: none !important;
-	background-color: #333 !important;
+    background-image: none !important;
+    background-color: #333 !important;
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-	background-color: transparent;
-	color: #eee;
-	border-bottom: 0px solid #000;
+    background-color: transparent;
+    color: #eee;
+    border-bottom: 0px solid #000;
 }
 
 .navbar .nav > li > .dropdown-menu:before, .navbar .nav > li > .dropdown-menu:after {
-	display: none;
+    display: none;
 }
 
 .dropdown-menu {
-	border: 0px solid transparent;
-	border-radius: 0px;
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
-	font-size: 14px;
-	padding: 0px 0px;
-	background: #2d343e;
-	border-bottom: 0px solid [[setting:maincolor]];
-	margin-top: 0px;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    font-size: 14px;
+    padding: 0px 0px;
+    background: #2d343e;
+    border-bottom: 0px solid [[setting:maincolor]];
+    margin-top: 0px;
 }
 
 .nav .dropdown-menu li a {
@@ -92,8 +92,8 @@ border-radius: 0px;
 }
 
 .nav .dropdown-menu li a:hover {
-	background: transparent;
-	color: #fff;
+    background: transparent;
+    color: #fff;
 }
 
 .nav .fa.fa-caret-down {
@@ -133,9 +133,9 @@ and (min-width : 1224px) {
 }
 
 @media (max-width: 979px) {
-	.nav-collapse.collapse.active .nav > li > a {
-	color: #333 !important;
-	}
+    .nav-collapse.collapse.active .nav > li > a {
+    color: #333 !important;
+    }
 
 }
 

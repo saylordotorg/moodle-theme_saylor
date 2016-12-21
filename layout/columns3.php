@@ -87,7 +87,7 @@ echo $OUTPUT->doctype() ?>
             <div id="page-navbar" class="span12">
             <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
             <?php echo $OUTPUT->navbar(); ?>
-        	</div>
+            </div>
                 <section id="region-main" class="span8 pull-right">
                     <?php
                     echo $OUTPUT->course_content_header();

@@ -1,10 +1,10 @@
 html,body {
-	margin: 0;
-	padding: 0;
-	background: #f8f7f4;
-	color: #173140;
-	font-size: 95%;
-	line-height: normal;
+    margin: 0;
+    padding: 0;
+    background: #f8f7f4;
+    color: #173140;
+    font-size: 95%;
+    line-height: normal;
 }
 
 body {
@@ -14,15 +14,15 @@ padding-top: 20px;
 
 /* background: #f1eee7 url([[pix:theme|bkg]]) no-repeat 100% 0; */
 html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
-	font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0px 0px 10px;
+    margin: 0px 0px 10px;
 }
 
 p {
-	line-height: 1.3em;
+    line-height: 1.3em;
 }
 
 /* background: #f1eee7 url([[pix:theme|bkg]]) no-repeat 100% 0; */
@@ -62,12 +62,12 @@ a:focus {
 }
 
 #page {
-	max-width: 3040px;
-	padding: 0 0;
+    max-width: 3040px;
+    padding: 0 0;
 }
 
 #page-content {
-	background: transparent;
+    background: transparent;
     box-shadow: none;
 }
 
@@ -76,64 +76,64 @@ a:focus {
 }
 
 #padder {
-	padding: 10px 0px;
+    padding: 10px 0px;
 }
 
 #page-header-wrapper {
-	background: rgba(0, 55, 69, 0.85);
-	padding: 20px 0px 25px;
+    background: rgba(0, 55, 69, 0.85);
+    padding: 20px 0px 25px;
 }
 
 #page-header {
-	border-bottom: 0px solid #ccc;
-	clear: both;
-	margin-bottom: 0px;
-	position: relative;
-	height: 75px;
+    border-bottom: 0px solid #ccc;
+    clear: both;
+    margin-bottom: 0px;
+    position: relative;
+    height: 75px;
 }
 
 #page-site-index #page-header {
-	border-bottom: 0px;
+    border-bottom: 0px;
 }
 
 #page-header, #page-content, .container {
-	max-width: 2200px;
-	width: 90%;
-	margin: 0 auto;
+    max-width: 2200px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #logo {
-	float: none;
-	display: block;
-	margin:0px auto;
+    float: none;
+    display: block;
+    margin:0px auto;
 }
 
 .logininfo {
-	margin-top: 5px;
+    margin-top: 5px;
 }
 
 #page-header .logo-img {
-	height: 89px;
-	display: block;
-	background-repeat: no-repeat;
-	background-position: center center;
+    height: 89px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #page-header .logo-div {
-	background-repeat: no-repeat;
-	float: left;
-	min-width: 26%;
-	width: 26%;
-	max-width: 357px;
-	height: 75px;
+    background-repeat: no-repeat;
+    float: left;
+    min-width: 26%;
+    width: 26%;
+    max-width: 357px;
+    height: 75px;
 }
 
 .lalign #logo {
-	float: left;
+    float: left;
 }
 
 #main-slider {
-	height: [[setting:intheight]]px;
+    height: [[setting:intheight]]px;
     overflow: hidden;
     position: relative;
     background: url([[setting:bannerpic]]) no-repeat top left;
@@ -142,7 +142,7 @@ a:focus {
 }
 
 #page-site-index #main-slider {
-	height: [[setting:fpheight]]px;
+    height: [[setting:fpheight]]px;
 }
 
 #cname h1 {
@@ -155,17 +155,17 @@ a:focus {
 }
 
 .headermenu {
-	float: right;
-	padding-top: 20px;
-	font-size: 80%;
-	color: #ccc;
-	right: 0px;
-	top: 0px;
-	max-width: 40%;
+    float: right;
+    padding-top: 20px;
+    font-size: 80%;
+    color: #ccc;
+    right: 0px;
+    top: 0px;
+    max-width: 40%;
 }
 
 #page-footer {
-	background: #003744;
+    background: #003744;
     margin: 10px auto 0;
     padding: 60px 0px 40px;
    text-align: left;
@@ -175,7 +175,7 @@ a:focus {
 }
 
 #page-footer p {
-	line-height: 20px;
+    line-height: 20px;
 }
 
 #page-footer a {
@@ -188,9 +188,9 @@ a:focus {
 }
 
 .footer-share a {
-	font-size: 24px;
-	margin-left: 10px;
-	margin-right: 10px;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 
@@ -201,9 +201,9 @@ a:focus {
 }
 
 #page-footer ul.footer-nav a {
-	padding-bottom: 0px;
-	display: inline-block;
-	line-height: 30px;
+    padding-bottom: 0px;
+    display: inline-block;
+    line-height: 30px;
 }
 
 #page-footer ul {
@@ -213,11 +213,11 @@ a:focus {
 }
 
 #page-footer .logo {
-	height: 150px;
-	display: block;
-	background-repeat: no-repeat;
-	background-position: center top;
-	margin-top: 4px;
+    height: 150px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin-top: 4px;
 }
 
 .footer-share .fb, .footer-share .twitter, .footer-share .gplus, .footer-share .linkedin, .footer-share .reddit, .footer-share .contact, .footer-share .share-this {
@@ -249,45 +249,45 @@ a:focus {
 }
 
 #page-navbar {
-	margin: 0 auto;
-	background: transparent;
-	border-bottom: 0px solid #dadada;
+    margin: 0 auto;
+    background: transparent;
+    border-bottom: 0px solid #dadada;
 }
 
 .breadcrumb {
-	padding: 0px 0px 0px;
-	margin: 0 0;
-	background: transparent;
-	font-size: 13px;
-	text-transform: uppercase;
-	text-shadow: none;
-	color: #fff;
-	color: #70f083;
+    padding: 0px 0px 0px;
+    margin: 0 0;
+    background: transparent;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #fff;
+    color: #70f083;
 }
 
 .breadcrumb a {
-	color: #70f083;
-	text-shadow: none;
+    color: #70f083;
+    text-shadow: none;
 }
 
 .breadcrumb > li {
-	text-shadow: none;
+    text-shadow: none;
 }
 
 .breadcrumb li:last-child, .breadcrumb li:last-child a {
-	color: #fff;
+    color: #fff;
 }
 
 .breadcrumb-button .singlebutton div, .breadcrumb-button .singlebutton div input, #page-navbar .breadcrumb-button {
-	margin: 0 0;
+    margin: 0 0;
 }
 
 .sr-only {
-	margin-right: 1%;
+    margin-right: 1%;
 }
 
 #page-navbar .forumsearch {
-	display: none;
+    display: none;
 }
 
 #page-footer a {
@@ -295,10 +295,10 @@ a:focus {
 }
 
 #page-footer .logininfo {
-	margin: 10px auto 0px;
-	font-size: 90%;
-	clear: both;
-	text-align: right;
+    margin: 10px auto 0px;
+    font-size: 90%;
+    clear: both;
+    text-align: right;
 }
 
 #page-footer .info {
@@ -312,8 +312,8 @@ a:focus {
 }
 
 #page-footer #logo {
-	width: 150px;
-	height: 153px;
+    width: 150px;
+    height: 153px;
 }
 
 #page-footer ol, #page-footer ul {
@@ -322,18 +322,18 @@ a:focus {
 }
 
 #page-header .socials {
-	font-size: 15px;
+    font-size: 15px;
     padding-top: 0;
     text-align: right;
     color: #70f083;
-	font-weight: 600;
-	position: absolute;
-	top: -5px;
-	right: 0px;
+    font-weight: 600;
+    position: absolute;
+    top: -5px;
+    right: 0px;
 }
 
 #page-header .socials a {
-	color: #70f083;
+    color: #70f083;
 }
 
 #intro.generalbox {
@@ -354,9 +354,9 @@ a:focus {
 
 
 .pagelayout-redirect #content {
-	width:60%; background: #fff; margin: 20px auto; padding: 1em;
-	border: 1px solid #dadada;
-	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    width:60%; background: #fff; margin: 20px auto; padding: 1em;
+    border: 1px solid #dadada;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -371,10 +371,10 @@ div.redirectmessage {
 
 /*buttons */
 input[type="submit"], input[type="button"], #searchform_button, a.submit, #accessibility_controls #block_accessibility_launchtoolbar {
-		background: #5cb85c !important;
+        background: #5cb85c !important;
 
      border: 0px;
-	 -webkit-border-radius: 0px;
+     -webkit-border-radius: 0px;
            -moz-border-radius: 0px;
                 border-radius: 3px;
         background-size: 100% 200%;
@@ -392,54 +392,54 @@ input[type="submit"], input[type="button"], #searchform_button, a.submit, #acces
 }
 
 input[type="submit"]:hover, input[type="button"]:hover, #searchform_button:hover, a.submit:hover{
-	 background-position: 0 -100%;
-	 text-decoration: none !important;
-	 color: #fff;
-	 background-color: [[setting:maincolor]] !important;
-	 box-shadow: 0px 0px 4px rgba(0,0,0,.25);
+     background-position: 0 -100%;
+     text-decoration: none !important;
+     color: #fff;
+     background-color: [[setting:maincolor]] !important;
+     box-shadow: 0px 0px 4px rgba(0,0,0,.25);
 }
 
 #marketblocks {
-	padding: 0px 15px;
+    padding: 0px 15px;
 }
 
 #marketblocks .span4, #marketblocks .span3, #marketblocks .span6 {
-	border: 0px solid #ccc;
-	min-height: 220px;
-	margin-bottom: 15px;
-	margin-top: 15px;
-	background: transparent
-	position: relative;
-	z-index: 90;
+    border: 0px solid #ccc;
+    min-height: 220px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background: transparent
+    position: relative;
+    z-index: 90;
 }
 
 .internalmarket {
-	padding: 10px 0px 0px;
-	text-align: center;
-	position: relative;
+    padding: 10px 0px 0px;
+    text-align: center;
+    position: relative;
 }
 
 .internalmarket .fa {
-	color: [[setting:secondcolor]];
-	font-size: 50px;
+    color: [[setting:secondcolor]];
+    font-size: 50px;
 }
 
 .internalmarket p {
-	text-align: center;
+    text-align: center;
 }
 
 #marketblocks .span4 h3, #marketblocks .span3 h3, #marketblocks .span6 h3 {
-	color: [[setting:maincolor]];
-	font-size: 1.6em;
-	display: block;
-	text-align: center;
-	margin: 0 0;
-	border-bottom: 0px solid [[setting:maincolor]];
+    color: [[setting:maincolor]];
+    font-size: 1.6em;
+    display: block;
+    text-align: center;
+    margin: 0 0;
+    border-bottom: 0px solid [[setting:maincolor]];
 }
 
 #marketblocks .span4 a.submit, #marketblocks .span3 a.submit, #marketblocks .span6 a.submit {
-	display: block;
-	margin: 10px 0px;
+    display: block;
+    margin: 10px 0px;
 }
 
 .ribbon-wrapper-green {
@@ -511,18 +511,18 @@ input[type="submit"]:hover, input[type="button"]:hover, #searchform_button:hover
 
 
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	border-radius: 0px;
+    border-radius: 0px;
 }
 
 .loginbox.onecolumn .loginform {
-	max-width: 500px;
-	margin: 0 auto;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .loginbox.onecolumn .loginform .form-label {
-	float: none;
-	text-align: left;
-	width: auto;
+    float: none;
+    text-align: left;
+    width: auto;
 }
 
 .loginbox.onecolumn .loginform .form-input {
@@ -536,142 +536,142 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 
 @media (max-width: 979px) {
-	.navbar {
-		float: none !important;
-	}
+    .navbar {
+        float: none !important;
+    }
 
-	.navbar .pull-right {
-		float: none;
-	}
+    .navbar .pull-right {
+        float: none;
+    }
 
-	#page-header .logo-div {
-		width: 301px;
-	}
+    #page-header .logo-div {
+        width: 301px;
+    }
 
-	#page-header .socials {
-		float: none;
-		text-align: center;
-		padding: 5px 0px;
-		position: relative;
-	}
+    #page-header .socials {
+        float: none;
+        text-align: center;
+        padding: 5px 0px;
+        position: relative;
+    }
 }
 
 @media (max-width: 768px) {
-	#region-main, .used-region-side-pre #region-main {
-		padding: 0px 15px;
-	}
+    #region-main, .used-region-side-pre #region-main {
+        padding: 0px 15px;
+    }
 
-	#page-header, #page-header-wrapper {
-		height: auto;
-	}
+    #page-header, #page-header-wrapper {
+        height: auto;
+    }
 
-	#page-header .logo-div {
-		float: none;
-		margin: 0px auto 10px;
-		margin-bottom: 15px !important;
-		width: 65%;
-		max-width: 301px;
-	}
+    #page-header .logo-div {
+        float: none;
+        margin: 0px auto 10px;
+        margin-bottom: 15px !important;
+        width: 65%;
+        max-width: 301px;
+    }
 
-	.navbar.pull-left {
-		margin-top: 10px;
-		margin-left: 0px;
-	}
+    .navbar.pull-left {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
 
-	.navbar .btn-navbar {
+    .navbar .btn-navbar {
     display: block;
     float: none;
     margin: 0px auto 10px;
     width: 20px;
-	}
+    }
 
 
-	.headermenu {
-	float: none;
-	padding: 10px 0px 0px;
-	text-align: center;
-	clear: both;
-	}
+    .headermenu {
+    float: none;
+    padding: 10px 0px 0px;
+    text-align: center;
+    clear: both;
+    }
 
 
-	.flex-caption a.submit {
-	display: block;
+    .flex-caption a.submit {
+    display: block;
     font-size: 1.5em !important;
     margin: 5px auto 0;
     max-width: 50%;
     padding: 10px 0 !important;
     text-transform: uppercase;
 
-	}
+    }
 
-	#page-header, #page-content, .container {
-		width: 95%;
-	}
+    #page-header, #page-content, .container {
+        width: 95%;
+    }
 
-	.block .header {
-		margin: 0px 10px !important;
-	}
-	#page-footer {
-		margin: 50px 0px 0px;
-	}
+    .block .header {
+        margin: 0px 10px !important;
+    }
+    #page-footer {
+        margin: 50px 0px 0px;
+    }
 
-	.lalign .navbar-inner {
-		margin-left: auto !important;
-	}
+    .lalign .navbar-inner {
+        margin-left: auto !important;
+    }
 
-	.textwrapinner .pull-left, .headermenu {
-		float: none;
-		max-width: inherit;
-	}
+    .textwrapinner .pull-left, .headermenu {
+        float: none;
+        max-width: inherit;
+    }
 }
 
 @media (max-width: 520px) {
-	#page-header .logo-div {
-		float: none;
-		width: 95%;
-		max-width: 301px;
-		margin-left: 0px;
-		display: block;
-		margin: 0px auto 10px;
-	}
+    #page-header .logo-div {
+        float: none;
+        width: 95%;
+        max-width: 301px;
+        margin-left: 0px;
+        display: block;
+        margin: 0px auto 10px;
+    }
 
-	.textwrapinner h2 {
-		font-size: 18px;
-	}
-	#marketblocks .span4 {
+    .textwrapinner h2 {
+        font-size: 18px;
+    }
+    #marketblocks .span4 {
 
-		margin: 15px auto;
-	}
+        margin: 15px auto;
+    }
 
-	.headermenu {
-		top: -12px;
-	}
+    .headermenu {
+        top: -12px;
+    }
 
-	.textwrapinner .pull-left {
-		text-align: center;
-		float: none;
-	}
+    .textwrapinner .pull-left {
+        text-align: center;
+        float: none;
+    }
 
-	#marketblocks .span4 a.submit, #marketblocks .span3 a.submit, #marketblocks .span6 a.submit {
-		width: auto;
-	}
+    #marketblocks .span4 a.submit, #marketblocks .span3 a.submit, #marketblocks .span6 a.submit {
+        width: auto;
+    }
 
-	div.navbar {
-		margin-left: auto;
-	}
+    div.navbar {
+        margin-left: auto;
+    }
 }
 
 
 .forumpost .row.maincontent .left {
-	display: none;
+    display: none;
 }
 
 .forumpost .row.maincontent .content{
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 .mform fieldset.collapsible legend a.fheader {
-	margin-left: 0px;
+    margin-left: 0px;
 }
 
 @media screen and (max-width: 30em) {

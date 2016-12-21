@@ -1,6 +1,6 @@
 <?php
 // This file is part of Moodle - http://moodle.org/
-//http://www.saylor.org/about/mission/
+// http://www.saylor.org/about/mission/
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
@@ -38,7 +38,7 @@ $THEME->name = 'saylor';
 //
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
-$THEME->sheets = array('custom','blocks','menu','course','slider');
+$THEME->sheets = array('custom', 'blocks', 'menu', 'course', 'slider');
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 

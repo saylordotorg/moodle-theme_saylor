@@ -67,7 +67,7 @@ html[xmlns] .slides {display: block;}
 .flex-caption { top: 0px; color: #fff; margin: 0; padding: 55px 0px 0px;
  position: absolute; right: 0; width: 100%; text-align: center;}
 .flex-caption h3 {
-	background: rgba(0,114,180,.7);
+    background: rgba(0,114,180,.7);
     color: #FFF;
     display: inline-block;
     font-size: 5.2em;
@@ -75,13 +75,13 @@ html[xmlns] .slides {display: block;}
     letter-spacing: 1px;
     line-height: 1em;
     margin-bottom: 15px;
-    padding: 10px 25px;	
+    padding: 10px 25px;    
 }
 
 .flex-caption p {margin: 0 0 15px;}
 
 .flex-caption a.submit {
-	display: block;
+    display: block;
     font-size: 2em;
     margin: 5px auto 0;
     max-width: 25%;
@@ -93,17 +93,17 @@ html[xmlns] .slides {display: block;}
 }
 
 #main-slider:hover .flex-caption a.submit {
-	background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.9);
 }
 
 #main-slider {
-	margin: 0px 0px 10px;
+    margin: 0px 0px 10px;
 }
 
 .slides li {
-	position: relative;
+    position: relative;
 }
 
 .flex-control-paging {
-	display: none;
+    display: none;
 }
