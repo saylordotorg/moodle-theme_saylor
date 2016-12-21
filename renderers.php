@@ -22,6 +22,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+// Check the file is being called internally from within Moodle.
+defined('MOODLE_INTERNAL') || die();
+
 //course renderer
 require_once $CFG->dirroot . "/course/renderer.php";
 require_once $CFG->dirroot . "/completion/completion_completion.php";

@@ -28,6 +28,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+// Check the file is being called internally from within Moodle.
+defined('MOODLE_INTERNAL') || die();
+
 /**
  * Parses CSS before it is cached.
  *
