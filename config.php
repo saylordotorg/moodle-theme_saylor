@@ -169,7 +169,7 @@ $THEME->layouts = array(
 
 $THEME->csspostprocess = 'theme_saylor_process_css';
 $THEME->javascripts = array('');
-$THEME->javascripts_footer = array('jquery-3.1.1.min','jquery.flexslider-min','jquery.easing-1.3','custom');
+$THEME->javascripts_footer = array('jquery-3.1.1-min','jquery.flexslider-min','jquery.easing-1.3-min','custom');
 $THEME->blockrtlmanipulations = array(
     'side-pre' => 'side-post',
     'side-post' => 'side-pre'
