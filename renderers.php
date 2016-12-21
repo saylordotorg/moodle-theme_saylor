@@ -557,7 +557,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
 
         // Active course box
         foreach ($courses as $key => $course) {
-            // If moving course, then don't show course which needs to be moved.
+           // If moving course, then don't show course which needs to be moved.
             if ($ismovingcourse && ($course->id == $movingcourseid)) {
                 continue;
             }
@@ -574,98 +574,10 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-
-            $html .= $this->output->box_start('coursebox', "course-{$course->id}");
-            $html .= html_writer::start_tag('div', array('class' => 'course_title'));
-            // If user is editing, then add move icons.
-            if ($userediting && !$ismovingcourse) {
-                $moveicon = html_writer::empty_tag(
-                    'img',
-                    array('src' => $this->pix_url('t/move')->out(false),
-                            'alt' => get_string('movecourse', 'block_course_overview', $course->fullname),
-                    'title' => get_string('move'))
-                );
-                $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
-                $moveurl = html_writer::link($moveurl, $moveicon);
-                $html .= html_writer::tag('div', $moveurl, array('class' => 'move'));
-            }
-
-            // No need to pass title through s() here as it will be done automatically by html_writer.
-            $attributes = array('title' => $course->fullname);
-            if ($course->id > 0) {
-                if (empty($course->visible)) {
-                    $attributes['class'] = 'dimmed';
-                }
-                $courseurl = new moodle_url('/course/view.php', array('id' => $course->id));
-                $coursefullname = format_string(get_course_display_name_for_list($course), true, $course->id);
-                $link = html_writer::link($courseurl, $coursefullname, $attributes);
-                $html .= $this->output->heading($link, 2, 'title');
-            } else {
-                $html .= $this->output->heading(
-                    html_writer::link(
-                        new moodle_url('/auth/mnet/jump.php', array('hostid' => $course->hostid, 'wantsurl' => '/course/view.php?id='.$course->remoteid)),
-                        format_string($course->shortname, true),
-                        $attributes
-                    ) . ' (' . format_string($course->hostname) . ')',
-                    2,
-                    'title'
-                );
-            }
-            $html .= $this->output->box('', 'flush');
-            $html .= html_writer::end_tag('div');
-
-            if (!empty($config->showchildren) && ($course->id > 0)) {
-                // List children here.
-                if ($children = block_course_overview_get_child_shortnames($course->id)) {
-                    $html .= html_writer::tag('span', $children, array('class' => 'coursechildren'));
-                }
-            }
-
-            // If user is moving courses, then down't show overview.
-            if (isset($overviews[$course->id]) && !$ismovingcourse) {
-                $html .= $this->activity_display($course->id, $overviews[$course->id]);
-            }
-
-            if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
-                // List category parent or categories path here.
-                $currentcategory = coursecat::get($course->category, IGNORE_MISSING);
-                if ($currentcategory !== null) {
-                    $html .= html_writer::start_tag('div', array('class' => 'categorypath'));
-                    if ($config->showcategories == BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_FULL_PATH) {
-                        foreach ($currentcategory->get_parents() as $categoryid) {
-                            $category = coursecat::get($categoryid, IGNORE_MISSING);
-                            if ($category !== null) {
-                                $html .= $category->get_formatted_name().' / ';
-                            }
-                        }
-                    }
-                    $html .= $currentcategory->get_formatted_name();
-                    $html .= html_writer::end_tag('div');
-                }
-            }
-
-            $html .= $this->output->box('', 'flush');
-            $html .= $this->output->box_end();
-            $courseordernumber++;
-            if ($ismovingcourse) {
-                $moveurl = new moodle_url(
-                    '/blocks/course_overview/move.php',
-                    array('sesskey' => sesskey(), 'moveto' => $courseordernumber, 'courseid' => $movingcourseid)
-                );
-                $a = new stdClass();
-                $a->movingcoursename = $courses[$movingcourseid]->fullname;
-                $a->currentcoursename = $course->fullname;
-                $movehereicon = html_writer::empty_tag(
-                    'img',
-                    array('src' => $this->output->pix_url('movehere'),
-                            'alt' => get_string('moveafterhere', 'block_course_overview', $a),
-                    'title' => get_string('movehere'))
-                );
-                $moveurl = html_writer::link($moveurl, $movehereicon);
-                $html .= html_writer::tag('div', $moveurl, array('class' => 'movehere'));
-            }
+            $html .= render_completed_courses($course);
         }
 
+        // Separate active/completed course boxes. Should these be in separate divs?
         $html .= html_writer::empty_tag('br', null);
         $html .= html_writer::empty_tag('hr', null);
         $html .= html_writer::empty_tag('br', null);
@@ -692,98 +604,111 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-            $html .= $this->output->box_start('coursebox', "course-{$course->id}");
-            $html .= html_writer::start_tag('div', array('class' => 'course_title'));
-            // If user is editing, then add move icons.
-            if ($userediting && !$ismovingcourse) {
-                $moveicon = html_writer::empty_tag(
-                    'img',
-                    array('src' => $this->pix_url('t/move')->out(false),
-                            'alt' => get_string('movecourse', 'block_course_overview', $course->fullname),
-                    'title' => get_string('move'))
-                );
-                $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
-                $moveurl = html_writer::link($moveurl, $moveicon);
-                $html .= html_writer::tag('div', $moveurl, array('class' => 'move'));
-            }
-
-            // No need to pass title through s() here as it will be done automatically by html_writer.
-            $attributes = array('title' => $course->fullname);
-            if ($course->id > 0) {
-                if (empty($course->visible)) {
-                    $attributes['class'] = 'dimmed';
-                }
-                $courseurl = new moodle_url('/course/view.php', array('id' => $course->id));
-                $coursefullname = format_string(get_course_display_name_for_list($course), true, $course->id);
-                $link = html_writer::link($courseurl, $coursefullname, $attributes);
-                $html .= $this->output->heading($link, 2, 'title');
-            } else {
-                $html .= $this->output->heading(
-                    html_writer::link(
-                        new moodle_url('/auth/mnet/jump.php', array('hostid' => $course->hostid, 'wantsurl' => '/course/view.php?id='.$course->remoteid)),
-                        format_string($course->shortname, true),
-                        $attributes
-                    ) . ' (' . format_string($course->hostname) . ')',
-                    2,
-                    'title'
-                );
-            }
-            $html .= $this->output->box('', 'flush');
-            $html .= html_writer::end_tag('div');
-
-            if (!empty($config->showchildren) && ($course->id > 0)) {
-                // List children here.
-                if ($children = block_course_overview_get_child_shortnames($course->id)) {
-                    $html .= html_writer::tag('span', $children, array('class' => 'coursechildren'));
-                }
-            }
-
-            // If user is moving courses, then down't show overview.
-            if (isset($overviews[$course->id]) && !$ismovingcourse) {
-                $html .= $this->activity_display($course->id, $overviews[$course->id]);
-            }
-
-            if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
-                // List category parent or categories path here.
-                $currentcategory = coursecat::get($course->category, IGNORE_MISSING);
-                if ($currentcategory !== null) {
-                    $html .= html_writer::start_tag('div', array('class' => 'categorypath'));
-                    if ($config->showcategories == BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_FULL_PATH) {
-                        foreach ($currentcategory->get_parents() as $categoryid) {
-                            $category = coursecat::get($categoryid, IGNORE_MISSING);
-                            if ($category !== null) {
-                                $html .= $category->get_formatted_name().' / ';
-                            }
-                        }
-                    }
-                    $html .= $currentcategory->get_formatted_name();
-                    $html .= html_writer::end_tag('div');
-                }
-            }
-
-            $html .= $this->output->box('', 'flush');
-            $html .= $this->output->box_end();
-            $courseordernumber++;
-            if ($ismovingcourse) {
-                $moveurl = new moodle_url(
-                    '/blocks/course_overview/move.php',
-                    array('sesskey' => sesskey(), 'moveto' => $courseordernumber, 'courseid' => $movingcourseid)
-                );
-                $a = new stdClass();
-                $a->movingcoursename = $courses[$movingcourseid]->fullname;
-                $a->currentcoursename = $course->fullname;
-                $movehereicon = html_writer::empty_tag(
-                    'img',
-                    array('src' => $this->output->pix_url('movehere'),
-                            'alt' => get_string('moveafterhere', 'block_course_overview', $a),
-                    'title' => get_string('movehere'))
-                );
-                $moveurl = html_writer::link($moveurl, $movehereicon);
-                $html .= html_writer::tag('div', $moveurl, array('class' => 'movehere'));
-            }
+            $html .= render_completed_courses($course);
         }
 
         // Wrap course list in a div and return.
         return html_writer::tag('div', $html, array('class' => 'course_list'));
+    }
+
+    /**
+     * Renders a course for the coursebox
+     *
+     *
+     * @param  course object $course
+     * @return string HTML fragment
+     */
+    protected function render_course($course) {
+                $html .= $this->output->box_start('coursebox', "course-{$course->id}");
+        $html .= html_writer::start_tag('div', array('class' => 'course_title'));
+        // If user is editing, then add move icons.
+        if ($userediting && !$ismovingcourse) {
+            $moveicon = html_writer::empty_tag(
+                'img',
+                array('src' => $this->pix_url('t/move')->out(false),
+                        'alt' => get_string('movecourse', 'block_course_overview', $course->fullname),
+                'title' => get_string('move'))
+            );
+            $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
+            $moveurl = html_writer::link($moveurl, $moveicon);
+            $html .= html_writer::tag('div', $moveurl, array('class' => 'move'));
+        }
+
+        // No need to pass title through s() here as it will be done automatically by html_writer.
+        $attributes = array('title' => $course->fullname);
+        if ($course->id > 0) {
+            if (empty($course->visible)) {
+                $attributes['class'] = 'dimmed';
+            }
+            $courseurl = new moodle_url('/course/view.php', array('id' => $course->id));
+            $coursefullname = format_string(get_course_display_name_for_list($course), true, $course->id);
+            $link = html_writer::link($courseurl, $coursefullname, $attributes);
+            $html .= $this->output->heading($link, 2, 'title');
+        } else {
+            $html .= $this->output->heading(
+                html_writer::link(
+                    new moodle_url('/auth/mnet/jump.php', array('hostid' => $course->hostid, 'wantsurl' => '/course/view.php?id='.$course->remoteid)),
+                    format_string($course->shortname, true),
+                    $attributes
+                ) . ' (' . format_string($course->hostname) . ')',
+                2,
+                'title'
+            );
+        }
+        $html .= $this->output->box('', 'flush');
+        $html .= html_writer::end_tag('div');
+
+        if (!empty($config->showchildren) && ($course->id > 0)) {
+            // List children here.
+            if ($children = block_course_overview_get_child_shortnames($course->id)) {
+                $html .= html_writer::tag('span', $children, array('class' => 'coursechildren'));
+            }
+        }
+
+        // If user is moving courses, then down't show overview.
+        if (isset($overviews[$course->id]) && !$ismovingcourse) {
+            $html .= $this->activity_display($course->id, $overviews[$course->id]);
+        }
+
+        if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
+            // List category parent or categories path here.
+            $currentcategory = coursecat::get($course->category, IGNORE_MISSING);
+            if ($currentcategory !== null) {
+                $html .= html_writer::start_tag('div', array('class' => 'categorypath'));
+                if ($config->showcategories == BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_FULL_PATH) {
+                    foreach ($currentcategory->get_parents() as $categoryid) {
+                        $category = coursecat::get($categoryid, IGNORE_MISSING);
+                        if ($category !== null) {
+                            $html .= $category->get_formatted_name().' / ';
+                        }
+                    }
+                }
+                $html .= $currentcategory->get_formatted_name();
+                $html .= html_writer::end_tag('div');
+            }
+        }
+
+        $html .= $this->output->box('', 'flush');
+        $html .= $this->output->box_end();
+        $courseordernumber++;
+        if ($ismovingcourse) {
+            $moveurl = new moodle_url(
+                '/blocks/course_overview/move.php',
+                array('sesskey' => sesskey(), 'moveto' => $courseordernumber, 'courseid' => $movingcourseid)
+            );
+            $a = new stdClass();
+            $a->movingcoursename = $courses[$movingcourseid]->fullname;
+            $a->currentcoursename = $course->fullname;
+            $movehereicon = html_writer::empty_tag(
+                'img',
+                array('src' => $this->output->pix_url('movehere'),
+                        'alt' => get_string('moveafterhere', 'block_course_overview', $a),
+                'title' => get_string('movehere'))
+            );
+            $moveurl = html_writer::link($moveurl, $movehereicon);
+            $html .= html_writer::tag('div', $moveurl, array('class' => 'movehere'));
+        }
+
+        return $html;
     }
 }
