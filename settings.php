@@ -32,7 +32,7 @@ defined('MOODLE_INTERNAL') || die;
 
 if ($ADMIN->fulltree) {
     // Invert Navbar to dark background.
-    
+
 
     // Custom CSS file.
     $name = 'theme_saylor/customcss';
@@ -42,7 +42,7 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
-    
+
     // footerline setting
     $name = 'theme_saylor/fsize';
     $title = get_string('fsize', 'theme_saylor');
@@ -50,7 +50,7 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $settings->add($setting);
 
-    //set pictures for frontpage
+    // set pictures for frontpage
     $name = 'theme_saylor/p1';
     $title = get_string('p1', 'theme_saylor');
     $description = get_string('p1desc', 'theme_saylor');
@@ -63,7 +63,7 @@ if ($ADMIN->fulltree) {
     $description = get_string('fpheightdesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $settings->add($setting);
-    
+
      $name = 'theme_saylor/intheight';
     $title = get_string('intheight', 'theme_saylor');
     $description = get_string('intheightdesc', 'theme_saylor');
@@ -71,7 +71,7 @@ if ($ADMIN->fulltree) {
     $settings->add($setting);
 
 
-    //marketing spots
+    // marketing spots
     $name = 'theme_saylor/market1';
     $title = get_string('market1', 'theme_saylor');
     $description = get_string('market1desc', 'theme_saylor');
@@ -100,13 +100,13 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $settings->add($setting);
 
-    //logo
+    // logo
     $name = 'theme_saylor/logo';
     $title = get_string('logo', 'theme_saylor');
     $description = get_string('logodesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
     $settings->add($setting);
-    
+
     // Turn on fluid width
     $name = 'theme_saylor/headeralign';
     $title = get_string('headeralign', 'theme_saylor');
@@ -141,7 +141,7 @@ if ($ADMIN->fulltree) {
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
     $settings->add($setting);
-    
+
     // main color setting
     $name = 'theme_saylor/secondcolor';
     $title = get_string('secondcolor', 'theme_saylor');
@@ -150,7 +150,7 @@ if ($ADMIN->fulltree) {
     $previewconfig = null;
     $setting = new admin_setting_configcolourpicker($name, $title, $description, $default, $previewconfig);
     $settings->add($setting);
-    
+
     // heading color setting
     $name = 'theme_saylor/backcolor';
     $title = get_string('backcolor', 'theme_saylor');
@@ -167,26 +167,26 @@ if ($ADMIN->fulltree) {
     $description = get_string('footnotedesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '');
     $settings->add($setting);
-    
-    //social settings
+
+    // social settings
     $name = 'theme_saylor/socialone';
     $title = get_string('socialone', 'theme_saylor');
     $description = get_string('socialonedesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
     $settings->add($setting);
-    
+
     $name = 'theme_saylor/socialtwo';
     $title = get_string('socialtwo', 'theme_saylor');
     $description = get_string('socialtwodesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
     $settings->add($setting);
-    
+
     $name = 'theme_saylor/socialthree';
     $title = get_string('socialthree', 'theme_saylor');
     $description = get_string('socialthreedesc', 'theme_saylor');
     $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
     $settings->add($setting);
-    
+
     $name = 'theme_saylor/socialfour';
     $title = get_string('socialfour', 'theme_saylor');
     $description = get_string('socialfourdesc', 'theme_saylor');

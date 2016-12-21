@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 // Get the HTML for the settings bits.
-//$html = theme_allyou_get_html_for_settings($OUTPUT, $PAGE);
+// $html = theme_allyou_get_html_for_settings($OUTPUT, $PAGE);
 
 $left = (!right_to_left());  // To know if to add 'pull-right' and 'desktop-first-column' classes in the layout for LTR.
 
@@ -28,7 +28,7 @@ $hasmarket2 = (!empty($PAGE->theme->settings->market2));
 $hasmarket3 = (!empty($PAGE->theme->settings->market3));
 $hasmarket4 = (!empty($PAGE->theme->settings->market4));
 
-//headeralignment
+// headeralignment
 if (empty($PAGE->theme->settings->headeralign)) {
     $headeralign = "0";
 } else {
@@ -86,7 +86,7 @@ echo $OUTPUT->doctype() ?>
 <div class="pull-right socials">
                 <?php
                     echo $OUTPUT->login_info();
-                    //echo $OUTPUT->lang_menu();
+                    // echo $OUTPUT->lang_menu();
                     echo $PAGE->headingmenu;
             ?>    
 </div>
@@ -171,7 +171,7 @@ echo $OUTPUT->doctype() ?>
         
         <div class="clearfix row">
         <?php
-        //echo $html->footnote;
+        // echo $html->footnote;
         echo $OUTPUT->login_info();
         // echo $OUTPUT->home_link();
         echo $OUTPUT->standard_footer_html();

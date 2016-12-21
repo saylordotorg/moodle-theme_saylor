@@ -25,29 +25,27 @@
 // Check the file is being called internally from within Moodle.
 defined('MOODLE_INTERNAL') || die();
 
-//course renderer
+// course renderer
 require_once $CFG->dirroot . "/course/renderer.php";
 require_once $CFG->dirroot . "/completion/completion_completion.php";
 require_once $CFG->dirroot . "/blocks/course_overview/renderer.php";
 
 class theme_saylor_core_renderer extends core_renderer
 {
-    
-    
-    public function user_menu($user = null, $withlinks = null)
-    {
+
+
+    public function user_menu($user = null, $withlinks = null) {
         global $CFG, $USER;
-        
+
         if (is_null($user)) {
             $user = $USER;
         }
-        
+
         $usermenu = new custom_menu('', current_language());
         return $this->render_user_menu($usermenu, $user);
     }
-    
-    protected function render_user_menu(custom_menu $menu, $user)
-    {
+
+    protected function render_user_menu(custom_menu $menu, $user) {
         global $CFG, $USER, $DB, $PAGE;
 
         $addusermenu = true;
@@ -64,13 +62,13 @@ class theme_saylor_core_renderer extends core_renderer
         $addmessagemenu = false;
         }
         */
-         
+
         if (!$CFG->messaging) {
             $addmessagemenu = false;
         } else {
             // Check whether or not the "popup" message output is enabled
             // This is after we check if messaging is enabled to possibly save a DB query
-            $popup = $DB->get_record('message_processors', array('name'=>'popup'));
+            $popup = $DB->get_record('message_processors', array('name' => 'popup'));
             if (!$popup) {
                 $addmessagemenu = false;
             }
@@ -79,7 +77,7 @@ class theme_saylor_core_renderer extends core_renderer
         if ($addmessagemenu) {
             $messages = $this->get_user_messages();
             $messagecount = count($messages);
-            
+
             if ($messagecount == 0) {
                 $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '', new moodle_url('/message/'), get_string('messages', 'message'), 9999);
             } else {
@@ -105,7 +103,6 @@ class theme_saylor_core_renderer extends core_renderer
             }
         }
 
-
         $langs = get_string_manager()->get_list_of_translations();
         if (count($langs) < 2
             or empty($CFG->langmenu)
@@ -120,7 +117,7 @@ class theme_saylor_core_renderer extends core_renderer
         if ($addusermenu) {
             if (isloggedin() && !isguestuser()) {
             } else {
-                //$usermenu = $menu->add('<i class="fa fa-key"></i>' .get_string('login'), new moodle_url('/login/index.php'), get_string('login'), 10001);
+                // $usermenu = $menu->add('<i class="fa fa-key"></i>' .get_string('login'), new moodle_url('/login/index.php'), get_string('login'), 10001);
             }
         }
 
@@ -131,10 +128,9 @@ class theme_saylor_core_renderer extends core_renderer
 
         return $content.'</ul>';
     }
-    
-    
-    protected function process_user_messages()
-    {
+
+
+    protected function process_user_messages() {
 
         $messagelist = array();
 
@@ -155,8 +151,7 @@ class theme_saylor_core_renderer extends core_renderer
         return $messagelist;
     }
 
-    protected function get_user_messages()
-    {
+    protected function get_user_messages() {
         global $USER, $DB;
         $messagelist = array();
 
@@ -189,8 +184,7 @@ class theme_saylor_core_renderer extends core_renderer
         return $messagelist;
     }
 
-    protected function saylor_process_message($message, $state)
-    {
+    protected function saylor_process_message($message, $state) {
         global $DB;
         $messagecontent = new stdClass();
 
@@ -209,14 +203,12 @@ class theme_saylor_core_renderer extends core_renderer
             $messagecontent->date = userdate($message->timecreated, get_string('strftimetime', 'langconfig'));
         }
 
-
         $messagecontent->from = $DB->get_record('user', array('id' => $message->useridfrom));
         $messagecontent->state = $state;
         return $messagecontent;
     }
-    
-    protected function bootstrap_process_message($message)
-    {
+
+    protected function bootstrap_process_message($message) {
         global $DB;
         $messagecontent = new stdClass();
 
@@ -242,19 +234,18 @@ class theme_saylor_core_renderer extends core_renderer
         $messagecontent->from = $DB->get_record('user', array('id' => $message->useridfrom));
         return $messagecontent;
     }
-    //end usermenu
-    
+    // end usermenu
+
     /**
- * @var custom_menu_item language The language menu if created
-*/
+     * @var custom_menu_item language The language menu if created
+     */
     protected $language = null;
 
     /*
      * This renders a notification message.
      * Uses bootstrap compatible html.
      */
-    public function notification($message, $classes = 'notifyproblem')
-    {
+    public function notification($message, $classes = 'notifyproblem') {
         $message = clean_text($message);
         $type = '';
 
@@ -277,8 +268,7 @@ class theme_saylor_core_renderer extends core_renderer
      * This renders the navbar.
      * Uses bootstrap compatible html.
      */
-    public function navbar()
-    {
+    public function navbar() {
         $items = $this->page->navbar->get_items();
         $breadcrumbs = array();
         foreach ($items as $item) {
@@ -296,8 +286,7 @@ class theme_saylor_core_renderer extends core_renderer
      * always shown, even if no menu items are configured in the global
      * theme settings page.
      */
-    public function custom_menu($custommenuitems = '')
-    {
+    public function custom_menu($custommenuitems = '') {
         global $CFG;
 
         if (!empty($CFG->custommenuitems)) {
@@ -312,20 +301,19 @@ class theme_saylor_core_renderer extends core_renderer
      *
      * This renderer is needed to enable the Bootstrap style navigation.
      */
-    protected function render_custom_menu(custom_menu $menu)
-    {
+    protected function render_custom_menu(custom_menu $menu) {
         global $CFG, $USER;
-        
+
         $branchurlB   = new moodle_url('/');
-        //$branch = $menu->add("<i class='fa fa-home'></i>", $branchurlB, "title", -10000);
-        
+        // $branch = $menu->add("<i class='fa fa-home'></i>", $branchurlB, "title", -10000);
+
         if (isloggedin() && !isguestuser()) {
                $mycoursetitle = "My Courses";
-                 $branchtitle ="My Courses";
+                 $branchtitle = "My Courses";
                $branchlabel = ''.$branchtitle;
             $branchurl   = new moodle_url('/my/index.php');
             $branchsort  = 10000;
- 
+
             $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
             if ($courses = enrol_get_my_courses(null, 'fullname ASC')) {
                 foreach ($courses as $course) {
@@ -349,8 +337,6 @@ class theme_saylor_core_renderer extends core_renderer
             }
         }
 
-
-
         // TODO: eliminate this duplicated logic, it belongs in core, not
         // here. See MDL-39565.
         $addlangmenu = true;
@@ -367,10 +353,10 @@ class theme_saylor_core_renderer extends core_renderer
         }
 
         if ($addlangmenu) {
-            //$this->language = $menu->add(get_string('language'), new moodle_url('#'), get_string('language'), 10000);
-            //foreach ($langs as $langtype => $langname) {
+            // $this->language = $menu->add(get_string('language'), new moodle_url('#'), get_string('language'), 10000);
+            // foreach ($langs as $langtype => $langname) {
               // $this->language->add($langname, new moodle_url($this->page->url, array('lang' => $langtype)), $langname);
-            //}
+            // }
         }
 
         $content = '<ul class="nav">';
@@ -385,8 +371,7 @@ class theme_saylor_core_renderer extends core_renderer
      * This code renders the custom menu items for the
      * bootstrap dropdown menu.
      */
-    protected function render_custom_menu_item(custom_menu_item $menunode, $level = 0)
-    {
+    protected function render_custom_menu_item(custom_menu_item $menunode, $level = 0) {
         static $submenucount = 0;
 
         if ($menunode->has_children()) {
@@ -407,7 +392,7 @@ class theme_saylor_core_renderer extends core_renderer
             } else {
                 $url = '#cm_submenu_'.$submenucount;
             }
-            $content .= html_writer::start_tag('a', array('href'=>$url, 'class'=>'dropdown-toggle', 'data-toggle'=>'dropdown', 'title'=>$menunode->get_title()));
+            $content .= html_writer::start_tag('a', array('href' => $url, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown', 'title' => $menunode->get_title()));
             $content .= $menunode->get_text();
             if ($level == 1) {
                 $content .= '<i class="fa fa-caret-down"></i>';
@@ -426,7 +411,7 @@ class theme_saylor_core_renderer extends core_renderer
             } else {
                 $url = '#';
             }
-            $content .= html_writer::link($url, $menunode->get_text(), array('title'=>$menunode->get_title()));
+            $content .= html_writer::link($url, $menunode->get_text(), array('title' => $menunode->get_title()));
         }
         return $content;
     }
@@ -437,8 +422,7 @@ class theme_saylor_core_renderer extends core_renderer
      * @param  tabtree $tabtree
      * @return string
      */
-    protected function render_tabtree(tabtree $tabtree)
-    {
+    protected function render_tabtree(tabtree $tabtree) {
         if (empty($tabtree->subtree)) {
             return '';
         }
@@ -461,11 +445,10 @@ class theme_saylor_core_renderer extends core_renderer
      * @param  tabobject $tabobject
      * @return string HTML fragment
      */
-    protected function render_tabobject(tabobject $tab)
-    {
+    protected function render_tabobject(tabobject $tab) {
         if ($tab->selected or $tab->activated) {
             return html_writer::tag('li', html_writer::tag('a', $tab->text), array('class' => 'active'));
-        } elseif ($tab->inactive) {
+        } else if ($tab->inactive) {
             return html_writer::tag('li', html_writer::tag('a', $tab->text), array('class' => 'disabled'));
         } else {
             if (!($tab->link instanceof moodle_url)) {
@@ -477,10 +460,9 @@ class theme_saylor_core_renderer extends core_renderer
             return html_writer::tag('li', $link);
         }
     }
-    
-    
-    public function saylorblocks($region, $classes = array(), $tag = 'aside')
-    {
+
+
+    public function saylorblocks($region, $classes = array(), $tag = 'aside') {
         $classes = (array)$classes;
         $classes[] = 'block-region';
         $attributes = array(
@@ -505,8 +487,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
      * @param  array $overviews list of course overviews
      * @return string html to be displayed in course_overview block
      */
-    public function course_overview($courses, $overviews)
-    {
+    public function course_overview($courses, $overviews) {
         global $USER;
         $html = '';
         $config = get_config('block_course_overview');
@@ -560,7 +541,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
 
         // Active course box
         foreach ($courses as $key => $course) {
-           // If moving course, then don't show course which needs to be moved.
+            // If moving course, then don't show course which needs to be moved.
             if ($ismovingcourse && ($course->id == $movingcourseid)) {
                 continue;
             }

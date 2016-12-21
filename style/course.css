@@ -46,7 +46,7 @@
 }
 
 .coursebox.panel:hover {
-    
+
 }
 
 .coursebox.panel .panel-body {
@@ -93,14 +93,14 @@
     padding-right: 20px;
     clear: both;
     text-transform: uppercase;
-    
+
     background: #1d9f4a !important;
     box-shadow: -2px 2px 3px #cbcac4;
     color: #005320;
 }
 
 .coursebox .summary {
- 
+
 }
 
 .coursebox .summary p {
@@ -135,7 +135,7 @@
 
 
 @media (max-width: 768px) {
-    
+
 }
 
 .breadcrumb-button .singlebutton div input {

@@ -40,8 +40,7 @@ defined('MOODLE_INTERNAL') || die();
  * @param  theme_config $theme The theme config object.
  * @return string The parsed CSS The parsed CSS.
  */
-function theme_saylor_process_css($css, $theme)
-{
+function theme_saylor_process_css($css, $theme) {
 
     // Set the font size
     if (!empty($theme->settings->fsize)) {
@@ -50,7 +49,7 @@ function theme_saylor_process_css($css, $theme)
         $fsize = null;
     }
     $css = theme_saylor_set_fsize($css, $fsize);
-    
+
     // Set the font size
     if (!empty($theme->settings->fpheight)) {
         $fpheight = $theme->settings->fpheight;
@@ -58,7 +57,7 @@ function theme_saylor_process_css($css, $theme)
         $fpheight = null;
     }
     $css = theme_saylor_set_fpheight($css, $fpheight);
-    
+
     // Set the font size
     if (!empty($theme->settings->intheight)) {
         $intheight = $theme->settings->intheight;
@@ -66,7 +65,7 @@ function theme_saylor_process_css($css, $theme)
         $intheight = null;
     }
     $css = theme_saylor_set_intheight($css, $intheight);
-    
+
     // Set the link color
     if (!empty($theme->settings->linkcolor)) {
         $linkcolor = $theme->settings->linkcolor;
@@ -82,7 +81,7 @@ function theme_saylor_process_css($css, $theme)
         $linkhover = null;
     }
     $css = theme_saylor_set_linkhover($css, $linkhover);
-    
+
     // Set the main color
     if (!empty($theme->settings->maincolor)) {
         $maincolor = $theme->settings->maincolor;
@@ -90,8 +89,7 @@ function theme_saylor_process_css($css, $theme)
         $maincolor = null;
     }
     $css = theme_saylor_set_maincolor($css, $maincolor);
-    
-    
+
      // Set the main color
     if (!empty($theme->settings->secondcolor)) {
         $secondcolor = $theme->settings->secondcolor;
@@ -107,15 +105,13 @@ function theme_saylor_process_css($css, $theme)
         $backcolor = null;
     }
     $css = theme_saylor_set_backcolor($css, $backcolor);
-    
-    
+
     if (!empty($theme->settings->p1)) {
         $p1 = $theme->settings->p1;
     } else {
         $p1 = null;
     }
     $css = saylor_set_pone($css, $p1, $theme);
-    
 
     // Set custom CSS.
     if (!empty($theme->settings->customcss)) {
@@ -124,7 +120,7 @@ function theme_saylor_process_css($css, $theme)
         $customcss = null;
     }
     $css = theme_saylor_set_customcss($css, $customcss);
-    
+
     return $css;
 }
 
@@ -136,8 +132,7 @@ function theme_saylor_process_css($css, $theme)
  * @param  string $customcss The custom CSS to add.
  * @return string The CSS which now contains our custom CSS.
  */
-function theme_saylor_set_customcss($css, $customcss)
-{
+function theme_saylor_set_customcss($css, $customcss) {
     $tag = '[[setting:customcss]]';
     $replacement = $customcss;
     if (is_null($replacement)) {
@@ -149,8 +144,7 @@ function theme_saylor_set_customcss($css, $customcss)
     return $css;
 }
 
-function theme_saylor_set_fsize($css, $fsize)
-{
+function theme_saylor_set_fsize($css, $fsize) {
     $tag = '[[setting:fsize]]';
     $replacement = $fsize;
     if (is_null($replacement)) {
@@ -160,8 +154,7 @@ function theme_saylor_set_fsize($css, $fsize)
     return $css;
 }
 
-function theme_saylor_set_fpheight($css, $fpheight)
-{
+function theme_saylor_set_fpheight($css, $fpheight) {
     $tag = '[[setting:fpheight]]';
     $replacement = $fpheight;
     if (is_null($replacement)) {
@@ -171,8 +164,7 @@ function theme_saylor_set_fpheight($css, $fpheight)
     return $css;
 }
 
-function theme_saylor_set_intheight($css, $intheight)
-{
+function theme_saylor_set_intheight($css, $intheight) {
     $tag = '[[setting:intheight]]';
     $replacement = $intheight;
     if (is_null($replacement)) {
@@ -181,9 +173,8 @@ function theme_saylor_set_intheight($css, $intheight)
     $css = str_replace($tag, $replacement, $css);
     return $css;
 }
- 
-function theme_saylor_set_linkcolor($css, $linkcolor)
-{
+
+function theme_saylor_set_linkcolor($css, $linkcolor) {
     $tag = '[[setting:linkcolor]]';
     $replacement = $linkcolor;
     if (is_null($replacement)) {
@@ -193,8 +184,7 @@ function theme_saylor_set_linkcolor($css, $linkcolor)
     return $css;
 }
 
-function theme_saylor_set_linkhover($css, $linkhover)
-{
+function theme_saylor_set_linkhover($css, $linkhover) {
     $tag = '[[setting:linkhover]]';
     $replacement = $linkhover;
     if (is_null($replacement)) {
@@ -204,8 +194,7 @@ function theme_saylor_set_linkhover($css, $linkhover)
     return $css;
 }
 
-function theme_saylor_set_maincolor($css, $maincolor)
-{
+function theme_saylor_set_maincolor($css, $maincolor) {
     $tag = '[[setting:maincolor]]';
     $replacement = $maincolor;
     if (is_null($replacement)) {
@@ -216,8 +205,7 @@ function theme_saylor_set_maincolor($css, $maincolor)
 }
 
 
-function theme_saylor_set_secondcolor($css, $secondcolor)
-{
+function theme_saylor_set_secondcolor($css, $secondcolor) {
     $tag = '[[setting:secondcolor]]';
     $replacement = $secondcolor;
     if (is_null($replacement)) {
@@ -227,8 +215,7 @@ function theme_saylor_set_secondcolor($css, $secondcolor)
     return $css;
 }
 
-function theme_saylor_set_backcolor($css, $backcolor)
-{
+function theme_saylor_set_backcolor($css, $backcolor) {
     $tag = '[[setting:backcolor]]';
     $replacement = $backcolor;
     if (is_null($replacement)) {
@@ -238,8 +225,7 @@ function theme_saylor_set_backcolor($css, $backcolor)
     return $css;
 }
 
-function saylor_set_pone($css, $p1, $theme)
-{
+function saylor_set_pone($css, $p1, $theme) {
     $tag = '[[setting:bannerpic]]';
     $replacement = $p1;
     if (is_null($replacement)) {
@@ -254,8 +240,7 @@ function saylor_set_pone($css, $p1, $theme)
  *
  * @deprecated since 2.5.1
  */
-function saylor_process_css($css, $theme)
-{
+function saylor_process_css($css, $theme) {
     debugging('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__, DEBUG_DEVELOPER);
     return theme_saylor_process_css($css, $theme);
 }
@@ -265,8 +250,7 @@ function saylor_process_css($css, $theme)
  *
  * @deprecated since 2.5.1
  */
-function saylor_set_customcss($css, $customcss)
-{
+function saylor_set_customcss($css, $customcss) {
     debugging('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__, DEBUG_DEVELOPER);
     return theme_saylor_set_customcss($css, $customcss);
 }
