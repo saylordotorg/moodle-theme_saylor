@@ -1,4 +1,5 @@
-.coursebox > .info > h3.name, .course_category_tree .category > .info .name {
+.coursebox>.info>h3.name,
+.course_category_tree .category>.info .name {
     font-size: 120%;
     font-weight: normal;
     margin: 0;
@@ -10,8 +11,8 @@
 
 .coursebox {
     padding: 0 0;
-    border: 0px;
-    border-radius: 0px;
+    border: 0;
+    border-radius: 0;
 }
 
 .course-content ul li.section.main {
@@ -19,7 +20,8 @@
     padding-top: 5px;
 }
 
-.site-topic ul.section, .course-content ul.section {
+.site-topic ul.section,
+.course-content ul.section {
     margin: 0em 1em;
 }
 
@@ -28,7 +30,7 @@
 }
 
 #searchforums {
-    margin: 5px 0px 5px 5px;
+    margin: 5px 0 5px 5px;
 }
 
 .courses .coursebox {
@@ -45,9 +47,7 @@
     margin-bottom: 25px;
 }
 
-.coursebox.panel:hover {
-
-}
+.coursebox.panel:hover {}
 
 .coursebox.panel .panel-body {
     border: 1px solid #e2e1de !important;
@@ -71,7 +71,7 @@
 
 .coursebox-content h3 {
     text-align: left;
-    margin: 5px 0px 20px;
+    margin: 5px 0 20px;
     font-weight: 700;
 }
 
@@ -81,39 +81,33 @@
     font-size: 1em;
 }
 
-.coursebox-content .teachers, .panel-heading {
+.coursebox-content .teachers,
+.panel-heading {
     display: none;
 }
 
 .panel .coursebtn.submit.btn {
     float: right;
     display: block;
-    margin: 0px 15px 15px;
+    margin: 0 15px 15px;
     padding-left: 20px;
     padding-right: 20px;
     clear: both;
     text-transform: uppercase;
-
     background: #1d9f4a !important;
     box-shadow: -2px 2px 3px #cbcac4;
     color: #005320;
 }
 
-.coursebox .summary {
-
-}
+.coursebox .summary {}
 
 .coursebox .summary p {
     font-size: 16px;
 }
 
-.coursebox:hover .summary p {
+.coursebox:hover .summary p {}
 
-}
-
-.coursebox:hover .summary {
-
-}
+.coursebox:hover .summary {}
 
 .coursebox.panel .fa-chevron-right.fa.glyphicon.glyphicon-arrow-right {
     font-size: 10px;
@@ -133,17 +127,14 @@
     width: 12px;
 }
 
-
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
 
 .breadcrumb-button .singlebutton div input {
     font-size: 11px;
     padding: 3px 10px;
 }
 
-
-.section .label .mod-indent-outer, .section .activity .mod-indent-outer {
-    padding-left: 0px;
+.section .label .mod-indent-outer,
+.section .activity .mod-indent-outer {
+    padding-left: 0;
 }

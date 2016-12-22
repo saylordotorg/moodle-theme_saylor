@@ -10,21 +10,21 @@
     background-color: transparent;
     background-image: none;
     background-repeat: repeat-x;
-    border: 0px solid #D4D4D4;
-    border-radius: 0px 0px 0px 0px;
+    border: 0 solid #D4D4D4;
+    border-radius: 0 0 0 0;
     box-shadow: none;
     min-height: 40px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .lalign .navbar-inner {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .navbar-inner .container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .navbar .nav {
@@ -53,7 +53,7 @@
 background-color:[[setting:maincolor]];
 background-image:none !important;
 background-position: top left !important;
-border-radius: 0px;
+border-radius: 0;
 }
 
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active {
@@ -64,7 +64,7 @@ border-radius: 0px;
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
     background-color: transparent;
     color: #eee;
-    border-bottom: 0px solid #000;
+    border-bottom: 0 solid #000;
 }
 
 .navbar .nav > li > .dropdown-menu:before, .navbar .nav > li > .dropdown-menu:after {
@@ -72,18 +72,18 @@ border-radius: 0px;
 }
 
 .dropdown-menu {
-    border: 0px solid transparent;
-    border-radius: 0px;
+    border: 0 solid transparent;
+    border-radius: 0;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
     font-size: 14px;
-    padding: 0px 0px;
+    padding: 0 0;
     background: #2d343e;
-    border-bottom: 0px solid [[setting:maincolor]];
-    margin-top: 0px;
+    border-bottom: 0 solid [[setting:maincolor]];
+    margin-top: 0;
 }
 
 .nav .dropdown-menu li a {
-    border-bottom: 0px solid #EEEEEE;
+    border-bottom: 0 solid #EEEEEE;
     color: #469dcd;
     font-size: 14px;
     font-weight: 400;

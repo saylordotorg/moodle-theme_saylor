@@ -1,10 +1,12 @@
 /*Mobile App Styling:*/
 
+
 /* match font to website but haven't added link to html pages yet*/
 
 body {
     font-family: 'Lato', sans-serif;
 }
+
 
 /*change background color of header*/
 
@@ -12,155 +14,182 @@ body {
     background-color: #25535E;
 }
 
+
 /* Username on header*/
 
-.bar-side-menu .item-avatar h2.ng-binding{
+.bar-side-menu .item-avatar h2.ng-binding {
     color: #71f083;
     font-weight: 400;
     margin-left: -10px;
 }
 
+
 /* Saylor Academy name on header*/
 
-.bar-side-menu mm-format-text.ng-binding span{
-  color: #F8F7F4;
-  font-weight: 600;
+.bar-side-menu mm-format-text.ng-binding span {
+    color: #F8F7F4;
+    font-weight: 600;
 }
+
 
 /*change color of divider in nav*/
+
 li.item.item-divider {
-  background-color: #ddd;
+    background-color: #ddd;
 }
+
 
 /*Menu text*/
+
 ul.list.dark {
-  font-weight: bold;
+    font-weight: bold;
 }
 
+
 /* Menu + change menu text color*/
+
 a.item {
     color: #666;
     border-color: #ddd;
     background-color: #fafafa;
 }
 
+
 /* Header title for each tab selected*/
+
 .bar-content .title {
-  color: #F8F7F4;
-  font-weight: bold;
+    color: #F8F7F4;
+    font-weight: bold;
 }
-
-
 
 
 /* MY COURSES*/
 
+
 /*title of each course*/
-.item h2, .item .item-heading {
-  color:#469DCC;
-  font-weight: 500;
-  text-align: center;
+
+.item h2,
+.item .item-heading {
+    color: #469DCC;
+    font-weight: 500;
+    text-align: center;
 }
 
 
 /* each text next to icon's font-size*/
-.tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item {
+
+.tabs-icon-left.tabs .tab-item,
+.tabs-icon-left>.tabs .tab-item,
+.tabs-icon-right.tabs .tab-item,
+.tabs-icon-right>.tabs .tab-item {
     font-size: 13px;
 }
 
+
 /*title of each unit and sub-unit ex. 'content'*/
-.item-button-right, a.item.item-button-right, button.item.item-button-right{
-  color: #333;
-  font-size: 1.2em;
+
+.item-button-right,
+a.item.item-button-right,
+button.item.item-button-right {
+    color: #333;
+    font-size: 1.2em;
 }
 
+
 /*color of icons + text*/
-div.item.tabs.tabs-icon-left{
-  color: #555;
-  background-color: #ddd;
+
+div.item.tabs.tabs-icon-left {
+    color: #555;
+    background-color: #ddd;
 }
+
 
 /*ALL SECTIONS*/
 
+
 /* change paragraph*/
+
 .item p {
-  color: #222;
-  font-size: inherit;
-  padding-bottom: 0.3em;
+    color: #222;
+    font-size: inherit;
+    padding-bottom: 0.3em;
 }
 
 
 /* change the ordered list spacing in relation to rest of text in course intro*/
-mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
-  -webkit-padding-start: 30px;
-  color: #444;
+
+mm-format-text ul,
+mm-format-text ol,
+*[mm-format-text] ul,
+*[mm-format-text] ol {
+    -webkit-padding-start: 30px;
+    color: #444;
 }
 
 
 /* style the bullet points*/
+
 ul ul {
-  list-style-position: inside;;
-  list-style-type: circle;
+    list-style-position: inside;
+    ;
+    list-style-type: circle;
 }
 
+
 /*align text & download icons with text */
+
 a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button-right.item-media.item-completion span {
-  display: inline-block;
-  vertical-align: -5px;
+    display: inline-block;
+    vertical-align: -5px;
 }
 
 
 /*MEDIA QUEIRES*/
 
+
 /*mobiles*/
 
 @media screen and (max-width: 30em) {
-  img.mm-media-adapt-width {
-    float: none !important;
-    width: 50%;
-    margin: 2px 25%;
-    padding: : 5px;
-  }
-
-  div.editor-indent {
-    margin: 0 !important;
-  }
-
-  div.item.item-text-wrap {
-    text-align: justify;
-    hyphens: auto;
-  }
-
-  mm-format-text ul, mm-format-text ol, *[mm-format-text] ul, *[mm-format-text] ol {
-    -webkit-padding-start: 2px;
-    position: relative;
-    float: left;
-    margin-left: 1.5px;
-
-  }
-
-  div.no-overflow {
-    text-align: justify;
-    hyphens: auto;
-    font-size: 1.2em;
-    padding-right:10px;
-  }
-
-  div.no-overflow h5 {
-    width: 100%;
-    font-size: inherit;
-  }
-
-  div.no-overflow p {
-    padding: 0px;
-    display: inline-block;
-    width: 100%;
-  }
-
-  div.no-overflow ul {
-    margin-left: 20px;
-    width: 100%;
-    padding: 3px;
-  }
-
+    img.mm-media-adapt-width {
+        float: none !important;
+        width: 50%;
+        margin: 2px 25%;
+        padding: : 5px;
+    }
+    div.editor-indent {
+        margin: 0 !important;
+    }
+    div.item.item-text-wrap {
+        text-align: justify;
+        hyphens: auto;
+    }
+    mm-format-text ul,
+    mm-format-text ol,
+    *[mm-format-text] ul,
+    *[mm-format-text] ol {
+        -webkit-padding-start: 2px;
+        position: relative;
+        float: left;
+        margin-left: 1.5px;
+    }
+    div.no-overflow {
+        text-align: justify;
+        hyphens: auto;
+        font-size: 1.2em;
+        padding-right: 10px;
+    }
+    div.no-overflow h5 {
+        width: 100%;
+        font-size: inherit;
+    }
+    div.no-overflow p {
+        padding: 0px;
+        display: inline-block;
+        width: 100%;
+    }
+    div.no-overflow ul {
+        margin-left: 20px;
+        width: 100%;
+        padding: 3px;
+    }
 }
