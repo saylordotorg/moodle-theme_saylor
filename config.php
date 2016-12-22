@@ -32,11 +32,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'saylor';
-/**
- * The only thing you need to change in this file when copying it to
- * create a new theme is the name above. You also need to change the name
- * in version.php and lang/en/theme_basensl.php as well.
- */
+// The only thing you need to change in this file when copying it to
+// create a new theme is the name above. You also need to change the name
+// in version.php and lang/en/theme_basensl.php as well.
+
 
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
@@ -77,7 +76,7 @@ $THEME->layouts = array(
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
-    // part of course, typical for modules - default page layout if $cm specified in require_login()
+    // part of course, typical for modules - default page layout if $cm specified in require_login().
     'incourse' => array(
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
@@ -127,7 +126,7 @@ $THEME->layouts = array(
         'regions' => array(),
         'options' => array('nofooter' => true, 'nocoursefooter' => true),
     ),
-    // Embeded pages, like iframe/object embeded in moodleform - it needs as much space as possible
+    // Embeded pages, like iframe/object embeded in moodleform - it needs as much space as possible.
     'embedded' => array(
         'file' => 'embedded.php',
         'regions' => array()
