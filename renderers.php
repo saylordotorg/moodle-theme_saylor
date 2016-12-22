@@ -26,9 +26,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 // course renderer
-require_once $CFG->dirroot . "/course/renderer.php";
-require_once $CFG->dirroot . "/completion/completion_completion.php";
-require_once $CFG->dirroot . "/blocks/course_overview/renderer.php";
+require_once($CFG->dirroot . "/course/renderer.php");
+require_once($CFG->dirroot . "/completion/completion_completion.php");
+require_once($CFG->dirroot . "/blocks/course_overview/renderer.php");
 
 class theme_saylor_core_renderer extends core_renderer
 {
@@ -79,9 +79,16 @@ class theme_saylor_core_renderer extends core_renderer
             $messagecount = count($messages);
 
             if ($messagecount == 0) {
-                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '', new moodle_url('/message/'), get_string('messages', 'message'), 9999);
+                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '',
+                    new moodle_url('/message/'),
+                    get_string('messages', 'message'), 9999);
             } else {
-                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '<span id="messagebubble">' . $messagecount . '</span>', new moodle_url('#'), get_string('messages', 'message'), 9999);
+                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' .
+                 get_string('messages', 'message') . '<span id="messagebubble">' . $messagecount .
+                 '</span>',
+                    new moodle_url('#'),
+                    get_string('messages', 'message'),
+                    9999);
             }
             foreach ($messages as $message) {
                 $senderpicture = new user_picture($message->from);
@@ -109,16 +116,6 @@ class theme_saylor_core_renderer extends core_renderer
             or ($this->page->course != SITEID and !empty($this->page->course->lang))
         ) {
             $addlangmenu = false;
-        }
-
-        if ($addlangmenu) {
-        }
-
-        if ($addusermenu) {
-            if (isloggedin() && !isguestuser()) {
-            } else {
-                // $usermenu = $menu->add('<i class="fa fa-key"></i>' .get_string('login'), new moodle_url('/login/index.php'), get_string('login'), 10001);
-            }
         }
 
         $content = '<ul class="usermenu2 nav navbar-nav navbar-right">';
@@ -276,9 +273,9 @@ class theme_saylor_core_renderer extends core_renderer
             $breadcrumbs[] = $this->render($item);
         }
         $divider = '<span class="divider">/</span>';
-        $list_items = '<li>'.join(" $divider</li><li>", $breadcrumbs).'</li>';
+        $listitems = '<li>'.join(" $divider</li><li>", $breadcrumbs).'</li>';
         $title = '<span class="accesshide">'.get_string('pagepath').'</span>';
-        return $title . "<ul class=\"breadcrumb\">$list_items</ul>";
+        return $title . "<ul class=\"breadcrumb\">$listitems</ul>";
     }
 
     /*
@@ -304,8 +301,8 @@ class theme_saylor_core_renderer extends core_renderer
     protected function render_custom_menu(custom_menu $menu) {
         global $CFG, $USER;
 
-        $branchurlB   = new moodle_url('/');
-        // $branch = $menu->add("<i class='fa fa-home'></i>", $branchurlB, "title", -10000);
+        // $branchurlb   = new moodle_url('/');
+        // $branch = $menu->add("<i class='fa fa-home'></i>", $branchurlb, "title", -10000);
 
         if (isloggedin() && !isguestuser()) {
                $mycoursetitle = "My Courses";
@@ -350,13 +347,6 @@ class theme_saylor_core_renderer extends core_renderer
 
         if (!$menu->has_children() && $addlangmenu === false) {
             return '';
-        }
-
-        if ($addlangmenu) {
-            // $this->language = $menu->add(get_string('language'), new moodle_url('#'), get_string('language'), 10000);
-            // foreach ($langs as $langtype => $langname) {
-              // $this->language->add($langname, new moodle_url($this->page->url, array('lang' => $langtype)), $langname);
-            // }
         }
 
         $content = '<ul class="nav">';
@@ -493,7 +483,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
         $config = get_config('block_course_overview');
         if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
             global $CFG;
-            include_once $CFG->libdir.'/coursecatlib.php';
+            include_once($CFG->libdir.'/coursecatlib.php');
         }
         $ismovingcourse = false;
         $courseordernumber = 0;

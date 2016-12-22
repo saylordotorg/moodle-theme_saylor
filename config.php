@@ -33,12 +33,11 @@ defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'saylor';
 /**
-/////////////////////////////////
-// The only thing you need to change in this file when copying it to
-// create a new theme is the name above. You also need to change the name
-// in version.php and lang/en/theme_basensl.php as well.
-//////////////////////////////////
-*/
+ * The only thing you need to change in this file when copying it to
+ * create a new theme is the name above. You also need to change the name
+ * in version.php and lang/en/theme_basensl.php as well.
+ */
+
 $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
 $THEME->sheets = array('custom', 'blocks', 'menu', 'course', 'slider');
@@ -169,7 +168,7 @@ $THEME->layouts = array(
 
 $THEME->csspostprocess = 'theme_saylor_process_css';
 $THEME->javascripts = array('');
-$THEME->javascripts_footer = array('jquery-3.1.1-min','jquery.flexslider-min','jquery.easing-1.3-min','custom');
+$THEME->javascripts_footer = array('jquery-3.1.1-min', 'jquery.flexslider-min', 'jquery.easing-1.3-min', 'custom');
 $THEME->blockrtlmanipulations = array(
     'side-pre' => 'side-post',
     'side-post' => 'side-pre'
