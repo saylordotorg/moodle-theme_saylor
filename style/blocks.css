@@ -1,12 +1,12 @@
 .block {
-    border: 0 solid #ccc;
-    padding: 0 0;
-    box-shadow: none;
     background: transparent;
-    border-radius: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    padding-bottom: 10px;
     background-size: 80% auto;
+    border: 0 solid #ccc;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 0;
+    padding-bottom: 10px;
 }
 
 .block .header {
@@ -20,20 +20,18 @@
 /* block titles */
 
 .block .header .title h2 {
-    font-weight: normal;
+    color: #173140;
+    font-size: 1.15em;
+    font-weight: 700;
     margin: 0 0;
     padding: 0 0;
     text-transform: none;
-    font-size: 1.15em;
-    color: #173140;
-    margin: 0 0;
-    font-weight: 700;
 }
 
 .block .content {
-    padding: 20px 0;
-    font-weight: normal;
     font-size: 90%:
+    font-weight: normal;
+    padding: 20px 0;
 }
 
 .block .content a {}
@@ -51,17 +49,17 @@
 
 .block.firstblock {
     background: [[setting: secondcolor]] url([[pix:theme|firstblock]]) repeat-x top left;
+    border: 1px solid [[setting: secondcolor]];
+    border-radius: 3px;
     padding: 10px 5px;
     width: auto;
-    border: 1px solid [[setting: secondcolor]];
-    -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
 .block.firstblock .title h2 {
-    text-shadow: 1px 1px 1px [[setting: secondcolor]];
     padding-left: 10px;
+    text-shadow: 1px 1px 1px [[setting: secondcolor]];
 }
 
 .block.firstblock .title h2,
@@ -127,8 +125,8 @@
 /*quiz editing block header */
 
 #page-mod-quiz-edit .questionbankwindow div.header {
-    background-color: #eee;
     color: inherit;
+    background-color: #eee;
 }
 
 #page-mod-quiz-edit .questionbankwindow div.header a {
