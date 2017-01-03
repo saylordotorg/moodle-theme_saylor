@@ -152,7 +152,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
     img.mm-media-adapt-width {
         float: none !important;
         margin: 2px 25%;
-        padding: : 5px;
+        padding: 5px;
         width: 50%;
     }
     div.editor-indent {
@@ -170,7 +170,6 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
         margin-left: 1.5px;
         position: relative;        
         -webkit-padding-start: 2px;
-
     }
     div.no-overflow {
         font-size: 1.2em;
@@ -184,7 +183,7 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
     }
     div.no-overflow p {
         display: inline-block;
-        padding: 0px;
+        padding: 0;
         width: 100%;
     }
     div.no-overflow ul {
