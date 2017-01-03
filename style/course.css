@@ -23,7 +23,7 @@
 
 .site-topic ul.section,
 .course-content ul.section {
-    margin: 0em 1em;
+    margin: 0 1em;
 }
 
 #newdiscussionform {
@@ -47,8 +47,6 @@
     margin-bottom: 25px;
     position: relative;
 }
-
-.coursebox.panel:hover {}
 
 .coursebox.panel .panel-body {
     background: #e2e1de !important;
@@ -101,15 +99,10 @@
     
 }
 
-.coursebox .summary {}
-
 .coursebox .summary p {
     font-size: 16px;
 }
 
-.coursebox:hover .summary p {}
-
-.coursebox:hover .summary {}
 
 .coursebox.panel .fa-chevron-right.fa.glyphicon.glyphicon-arrow-right {
     font-size: 10px;
