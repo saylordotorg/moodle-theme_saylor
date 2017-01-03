@@ -1,11 +1,11 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
     background: #f8f7f4;
     color: #173140;
     font-size: 95%;
     line-height: normal;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -88,12 +88,12 @@ h2.main,
 #frontpage-course-list h2,
 #frontpage-category-names h2,
 #frontpage-category-combo h2 {
+    border-bottom: 0 solid #eee;
     color: #173140;
     font-size: 30px;
     font-weight: normal;
-    text-transform: none;
-    border-bottom: 0 solid #eee;
     margin-bottom: 15px;
+    text-transform: none;
 }
 
 #page {
@@ -120,9 +120,9 @@ h2.main,
 #page-header {
     border-bottom: 0 solid #ccc;
     clear: both;
+    height: 75px;
     margin-bottom: 0;
     position: relative;
-    height: 75px;
 }
 
 #page-site-index #page-header {
@@ -132,14 +132,14 @@ h2.main,
 #page-header,
 #page-content,
 .container {
+    margin: 0 auto;
     max-width: 2200px;
     width: 90%;
-    margin: 0 auto;
 }
 
 #logo {
-    float: none;
     display: block;
+    float: none;
     margin: 0 auto;
 }
 
@@ -148,19 +148,19 @@ h2.main,
 }
 
 #page-header .logo-img {
-    height: 89px;
-    display: block;
-    background-repeat: no-repeat;
     background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 89px; 
 }
 
 #page-header .logo-div {
     background-repeat: no-repeat;
     float: left;
+    height: 75px;
+    max-width: 357px;
     min-width: 26%;
     width: 26%;
-    max-width: 357px;
-    height: 75px;
 }
 
 .lalign #logo {
@@ -168,11 +168,11 @@ h2.main,
 }
 
 #main-slider {
+    background: url([[setting:bannerpic]]) no-repeat top left;
+    background-size: cover;
     height: [[setting: intheight]]px;
     overflow: hidden;
     position: relative;
-    background: url([[setting:bannerpic]]) no-repeat top left;
-    background-size: cover;
     width: 100%;
 }
 
@@ -190,24 +190,24 @@ h2.main,
 }
 
 .headermenu {
-    float: right;
-    padding-top: 20px;
-    font-size: 80%;
     color: #ccc;
+    float: right;
+    font-size: 80%;
+    max-width: 40%;
+    padding-top: 20px;
     right: 0;
     top: 0;
-    max-width: 40%;
 }
 
 #page-footer {
     background: #003744;
+    border-top: 0;
+    color: #fff;
+    font-size: .83em;
     margin: 10px auto 0;
     padding: 60px 0 40px;
     text-align: left;
-    color: #fff;
-    border-top: 0;
-    font-size: .83em;
-}
+}    
 
 #page-footer p {
     line-height: 20px;
@@ -235,9 +235,9 @@ h2.main,
 }
 
 #page-footer ul.footer-nav a {
-    padding-bottom: 0;
     display: inline-block;
     line-height: 30px;
+    padding-bottom: 0;
 }
 
 #page-footer ul {
@@ -247,10 +247,10 @@ h2.main,
 }
 
 #page-footer .logo {
-    height: 150px;
-    display: block;
     background-repeat: no-repeat;
     background-position: center top;
+    display: block;
+    height: 150px;
     margin-top: 4px;
 }
 
@@ -283,26 +283,26 @@ h2.main,
 #navwrap {
     background-color: #898989;
     color: #fff;
+    margin-bottom: 30px;
     padding: 1em 0;
     text-transform: uppercase;
-    margin-bottom: 30px;
 }
 
 #page-navbar {
-    margin: 0 auto;
     background: transparent;
     border-bottom: 0 solid #dadada;
+    margin: 0 auto;
 }
 
 .breadcrumb {
-    padding: 0 0 0;
-    margin: 0 0;
     background: transparent;
-    font-size: 13px;
-    text-transform: uppercase;
-    text-shadow: none;
     color: #fff;
     color: #70f083;
+    font-size: 13px;
+    margin: 0 0;
+    padding: 0 0 0;
+    text-shadow: none;
+    text-transform: uppercase;
 }
 
 .breadcrumb a {
@@ -336,9 +336,9 @@ h2.main,
 #page-footer a {}
 
 #page-footer .logininfo {
-    margin: 10px auto 0;
-    font-size: 90%;
     clear: both;
+    font-size: 90%;
+    margin: 10px auto 0;
     text-align: right;
 }
 
@@ -352,8 +352,8 @@ h2.main,
 }
 
 #page-footer #logo {
-    width: 150px;
     height: 153px;
+    width: 150px;
 }
 
 #page-footer ol,
@@ -363,14 +363,14 @@ h2.main,
 }
 
 #page-header .socials {
-    font-size: 15px;
-    padding-top: 0;
-    text-align: right;
     color: #70f083;
+    font-size: 15px;
     font-weight: 600;
+    padding-top: 0;
     position: absolute;
-    top: -5px;
     right: 0;
+    text-align: right;
+    top: -5px;
 }
 
 #page-header .socials a {
@@ -387,28 +387,28 @@ h2.main,
 
 #notice,
 .redirectmessage2 {
-    text-align: center;
     border-color: #e5e5e5;
-    padding: 5px;
+    padding: 5px;    
+    text-align: center;
 }
 
 .pagelayout-redirect #content {
-    width: 60%;
     background: #fff;
+    border: 1px solid #dadada;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
     margin: 20px auto;
     padding: 1em;
-    border: 1px solid #dadada;
+    width: 60%;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 
 div.redirectmessage {
-    width: 60%;
-    margin: 10px auto 0 auto;
+    background: #fff url([[pix:theme|ajax-loader]]) no-repeat 50% 95%;
     border: 0 solid transparent;
     font-size: 13px;
-    background: #fff url([[pix:theme|ajax-loader]]) no-repeat 50% 95%;
+    margin: 10px auto 0 auto;
     padding: 20px 20px 40px;
+    width: 60%;
 }
 
 
@@ -420,33 +420,34 @@ input[type="button"],
 a.submit,
 #accessibility_controls #block_accessibility_launchtoolbar {
     background: #5cb85c !important;
-    border: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 3px;
     background-size: 100% 200%;
-    text-shadow: none;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 -1.3px 0 0 rgba(0, 0, 0, 0.1) inset;
     color: #fff;
     cursor: pointer;
     font-weight: 600;
-    padding: 7px 25px 8px;
-    box-shadow: 0 -1.3px 0 0 rgba(0, 0, 0, 0.1) inset;
+    padding: 7px 25px 8px;  
+    text-shadow: none;
+    transition: background .2s ease-out;
     -webkit-transition: background .2s ease-out;
     -moz-transition: background .2s ease-out;
     -ie-transition: background .2s ease-out;
     -o-transition: background .2s ease-out;
-    transition: background .2s ease-out;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
 }
 
 input[type="submit"]:hover,
 input[type="button"]:hover,
 #searchform_button:hover,
 a.submit:hover {
-    background-position: 0 -100%;
-    text-decoration: none !important;
-    color: #fff;
     background-color: [[setting: maincolor]] !important;
+    background-position: 0 -100%;
     box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+    color: #fff;
+    text-decoration: none !important;
+
 }
 
 #marketblocks {
@@ -456,18 +457,19 @@ a.submit:hover {
 #marketblocks .span4,
 #marketblocks .span3,
 #marketblocks .span6 {
+    background: transparent; 
     border: 0 solid #ccc;
     min-height: 220px;
     margin-bottom: 15px;
     margin-top: 15px;
-    background: transparent position: relative;
+    position: relative;
     z-index: 90;
 }
 
 .internalmarket {
     padding: 10px 0 0;
-    text-align: center;
     position: relative;
+    text-align: center;
 }
 
 .internalmarket .fa {
@@ -482,12 +484,12 @@ a.submit:hover {
 #marketblocks .span4 h3,
 #marketblocks .span3 h3,
 #marketblocks .span6 h3 {
-    color: [[setting: maincolor]];
-    font-size: 1.6em;
-    display: block;
-    text-align: center;
-    margin: 0 0;
     border-bottom: 0 solid [[setting: maincolor]];
+    color: [[setting: maincolor]];
+    display: block;
+    font-size: 1.6em;
+    margin: 0 0;
+    text-align: center;
 }
 
 #marketblocks .span4 a.submit,
@@ -498,44 +500,44 @@ a.submit:hover {
 }
 
 .ribbon-wrapper-green {
-    width: 85px;
+    display: none;
     height: 88px;
     overflow: hidden;
     position: absolute;
-    top: -3px;
     right: -3px;
-    display: none;
+    top: -3px;
+    width: 85px;
 }
 
 .ribbon-green {
+    background-color: [[setting: maincolor]];
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    color: #333;    
     display: none;
     font: bold 15px Sans-Serif;
-    color: #333;
-    text-align: center;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    position: relative;
-    padding: 7px 0;
     left: -5px;
+    padding: 7px 0;
+    position: relative;
+    text-align: center;
     top: 15px;
     width: 120px;
-    background-color: [[setting: maincolor]];
-    color: #fff;
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(45deg);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-transform: rotate(45deg);    
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+
 }
 
 .ribbon-green:before,
 .ribbon-green:after {
-    content: "";
     border-top: 3px solid [[setting: maincolor]];
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
-    position: absolute;
     bottom: -3px;
+    content: "";
+    position: absolute;
 }
 
 .ribbon-green:before {
@@ -549,9 +551,8 @@ a.submit:hover {
 .forumpost {
     background-color: rgba(255, 255, 255, .4);
     border: 1px solid #CCCCCC;
-    border-radius: 0;
-    box-shadow: none;
     border-radius: 3px;
+    box-shadow: none;
 }
 
 .forumpost .picture img {
@@ -587,8 +588,8 @@ input[type="color"],
 }
 
 .loginbox.onecolumn .loginform {
-    max-width: 500px;
     margin: 0 auto;
+    max-width: 500px;
 }
 
 .loginbox.onecolumn .loginform .form-label {
@@ -618,9 +619,9 @@ input[type="color"],
     }
     #page-header .socials {
         float: none;
-        text-align: center;
         padding: 5px 0;
         position: relative;
+        text-align: center;
     }
 }
 
@@ -637,12 +638,12 @@ input[type="color"],
         float: none;
         margin: 0 auto 10px;
         margin-bottom: 15px !important;
-        width: 65%;
         max-width: 301px;
+        width: 65%;
     }
     .navbar.pull-left {
-        margin-top: 10px;
         margin-left: 0;
+        margin-top: 10px;
     }
     .navbar .btn-navbar {
         display: block;
@@ -651,10 +652,10 @@ input[type="color"],
         width: 20px;
     }
     .headermenu {
+        clear: both;
         float: none;
         padding: 10px 0 0;
         text-align: center;
-        clear: both;
     }
     .flex-caption a.submit {
         display: block;
@@ -687,12 +688,12 @@ input[type="color"],
 
 @media (max-width: 520px) {
     #page-header .logo-div {
-        float: none;
-        width: 95%;
-        max-width: 301px;
-        margin-left: 0;
         display: block;
+        float: none;
         margin: 0 auto 10px;
+        margin-left: 0;
+        max-width: 301px;
+        width: 95%;
     }
     .textwrapinner h2 {
         font-size: 18px;
@@ -704,8 +705,8 @@ input[type="color"],
         top: -12px;
     }
     .textwrapinner .pull-left {
-        text-align: center;
         float: none;
+        text-align: center;
     }
     #marketblocks .span4 a.submit,
     #marketblocks .span3 a.submit,
@@ -732,44 +733,44 @@ input[type="color"],
 @media screen and (max-width: 30em) {
     img.mm-media-adapt-width {
         float: none !important;
-        width: 50%;
         margin: 2px 25%;
         padding: : 5px;
+        width: 50%;
     }
     div.editor-indent {
         margin: 0 !important;
     }
     div.item.item-text-wrap {
-        text-align: justify;
         hyphens: auto;
+        text-align: justify;
     }
     mm-format-text ul,
     mm-format-text ol,
     *[mm-format-text] ul,
     *[mm-format-text] ol {
-        -webkit-padding-start: 2px;
-        position: relative;
         float: left;
         margin-left: 1.5px;
+        position: relative;
+        -webkit-padding-start: 2px;
     }
     div.no-overflow {
-        text-align: justify;
-        hyphens: auto;
         font-size: 1.2em;
+        hyphens: auto;
+        text-align: justify;
     }
     div.no-overflow h5 {
-        width: 100%;
         font-size: inherit;
+        width: 100%;
     }
     div.no-overflow p {
-        padding: 0;
         display: inline-block;
+        padding: 0;
         width: 100%;
     }
     div.no-overflow ul {
         margin-left: 20px;
-        width: 100%;
         padding: 3px;
+        width: 100%;
     }
 }
 
@@ -796,20 +797,20 @@ div.guestsub {
 
 /*** Adjusts sizing for images and descriptions in course catalog ***/
 .coursebox .content .summary {
-  width: 85%;
+    width: 85%;
 }
 
 .coursebox .content .courseimage {
-  width: 10%;
+    width: 10%;
 }
 
 @media (max-width: 1200px) {
   .coursebox .content .summary {
-  width: 100%;
+    width: 100%;
 }
 
 .coursebox .content .courseimage {
-  display: none;
+    display: none;
 }
 }
 
