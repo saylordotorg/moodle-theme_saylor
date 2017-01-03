@@ -10,9 +10,10 @@
 .slides,
 .flex-control-nav,
 .flex-direction-nav {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
+
 }
 
 
@@ -33,8 +34,8 @@
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 
 .flexslider .slides img {
-    width: 100%;
     display: block;
+    width: 100%;
 }
 
 .flex-pauseplay span {
@@ -45,12 +46,12 @@
 /* Clearfix for the .slides element */
 
 .slides:after {
-    content: ".";
-    display: block;
     clear: both;
-    visibility: hidden;
-    line-height: 0;
+    content: ".";
+    display: block;    
     height: 0;
+    line-height: 0;
+    visibility: hidden;
 }
 
 html[xmlns] .slides {
@@ -77,8 +78,8 @@ html[xmlns] .slides {
 *********************************/
 
 .flexslider {
+    background: #fff;    
     margin: 0;
-    background: #fff;
     position: relative;
     zoom: 1;
 }
@@ -102,33 +103,34 @@ html[xmlns] .slides {
 /* Direction Nav */
 
 .flex-direction-nav a {
-    width: 30px;
-    height: 100%;
+    cursor: pointer;
     display: block;
+    height: 100%;
+    opacity: 0;
     position: absolute;
     top: 0%;
-    cursor: pointer;
     text-indent: -9999px;
-    opacity: 0;
     -webkit-transition: all .3s ease;
+    width: 30px;
+
 }
 
 .flex-direction-nav .flex-next {
-    height: 30px;
-    width: 25px;
-    top: 46%;
     background: rgba(255, 255, 255, .9) url([[pix:theme|next]]) no-repeat 50% 50%;
-    right: 0;
+    height: 30px;    
     opacity: .5;
+    right: 0;
+    top: 46%;
+    width: 25px;
 }
 
 .flex-direction-nav .flex-prev {
-    height: 30px;
-    width: 25px;
-    top: 46%;
     background: rgba(255, 255, 255, .9) url([[pix:theme|previous]]) no-repeat 50% 50%;
+    height: 30px;
     left: 0;
     opacity: .5;
+    top: 46%;
+    width: 25px;
 }
 
 .flexslider:hover .flex-next {
@@ -148,9 +150,9 @@ html[xmlns] .slides {
 }
 
 .flex-direction-nav .disabled {
-    opacity: .3!important;
-    filter: alpha(opacity=30);
     cursor: default;
+    filter: alpha(opacity=30);
+    opacity: .3 !important;
 }
 
 
@@ -182,32 +184,34 @@ html[xmlns] .slides {
 /* Control Nav */
 
 .flex-control-nav {
-    width: 100%;
-    position: absolute;
     bottom: 10px;
+    position: absolute;
     text-align: center;
+    width: 100%;
 }
 
 .flex-control-nav li {
-    margin: 0 4px;
     display: inline-block;
-    zoom: 1;
     *display: inline;
+    margin: 0 4px;
+    zoom: 1;
+
 }
 
 .flex-control-paging li a {
-    width: 8px;
-    height: 8px;
-    display: block;
     background: #666;
     background: rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    text-indent: -9999px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
     border-radius: 20px;
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: block;
+    height: 8px;
+    text-indent: -9999px;
+    width: 8px;
+    -o-border-radius: 20px;    
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+
 }
 
 .flex-control-paging li a:hover {
@@ -223,21 +227,21 @@ html[xmlns] .slides {
 
 .flex-control-thumbs {
     margin: 5px 0 0;
-    position: static;
     overflow: hidden;
+    position: static;
 }
 
 .flex-control-thumbs li {
-    width: 25%;
     float: left;
     margin: 0;
+    width: 25%;
 }
 
 .flex-control-thumbs img {
-    width: 100%;
+    cursor: pointer;    
     display: block;
     opacity: .7;
-    cursor: pointer;
+    width: 100%;
 }
 
 .flex-control-thumbs img:hover {
@@ -245,8 +249,8 @@ html[xmlns] .slides {
 }
 
 .flex-control-thumbs .active {
-    opacity: 1;
     cursor: default;
+    opacity: 1;
 }
 
 
@@ -257,8 +261,8 @@ html[xmlns] .slides {
 
 .flex-caption {
     background: none;
-    -ms-filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endColorstr=#4C000000);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endColorstr=#4C000000);
+    -ms-filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endColorstr=#4C000000);
     zoom: 1;
 }
 
@@ -290,15 +294,15 @@ html[xmlns] .slides {
 }
 
 .flex-caption a.submit {
+    background: rgba(255, 255, 255, .6) !important;   
+    border: 2px solid #000;
+    color: #000;
     display: block;
     font-size: 2em;
     margin: 5px auto 0;
     max-width: 25%;
     padding: 15px 0;
     text-transform: uppercase;
-    border: 2px solid #000;
-    background: rgba(255, 255, 255, .6) !important;
-    color: #000;
 }
 
 #main-slider:hover .flex-caption a.submit {
