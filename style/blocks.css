@@ -125,8 +125,8 @@
 /*quiz editing block header */
 
 #page-mod-quiz-edit .questionbankwindow div.header {
-    color: inherit;
     background-color: #eee;
+    color: inherit;
 }
 
 #page-mod-quiz-edit .questionbankwindow div.header a {
