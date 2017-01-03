@@ -10,9 +10,10 @@
 }
 
 .coursebox {
-    padding: 0 0;
     border: 0;
     border-radius: 0;
+    padding: 0 0;
+
 }
 
 .course-content ul li.section.main {
@@ -43,25 +44,25 @@
 }
 
 .coursebox.panel {
-    position: relative;
     margin-bottom: 25px;
+    position: relative;
 }
 
 .coursebox.panel:hover {}
 
 .coursebox.panel .panel-body {
-    border: 1px solid #e2e1de !important;
     background: #e2e1de !important;
+    border: 1px solid #e2e1de !important;
+    border-radius: 5px;
     overflow: hidden;
     position: relative;
-    border-radius: 5px;
 }
 
 .cimbox {
-    height: 125px;
-    position: relative;
-    margin-right: -1px;
     display: none;
+    height: 125px;
+    margin-right: -1px;
+    position: relative;
 }
 
 .coursebox-content {
@@ -70,15 +71,15 @@
 }
 
 .coursebox-content h3 {
-    text-align: left;
-    margin: 5px 0 20px;
     font-weight: 700;
+    margin: 5px 0 20px;
+    text-align: left;
 }
 
 .coursebox-content h3 a {
     color: #469dcd;
-    font-weight: 700;
     font-size: 1em;
+    font-weight: 700;
 }
 
 .coursebox-content .teachers,
@@ -87,16 +88,17 @@
 }
 
 .panel .coursebtn.submit.btn {
-    float: right;
+    background: #1d9f4a !important;
+    box-shadow: -2px 2px 3px #cbcac4;
+    clear: both;
+    color: #005320;    
     display: block;
+    float: right;
     margin: 0 15px 15px;
     padding-left: 20px;
     padding-right: 20px;
-    clear: both;
     text-transform: uppercase;
-    background: #1d9f4a !important;
-    box-shadow: -2px 2px 3px #cbcac4;
-    color: #005320;
+    
 }
 
 .coursebox .summary {}
@@ -118,8 +120,8 @@
 }
 
 .coursebox .enrolmenticons {
-    float: none;
     display: inline-block;
+    float: none;
     padding-left: 10px;
 }
 
