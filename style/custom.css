@@ -64,10 +64,10 @@ a:active {
     text-decoration: underline;
 }
 
-a:active {
+/*a:active {
     outline: 0;
-    /* for browsers that understand */
-}
+     for browsers that understand 
+}*/
 
 a:focus {
     outline: 0;
@@ -106,7 +106,7 @@ h2.main,
     box-shadow: none;
 }
 
-.used-region-side-pre #region-main {}
+
 
 #padder {
     padding: 10px 0;
@@ -247,8 +247,8 @@ h2.main,
 }
 
 #page-footer .logo {
-    background-repeat: no-repeat;
     background-position: center top;
+    background-repeat: no-repeat;
     display: block;
     height: 150px;
     margin-top: 4px;
@@ -333,7 +333,7 @@ h2.main,
     display: none;
 }
 
-#page-footer a {}
+
 
 #page-footer .logininfo {
     clear: both;
@@ -395,11 +395,11 @@ h2.main,
 .pagelayout-redirect #content {
     background: #fff;
     border: 1px solid #dadada;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
     margin: 20px auto;
     padding: 1em;
     width: 60%;
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);    
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 
 div.redirectmessage {
@@ -422,7 +422,6 @@ a.submit,
     background: #5cb85c !important;
     background-size: 100% 200%;
     border: 0;
-    border-radius: 3px;
     box-shadow: 0 -1.3px 0 0 rgba(0, 0, 0, 0.1) inset;
     color: #fff;
     cursor: pointer;
@@ -430,12 +429,13 @@ a.submit,
     padding: 7px 25px 8px;  
     text-shadow: none;
     transition: background .2s ease-out;
-    -webkit-transition: background .2s ease-out;
+    -ie-transition: background .2s ease-out;    
+    -moz-border-radius: 0;
     -moz-transition: background .2s ease-out;
-    -ie-transition: background .2s ease-out;
     -o-transition: background .2s ease-out;
     -webkit-border-radius: 0;
-    -moz-border-radius: 0;
+    border-radius: 3px;
+    -webkit-transition: background .2s ease-out;
 }
 
 input[type="submit"]:hover,
@@ -459,9 +459,9 @@ a.submit:hover {
 #marketblocks .span6 {
     background: transparent; 
     border: 0 solid #ccc;
-    min-height: 220px;
     margin-bottom: 15px;
     margin-top: 15px;
+    min-height: 220px;
     position: relative;
     z-index: 90;
 }
@@ -511,7 +511,6 @@ a.submit:hover {
 
 .ribbon-green {
     background-color: [[setting: maincolor]];
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     color: #333;    
     display: none;
     font: bold 15px Sans-Serif;
@@ -521,20 +520,20 @@ a.submit:hover {
     text-align: center;
     top: 15px;
     width: 120px;
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    -webkit-transform: rotate(45deg);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     -moz-transform: rotate(45deg);    
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);    
+    -webkit-transform: rotate(45deg);
 }
 
 .ribbon-green:before,
 .ribbon-green:after {
-    border-top: 3px solid [[setting: maincolor]];
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
+    border-top: 3px solid [[setting: maincolor]];
     bottom: -3px;
     content: "";
     position: absolute;
@@ -734,7 +733,7 @@ input[type="color"],
     img.mm-media-adapt-width {
         float: none !important;
         margin: 2px 25%;
-        padding: : 5px;
+        padding: 5px;
         width: 50%;
     }
     div.editor-indent {
@@ -818,4 +817,4 @@ div.guestsub {
 /* Custom CSS Settings
 -------------------------*/
 
-[[setting:customcss]]
+    [[setting:customcss]]
