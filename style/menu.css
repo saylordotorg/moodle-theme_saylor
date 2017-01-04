@@ -34,8 +34,8 @@
 
 .navbar .nav > li > a {
     color: #fff;
-    font-weight: 200;
     font-size: 24px;
+    font-weight: 200;
     padding: 15px 18px 15px;
     text-decoration: none;
     text-shadow: none;
@@ -58,8 +58,8 @@
 }
 
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-    background-image: none !important;
     background-color: #333 !important;
+    background-image: none !important;
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
