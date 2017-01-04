@@ -108,11 +108,10 @@ html[xmlns] .slides {
     height: 100%;
     opacity: 0;
     position: absolute;
-    top: 0%;
     text-indent: -9999px;
-    -webkit-transition: all .3s ease;
+    top: 0;
     width: 30px;
-
+    -webkit-transition: all .3s ease;
 }
 
 .flex-direction-nav .flex-next {
@@ -201,17 +200,16 @@ html[xmlns] .slides {
 .flex-control-paging li a {
     background: #666;
     background: rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     display: block;
     height: 8px;
     text-indent: -9999px;
     width: 8px;
-    -o-border-radius: 20px;    
+    -o-border-radius: 20px; 
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
-
+    border-radius: 20px;
 }
 
 .flex-control-paging li a:hover {
@@ -267,14 +265,14 @@ html[xmlns] .slides {
 }
 
 .flex-caption {
-    top: 0;
     color: #fff;
     margin: 0;
     padding: 55px 0 0;
     position: absolute;
     right: 0;
-    width: 100%;
     text-align: center;
+    top: 0;
+    width: 100%;
 }
 
 .flex-caption h3 {
