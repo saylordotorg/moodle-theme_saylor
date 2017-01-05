@@ -548,7 +548,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-            $html .= render_completed_courses($course);
+            $html .= render_course($course);
         }
 
         // Separate active/completed course boxes. Should these be in separate divs?
@@ -578,7 +578,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-            $html .= render_completed_courses($course);
+            $html .= render_courses=($course);
         }
 
         // Wrap course list in a div and return.
