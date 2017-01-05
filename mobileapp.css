@@ -165,11 +165,11 @@ a.item.item-text-wrap.mm-course-module-handler.mma-mod_forum-handler.item-button
     mm-format-text ul,
     mm-format-text ol,
     *[mm-format-text] ul,
-    *[mm-format-text] ol {
+    *[mm-format-text] ol {      
+        -webkit-padding-start: 2px;
         float: left;
         margin-left: 1.5px;
         position: relative;        
-        -webkit-padding-start: 2px;
     }
     div.no-overflow {
         font-size: 1.2em;
