@@ -548,7 +548,9 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-            $html .= render_course($course);
+            $courseordernumber++;
+
+            $html .= theme_saylor_block_course_overview_renderer::render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber);
         }
 
         // Separate active/completed course boxes. Should these be in separate divs?
@@ -578,7 +580,9 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-            $html .= render_courses($course);
+            $courseordernumber++;
+
+            $html .= theme_saylor_block_course_overview_renderer::render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber);
         }
 
         // Wrap course list in a div and return.
@@ -592,8 +596,8 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
      * @param  course object $course
      * @return string HTML fragment
      */
-    protected function render_course($course) {
-                $html .= $this->output->box_start('coursebox', "course-{$course->id}");
+    protected function render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber) {
+        $html = $this->output->box_start('coursebox', "course-{$course->id}");
         $html .= html_writer::start_tag('div', array('class' => 'course_title'));
         // If user is editing, then add move icons.
         if ($userediting && !$ismovingcourse) {
@@ -664,7 +668,6 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
 
         $html .= $this->output->box('', 'flush');
         $html .= $this->output->box_end();
-        $courseordernumber++;
         if ($ismovingcourse) {
             $moveurl = new moodle_url(
                 '/blocks/course_overview/move.php',
