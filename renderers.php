@@ -550,7 +550,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
 
             $courseordernumber++;
 
-            $html .= theme_saylor_block_course_overview_renderer::render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber);
+            $html .= self::render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber);
         }
 
         // Separate active/completed course boxes. Should these be in separate divs?
@@ -582,7 +582,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
 
             $courseordernumber++;
 
-            $html .= theme_saylor_block_course_overview_renderer::render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber);
+            $html .= self::render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber);
         }
 
         // Wrap course list in a div and return.
