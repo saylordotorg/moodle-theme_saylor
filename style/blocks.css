@@ -48,13 +48,13 @@
 }
 
 .block.firstblock {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     background: [[setting: secondcolor]] url([[pix:theme|firstblock]]) repeat-x top left;
+    border-radius: 3px;
     border: 1px solid [[setting: secondcolor]];
     padding: 10px 5px;
     width: auto;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
 }
 
 .block.firstblock .title h2 {
