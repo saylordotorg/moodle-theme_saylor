@@ -28,6 +28,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+// Check the file is being called internally from within Moodle.
+defined('MOODLE_INTERNAL') || die();
+
 // Get the HTML for the settings bits.
 $html = theme_modernr_get_html_for_settings($OUTPUT, $PAGE);
 
@@ -87,7 +90,7 @@ echo $OUTPUT->doctype() ?>
             <div id="page-navbar" class="span12">
             <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
             <?php echo $OUTPUT->navbar(); ?>
-        	</div>
+            </div>
                 <section id="region-main" class="span8 pull-right">
                     <?php
                     echo $OUTPUT->course_content_header();

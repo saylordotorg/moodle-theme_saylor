@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 // Get the HTML for the settings bits.
-//$html = theme_allyou_get_html_for_settings($OUTPUT, $PAGE);
+// $html = theme_allyou_get_html_for_settings($OUTPUT, $PAGE);
 
 $left = (!right_to_left());  // To know if to add 'pull-right' and 'desktop-first-column' classes in the layout for LTR.
 
@@ -28,35 +28,19 @@ $hasmarket2 = (!empty($PAGE->theme->settings->market2));
 $hasmarket3 = (!empty($PAGE->theme->settings->market3));
 $hasmarket4 = (!empty($PAGE->theme->settings->market4));
 
-//headeralignment
+// headeralignment
 if (empty($PAGE->theme->settings->headeralign)) {
-	$headeralign = "0";
+    $headeralign = "0";
 } else {
-$headeralign = $PAGE->theme->settings->headeralign;
+    $headeralign = $PAGE->theme->settings->headeralign;
 }
 
 if ($headeralign == 1) {
-	$headerclass = "lalign";
+    $headerclass = "lalign";
 } else {
-	$headerclass = " ";
+    $headerclass = " ";
 }
 
-function Truncate($string, $length, $stopanywhere=false) {
-    //truncates a string to a certain char length, stopping on a word if not specified otherwise.
-    $string = strip_tags($string);
-    if (strlen($string) > $length) {
-        //limit hit!
-        $string = substr($string,0,($length -3));
-        if ($stopanywhere) {
-            //stop anywhere
-            $string .= '...';
-        } else{
-            //stop on a word.
-            $string = substr($string,0,strrpos($string,' ')).'...';
-        }
-    }
-    return $string;
-}
 
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
@@ -100,11 +84,11 @@ echo $OUTPUT->doctype() ?>
         
         
 <div class="pull-right socials">
-				<?php
-	        	    echo $OUTPUT->login_info();
-    	        	//echo $OUTPUT->lang_menu();
-	        	    echo $PAGE->headingmenu;
-		        ?>	
+                <?php
+                    echo $OUTPUT->login_info();
+                    // echo $OUTPUT->lang_menu();
+                    echo $PAGE->headingmenu;
+            ?>    
 </div>
         
         
@@ -126,7 +110,7 @@ echo $OUTPUT->doctype() ?>
 
  <div id="page-content" class="row-fluid">
    
-    	<div id="padder" class="clearfix">
+        <div id="padder" class="clearfix">
         <section id="region-main" class="span12">
             <?php
             echo $OUTPUT->course_content_header();
@@ -169,7 +153,6 @@ echo $OUTPUT->doctype() ?>
        <ul class="footer-nav">
 <li><a href="/">Home</a></li>
 <li><a href="http://saylor.org/about">About</a></li>
-<li><a href="http://saylor.org/donate">Donate</a></li>
 <li><a href="https://sayloracademy.zendesk.com">Help</a></li>
 <li><a href="http://www.saylor.org/blog">Blog</a></li>
 <li><a href="http://saylor.org/contact">Contact</a></li>
@@ -180,9 +163,9 @@ echo $OUTPUT->doctype() ?>
         
         <div class="clearfix row">
         <?php
-        //echo $html->footnote;
+        // echo $html->footnote;
         echo $OUTPUT->login_info();
-       // echo $OUTPUT->home_link();
+        // echo $OUTPUT->home_link();
         echo $OUTPUT->standard_footer_html();
         ?>
         </div>

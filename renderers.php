@@ -17,31 +17,35 @@
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_bootstrapbase
- * @copyright  2012
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   theme_bootstrapbase
+ * @copyright 2012
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-//course renderer
+// Check the file is being called internally from within Moodle.
+defined('MOODLE_INTERNAL') || die();
+
+// course renderer
 require_once($CFG->dirroot . "/course/renderer.php");
 require_once($CFG->dirroot . "/completion/completion_completion.php");
 require_once($CFG->dirroot . "/blocks/course_overview/renderer.php");
 
-class theme_saylor_core_renderer extends core_renderer {
-	
-	
-	public function user_menu($user = null, $withlinks = null) {
+class theme_saylor_core_renderer extends core_renderer
+{
+
+
+    public function user_menu($user = null, $withlinks = null) {
         global $CFG, $USER;
-        
+
         if (is_null($user)) {
             $user = $USER;
         }
-        
+
         $usermenu = new custom_menu('', current_language());
         return $this->render_user_menu($usermenu, $user);
     }
-    
-     protected function render_user_menu(custom_menu $menu, $user) {
+
+    protected function render_user_menu(custom_menu $menu, $user) {
         global $CFG, $USER, $DB, $PAGE;
 
         $addusermenu = true;
@@ -53,35 +57,40 @@ class theme_saylor_core_renderer extends core_renderer {
         }
 
         /*
-         $messagecount = $DB->count_records('message', array('useridto' => $USER->id));
-         if ($messagecount<1) {
-         $addmessagemenu = false;
-         }
-         */
-         
-          if (!$CFG->messaging) {
-          $addmessagemenu = false;
-        } else {
-          // Check whether or not the "popup" message output is enabled
-          // This is after we check if messaging is enabled to possibly save a DB query
-          $popup = $DB->get_record('message_processors', array('name'=>'popup'));
-          if(!$popup) {
+        $messagecount = $DB->count_records('message', array('useridto' => $USER->id));
+        if ($messagecount<1) {
+        $addmessagemenu = false;
+        }
+        */
+
+        if (!$CFG->messaging) {
             $addmessagemenu = false;
-          }
+        } else {
+            // Check whether or not the "popup" message output is enabled
+            // This is after we check if messaging is enabled to possibly save a DB query
+            $popup = $DB->get_record('message_processors', array('name' => 'popup'));
+            if (!$popup) {
+                $addmessagemenu = false;
+            }
         }
 
-         if ($addmessagemenu) {
+        if ($addmessagemenu) {
             $messages = $this->get_user_messages();
             $messagecount = count($messages);
-            
+
             if ($messagecount == 0) {
-            $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '', new moodle_url('/message/'),  get_string('messages', 'message'), 9999);
+                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '',
+                    new moodle_url('/message/'),
+                    get_string('messages', 'message'), 9999);
             } else {
-            
-            $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' . get_string('messages', 'message') . '<span id="messagebubble">' . $messagecount . '</span>', new moodle_url('#'),  get_string('messages', 'message'), 9999);
+                $messagemenu = $menu->add('<i class="fa fa-comments"> </i>' .
+                 get_string('messages', 'message') . '<span id="messagebubble">' . $messagecount .
+                 '</span>',
+                    new moodle_url('#'),
+                    get_string('messages', 'message'),
+                    9999);
             }
             foreach ($messages as $message) {
-
                 $senderpicture = new user_picture($message->from);
                 $senderpicture->link = false;
                 $senderpicture = $this->render($senderpicture);
@@ -93,7 +102,7 @@ class theme_saylor_core_renderer extends core_renderer {
                 $messagecontent .= $message->text;
                 $messagecontent .= html_writer::end_tag('span');
                 $messagecontent .= html_writer::start_tag('span', array('class' => 'msg-time'));
-                $messagecontent .= html_writer::tag('i','',array('class' => 'icon-time'));
+                $messagecontent .= html_writer::tag('i', '', array('class' => 'icon-time'));
                 $messagecontent .= html_writer::tag('span', $message->date);
                 $messagecontent .= html_writer::end_tag('span');
 
@@ -101,24 +110,12 @@ class theme_saylor_core_renderer extends core_renderer {
             }
         }
 
-
         $langs = get_string_manager()->get_list_of_translations();
         if (count($langs) < 2
-        or empty($CFG->langmenu)
-        or ($this->page->course != SITEID and !empty($this->page->course->lang))) {
+            or empty($CFG->langmenu)
+            or ($this->page->course != SITEID and !empty($this->page->course->lang))
+        ) {
             $addlangmenu = false;
-        }
-
-        if ($addlangmenu) {
-           
-        }
-
-        if ($addusermenu) {
-            if (isloggedin() && !isguestuser()) {
-                
-            } else {
-                //$usermenu = $menu->add('<i class="fa fa-key"></i>' .get_string('login'), new moodle_url('/login/index.php'), get_string('login'), 10001);
-            }
         }
 
         $content = '<ul class="usermenu2 nav navbar-nav navbar-right">';
@@ -128,9 +125,9 @@ class theme_saylor_core_renderer extends core_renderer {
 
         return $content.'</ul>';
     }
-    
-    
-         protected function process_user_messages() {
+
+
+    protected function process_user_messages() {
 
         $messagelist = array();
 
@@ -203,12 +200,11 @@ class theme_saylor_core_renderer extends core_renderer {
             $messagecontent->date = userdate($message->timecreated, get_string('strftimetime', 'langconfig'));
         }
 
-
         $messagecontent->from = $DB->get_record('user', array('id' => $message->useridfrom));
         $messagecontent->state = $state;
         return $messagecontent;
     }
-    
+
     protected function bootstrap_process_message($message) {
         global $DB;
         $messagecontent = new stdClass();
@@ -235,9 +231,11 @@ class theme_saylor_core_renderer extends core_renderer {
         $messagecontent->from = $DB->get_record('user', array('id' => $message->useridfrom));
         return $messagecontent;
     }
-//end usermenu
-	
-    /** @var custom_menu_item language The language menu if created */
+    // end usermenu
+
+    /**
+     * @var custom_menu_item language The language menu if created
+     */
     protected $language = null;
 
     /*
@@ -275,9 +273,9 @@ class theme_saylor_core_renderer extends core_renderer {
             $breadcrumbs[] = $this->render($item);
         }
         $divider = '<span class="divider">/</span>';
-        $list_items = '<li>'.join(" $divider</li><li>", $breadcrumbs).'</li>';
+        $listitems = '<li>'.join(" $divider</li><li>", $breadcrumbs).'</li>';
         $title = '<span class="accesshide">'.get_string('pagepath').'</span>';
-        return $title . "<ul class=\"breadcrumb\">$list_items</ul>";
+        return $title . "<ul class=\"breadcrumb\">$listitems</ul>";
     }
 
     /*
@@ -302,46 +300,39 @@ class theme_saylor_core_renderer extends core_renderer {
      */
     protected function render_custom_menu(custom_menu $menu) {
         global $CFG, $USER;
-		
-		$branchurlB   = new moodle_url('/');
-		//$branch = $menu->add("<i class='fa fa-home'></i>", $branchurlB, "title", -10000);
-		
-		if (isloggedin() && !isguestuser()) {
-		
-	
-		
-        	$mycoursetitle = "My Courses";
-           $branchtitle ="My Courses";
-			$branchlabel = ''.$branchtitle;
+
+        // $branchurlb   = new moodle_url('/');
+        // $branch = $menu->add("<i class='fa fa-home'></i>", $branchurlb, "title", -10000);
+
+        if (isloggedin() && !isguestuser()) {
+               $mycoursetitle = "My Courses";
+                 $branchtitle = "My Courses";
+               $branchlabel = ''.$branchtitle;
             $branchurl   = new moodle_url('/my/index.php');
             $branchsort  = 10000;
- 
-            $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
- 			if ($courses = enrol_get_my_courses(NULL, 'fullname ASC')) {
- 				foreach ($courses as $course) {
 
+            $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
+            if ($courses = enrol_get_my_courses(null, 'fullname ASC')) {
+                foreach ($courses as $course) {
                     // Setting up params array for completion_completion object
                     $params = array (
-                        'userid' => $USER->id,
-                        'course' => $course->id
-                        );
+                    'userid' => $USER->id,
+                    'course' => $course->id
+                               );
 
-                    // Create completion_completion object; will use to check whether the course is completed before adding to the menu.
-                    $ccompletion = new completion_completion($params);
+                           // Create completion_completion object; will use to check whether the course is completed before adding to the menu.
+                           $ccompletion = new completion_completion($params);
 
-                    // Only add course to menu if course is not completed and is visible.
- 					if ($course->visible && !$ccompletion->is_complete()) {
- 						$branch->add(format_string($course->fullname), new moodle_url('/course/view.php?id='.$course->id), format_string($course->shortname));
- 					}
- 				}
- 			} else {
-                $noenrolments = get_string('noenrolments', 'theme_saylor');
- 				$branch->add('<em>'.$noenrolments.'</em>', new moodle_url('/'), $noenrolments);
- 			}
-            
+                           // Only add course to menu if course is not completed and is visible.
+                    if ($course->visible && !$ccompletion->is_complete()) {
+                            $branch->add(format_string($course->fullname), new moodle_url('/course/view.php?id='.$course->id), format_string($course->shortname));
+                    }
+                }
+            } else {
+                  $noenrolments = get_string('noenrolments', 'theme_saylor');
+                $branch->add('<em>'.$noenrolments.'</em>', new moodle_url('/'), $noenrolments);
+            }
         }
-
-
 
         // TODO: eliminate this duplicated logic, it belongs in core, not
         // here. See MDL-39565.
@@ -349,19 +340,13 @@ class theme_saylor_core_renderer extends core_renderer {
         $langs = get_string_manager()->get_list_of_translations();
         if (count($langs) < 2
             or empty($CFG->langmenu)
-            or ($this->page->course != SITEID and !empty($this->page->course->lang))) {
+            or ($this->page->course != SITEID and !empty($this->page->course->lang))
+        ) {
             $addlangmenu = false;
         }
 
         if (!$menu->has_children() && $addlangmenu === false) {
             return '';
-        }
-
-        if ($addlangmenu) {
-            //$this->language = $menu->add(get_string('language'), new moodle_url('#'), get_string('language'), 10000);
-            //foreach ($langs as $langtype => $langname) {
-              // $this->language->add($langname, new moodle_url($this->page->url, array('lang' => $langtype)), $langname);
-            //}
         }
 
         $content = '<ul class="nav">';
@@ -376,11 +361,10 @@ class theme_saylor_core_renderer extends core_renderer {
      * This code renders the custom menu items for the
      * bootstrap dropdown menu.
      */
-    protected function render_custom_menu_item(custom_menu_item $menunode, $level = 0 ) {
+    protected function render_custom_menu_item(custom_menu_item $menunode, $level = 0) {
         static $submenucount = 0;
 
         if ($menunode->has_children()) {
-
             if ($level == 1) {
                 $class = 'dropdown';
             } else {
@@ -398,7 +382,7 @@ class theme_saylor_core_renderer extends core_renderer {
             } else {
                 $url = '#cm_submenu_'.$submenucount;
             }
-            $content .= html_writer::start_tag('a', array('href'=>$url, 'class'=>'dropdown-toggle', 'data-toggle'=>'dropdown', 'title'=>$menunode->get_title()));
+            $content .= html_writer::start_tag('a', array('href' => $url, 'class' => 'dropdown-toggle', 'data-toggle' => 'dropdown', 'title' => $menunode->get_title()));
             $content .= $menunode->get_text();
             if ($level == 1) {
                 $content .= '<i class="fa fa-caret-down"></i>';
@@ -417,7 +401,7 @@ class theme_saylor_core_renderer extends core_renderer {
             } else {
                 $url = '#';
             }
-            $content .= html_writer::link($url, $menunode->get_text(), array('title'=>$menunode->get_title()));
+            $content .= html_writer::link($url, $menunode->get_text(), array('title' => $menunode->get_title()));
         }
         return $content;
     }
@@ -425,7 +409,7 @@ class theme_saylor_core_renderer extends core_renderer {
     /**
      * Renders tabtree
      *
-     * @param tabtree $tabtree
+     * @param  tabtree $tabtree
      * @return string
      */
     protected function render_tabtree(tabtree $tabtree) {
@@ -448,7 +432,7 @@ class theme_saylor_core_renderer extends core_renderer {
      * This function is called from {@link core_renderer::render_tabtree()}
      * and also it calls itself when printing the $tabobject subtree recursively.
      *
-     * @param tabobject $tabobject
+     * @param  tabobject $tabobject
      * @return string HTML fragment
      */
     protected function render_tabobject(tabobject $tab) {
@@ -466,8 +450,8 @@ class theme_saylor_core_renderer extends core_renderer {
             return html_writer::tag('li', $link);
         }
     }
-    
-    
+
+
     public function saylorblocks($region, $classes = array(), $tag = 'aside') {
         $classes = (array)$classes;
         $classes[] = 'block-region';
@@ -479,19 +463,18 @@ class theme_saylor_core_renderer extends core_renderer {
         );
         return html_writer::tag($tag, $this->blocks_for_region($region), $attributes);
     }
-    
 }
 
-class theme_saylor_block_course_overview_renderer extends block_course_overview_renderer {
+class theme_saylor_block_course_overview_renderer extends block_course_overview_renderer
+{
 
     /**
      * Construct contents of course_overview block
      *
-     * Override 
+     * Override
      *
-     *
-     * @param array $courses list of courses in sorted order
-     * @param array $overviews list of course overviews
+     * @param  array $courses   list of courses in sorted order
+     * @param  array $overviews list of course overviews
      * @return string html to be displayed in course_overview block
      */
     public function course_overview($courses, $overviews) {
@@ -500,7 +483,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
         $config = get_config('block_course_overview');
         if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
             global $CFG;
-            require_once($CFG->libdir.'/coursecatlib.php');
+            include_once($CFG->libdir.'/coursecatlib.php');
         }
         $ismovingcourse = false;
         $courseordernumber = 0;
@@ -512,7 +495,7 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
             $this->page->requires->js_init_call('M.block_course_overview.add_handles');
 
             // Check if course is moving
-            $ismovingcourse = optional_param('movecourse', FALSE, PARAM_BOOL);
+            $ismovingcourse = optional_param('movecourse', false, PARAM_BOOL);
             $movingcourseid = optional_param('courseid', 0, PARAM_INT);
         }
 
@@ -529,13 +512,17 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
             $html .= get_string('movingcourse', 'block_course_overview', $a);
             $html .= $this->output->box_end();
 
-            $moveurl = new moodle_url('/blocks/course_overview/move.php',
-                        array('sesskey' => sesskey(), 'moveto' => 0, 'courseid' => $movingcourseid));
+            $moveurl = new moodle_url(
+                '/blocks/course_overview/move.php',
+                array('sesskey' => sesskey(), 'moveto' => 0, 'courseid' => $movingcourseid)
+            );
             // Create move icon, so it can be used.
-            $movetofirsticon = html_writer::empty_tag('img',
-                    array('src' => $this->output->pix_url('movehere'),
+            $movetofirsticon = html_writer::empty_tag(
+                'img',
+                array('src' => $this->output->pix_url('movehere'),
                         'alt' => get_string('movetofirst', 'block_course_overview', $courses[$movingcourseid]->fullname),
-                        'title' => get_string('movehere')));
+                'title' => get_string('movehere'))
+            );
             $moveurl = html_writer::link($moveurl, $movetofirsticon);
             $html .= html_writer::tag('div', $moveurl, array('class' => 'movehere'));
         }
@@ -561,90 +548,15 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-
-            $html .= $this->output->box_start('coursebox', "course-{$course->id}");
-            $html .= html_writer::start_tag('div', array('class' => 'course_title'));
-            // If user is editing, then add move icons.
-            if ($userediting && !$ismovingcourse) {
-                $moveicon = html_writer::empty_tag('img',
-                        array('src' => $this->pix_url('t/move')->out(false),
-                            'alt' => get_string('movecourse', 'block_course_overview', $course->fullname),
-                            'title' => get_string('move')));
-                $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
-                $moveurl = html_writer::link($moveurl, $moveicon);
-                $html .= html_writer::tag('div', $moveurl, array('class' => 'move'));
-
-            }
-
-            // No need to pass title through s() here as it will be done automatically by html_writer.
-            $attributes = array('title' => $course->fullname);
-            if ($course->id > 0) {
-                if (empty($course->visible)) {
-                    $attributes['class'] = 'dimmed';
-                }
-                $courseurl = new moodle_url('/course/view.php', array('id' => $course->id));
-                $coursefullname = format_string(get_course_display_name_for_list($course), true, $course->id);
-                $link = html_writer::link($courseurl, $coursefullname, $attributes);
-                $html .= $this->output->heading($link, 2, 'title');
-            } else {
-                $html .= $this->output->heading(html_writer::link(
-                    new moodle_url('/auth/mnet/jump.php', array('hostid' => $course->hostid, 'wantsurl' => '/course/view.php?id='.$course->remoteid)),
-                    format_string($course->shortname, true), $attributes) . ' (' . format_string($course->hostname) . ')', 2, 'title');
-            }
-            $html .= $this->output->box('', 'flush');
-            $html .= html_writer::end_tag('div');
-
-            if (!empty($config->showchildren) && ($course->id > 0)) {
-                // List children here.
-                if ($children = block_course_overview_get_child_shortnames($course->id)) {
-                    $html .= html_writer::tag('span', $children, array('class' => 'coursechildren'));
-                }
-            }
-
-            // If user is moving courses, then down't show overview.
-            if (isset($overviews[$course->id]) && !$ismovingcourse) {
-                $html .= $this->activity_display($course->id, $overviews[$course->id]);
-            }
-
-            if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
-                // List category parent or categories path here.
-                $currentcategory = coursecat::get($course->category, IGNORE_MISSING);
-                if ($currentcategory !== null) {
-                    $html .= html_writer::start_tag('div', array('class' => 'categorypath'));
-                    if ($config->showcategories == BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_FULL_PATH) {
-                        foreach ($currentcategory->get_parents() as $categoryid) {
-                            $category = coursecat::get($categoryid, IGNORE_MISSING);
-                            if ($category !== null) {
-                                $html .= $category->get_formatted_name().' / ';
-                            }
-                        }
-                    }
-                    $html .= $currentcategory->get_formatted_name();
-                    $html .= html_writer::end_tag('div');
-                }
-            }
-
-            $html .= $this->output->box('', 'flush');
-            $html .= $this->output->box_end();
             $courseordernumber++;
-            if ($ismovingcourse) {
-                $moveurl = new moodle_url('/blocks/course_overview/move.php',
-                            array('sesskey' => sesskey(), 'moveto' => $courseordernumber, 'courseid' => $movingcourseid));
-                $a = new stdClass();
-                $a->movingcoursename = $courses[$movingcourseid]->fullname;
-                $a->currentcoursename = $course->fullname;
-                $movehereicon = html_writer::empty_tag('img',
-                        array('src' => $this->output->pix_url('movehere'),
-                            'alt' => get_string('moveafterhere', 'block_course_overview', $a),
-                            'title' => get_string('movehere')));
-                $moveurl = html_writer::link($moveurl, $movehereicon);
-                $html .= html_writer::tag('div', $moveurl, array('class' => 'movehere'));
-            }
+
+            $html .= self::render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber);
         }
 
-        $html .= html_writer::empty_tag('br', NULL);
-        $html .= html_writer::empty_tag('hr', NULL);
-        $html .= html_writer::empty_tag('br', NULL);
+        // Separate active/completed course boxes. Should these be in separate divs?
+        $html .= html_writer::empty_tag('br', null);
+        $html .= html_writer::empty_tag('hr', null);
+        $html .= html_writer::empty_tag('br', null);
 
         $html .= html_writer::start_span('completedcoursebox') . 'Completed Courses' . html_writer::end_span();
 
@@ -668,88 +580,112 @@ class theme_saylor_block_course_overview_renderer extends block_course_overview_
                 continue;
             }
 
-            $html .= $this->output->box_start('coursebox', "course-{$course->id}");
-            $html .= html_writer::start_tag('div', array('class' => 'course_title'));
-            // If user is editing, then add move icons.
-            if ($userediting && !$ismovingcourse) {
-                $moveicon = html_writer::empty_tag('img',
-                        array('src' => $this->pix_url('t/move')->out(false),
-                            'alt' => get_string('movecourse', 'block_course_overview', $course->fullname),
-                            'title' => get_string('move')));
-                $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
-                $moveurl = html_writer::link($moveurl, $moveicon);
-                $html .= html_writer::tag('div', $moveurl, array('class' => 'move'));
-
-            }
-
-            // No need to pass title through s() here as it will be done automatically by html_writer.
-            $attributes = array('title' => $course->fullname);
-            if ($course->id > 0) {
-                if (empty($course->visible)) {
-                    $attributes['class'] = 'dimmed';
-                }
-                $courseurl = new moodle_url('/course/view.php', array('id' => $course->id));
-                $coursefullname = format_string(get_course_display_name_for_list($course), true, $course->id);
-                $link = html_writer::link($courseurl, $coursefullname, $attributes);
-                $html .= $this->output->heading($link, 2, 'title');
-            } else {
-                $html .= $this->output->heading(html_writer::link(
-                    new moodle_url('/auth/mnet/jump.php', array('hostid' => $course->hostid, 'wantsurl' => '/course/view.php?id='.$course->remoteid)),
-                    format_string($course->shortname, true), $attributes) . ' (' . format_string($course->hostname) . ')', 2, 'title');
-            }
-            $html .= $this->output->box('', 'flush');
-            $html .= html_writer::end_tag('div');
-
-            if (!empty($config->showchildren) && ($course->id > 0)) {
-                // List children here.
-                if ($children = block_course_overview_get_child_shortnames($course->id)) {
-                    $html .= html_writer::tag('span', $children, array('class' => 'coursechildren'));
-                }
-            }
-
-            // If user is moving courses, then down't show overview.
-            if (isset($overviews[$course->id]) && !$ismovingcourse) {
-                $html .= $this->activity_display($course->id, $overviews[$course->id]);
-            }
-
-            if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
-                // List category parent or categories path here.
-                $currentcategory = coursecat::get($course->category, IGNORE_MISSING);
-                if ($currentcategory !== null) {
-                    $html .= html_writer::start_tag('div', array('class' => 'categorypath'));
-                    if ($config->showcategories == BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_FULL_PATH) {
-                        foreach ($currentcategory->get_parents() as $categoryid) {
-                            $category = coursecat::get($categoryid, IGNORE_MISSING);
-                            if ($category !== null) {
-                                $html .= $category->get_formatted_name().' / ';
-                            }
-                        }
-                    }
-                    $html .= $currentcategory->get_formatted_name();
-                    $html .= html_writer::end_tag('div');
-                }
-            }
-
-            $html .= $this->output->box('', 'flush');
-            $html .= $this->output->box_end();
             $courseordernumber++;
-            if ($ismovingcourse) {
-                $moveurl = new moodle_url('/blocks/course_overview/move.php',
-                            array('sesskey' => sesskey(), 'moveto' => $courseordernumber, 'courseid' => $movingcourseid));
-                $a = new stdClass();
-                $a->movingcoursename = $courses[$movingcourseid]->fullname;
-                $a->currentcoursename = $course->fullname;
-                $movehereicon = html_writer::empty_tag('img',
-                        array('src' => $this->output->pix_url('movehere'),
-                            'alt' => get_string('moveafterhere', 'block_course_overview', $a),
-                            'title' => get_string('movehere')));
-                $moveurl = html_writer::link($moveurl, $movehereicon);
-                $html .= html_writer::tag('div', $moveurl, array('class' => 'movehere'));
-            }
+
+            $html .= self::render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber);
         }
 
         // Wrap course list in a div and return.
         return html_writer::tag('div', $html, array('class' => 'course_list'));
     }
 
+    /**
+     * Renders a course for the coursebox
+     *
+     *
+     * @param  course object $course
+     * @return string HTML fragment
+     */
+    protected function render_course($course, $config, $userediting, $ismovingcourse, $courseordernumber) {
+        $html = $this->output->box_start('coursebox', "course-{$course->id}");
+        $html .= html_writer::start_tag('div', array('class' => 'course_title'));
+        // If user is editing, then add move icons.
+        if ($userediting && !$ismovingcourse) {
+            $moveicon = html_writer::empty_tag(
+                'img',
+                array('src' => $this->pix_url('t/move')->out(false),
+                        'alt' => get_string('movecourse', 'block_course_overview', $course->fullname),
+                'title' => get_string('move'))
+            );
+            $moveurl = new moodle_url($this->page->url, array('sesskey' => sesskey(), 'movecourse' => 1, 'courseid' => $course->id));
+            $moveurl = html_writer::link($moveurl, $moveicon);
+            $html .= html_writer::tag('div', $moveurl, array('class' => 'move'));
+        }
+
+        // No need to pass title through s() here as it will be done automatically by html_writer.
+        $attributes = array('title' => $course->fullname);
+        if ($course->id > 0) {
+            if (empty($course->visible)) {
+                $attributes['class'] = 'dimmed';
+            }
+            $courseurl = new moodle_url('/course/view.php', array('id' => $course->id));
+            $coursefullname = format_string(get_course_display_name_for_list($course), true, $course->id);
+            $link = html_writer::link($courseurl, $coursefullname, $attributes);
+            $html .= $this->output->heading($link, 2, 'title');
+        } else {
+            $html .= $this->output->heading(
+                html_writer::link(
+                    new moodle_url('/auth/mnet/jump.php', array('hostid' => $course->hostid, 'wantsurl' => '/course/view.php?id='.$course->remoteid)),
+                    format_string($course->shortname, true),
+                    $attributes
+                ) . ' (' . format_string($course->hostname) . ')',
+                2,
+                'title'
+            );
+        }
+        $html .= $this->output->box('', 'flush');
+        $html .= html_writer::end_tag('div');
+
+        if (!empty($config->showchildren) && ($course->id > 0)) {
+            // List children here.
+            if ($children = block_course_overview_get_child_shortnames($course->id)) {
+                $html .= html_writer::tag('span', $children, array('class' => 'coursechildren'));
+            }
+        }
+
+        // If user is moving courses, then down't show overview.
+        if (isset($overviews[$course->id]) && !$ismovingcourse) {
+            $html .= $this->activity_display($course->id, $overviews[$course->id]);
+        }
+
+        if ($config->showcategories != BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_NONE) {
+            // List category parent or categories path here.
+            $currentcategory = coursecat::get($course->category, IGNORE_MISSING);
+            if ($currentcategory !== null) {
+                $html .= html_writer::start_tag('div', array('class' => 'categorypath'));
+                if ($config->showcategories == BLOCKS_COURSE_OVERVIEW_SHOWCATEGORIES_FULL_PATH) {
+                    foreach ($currentcategory->get_parents() as $categoryid) {
+                        $category = coursecat::get($categoryid, IGNORE_MISSING);
+                        if ($category !== null) {
+                            $html .= $category->get_formatted_name().' / ';
+                        }
+                    }
+                }
+                $html .= $currentcategory->get_formatted_name();
+                $html .= html_writer::end_tag('div');
+            }
+        }
+
+        $html .= $this->output->box('', 'flush');
+        $html .= $this->output->box_end();
+        if ($ismovingcourse) {
+            $moveurl = new moodle_url(
+                '/blocks/course_overview/move.php',
+                array('sesskey' => sesskey(), 'moveto' => $courseordernumber, 'courseid' => $movingcourseid)
+            );
+            $a = new stdClass();
+            $a->movingcoursename = $courses[$movingcourseid]->fullname;
+            $a->currentcoursename = $course->fullname;
+            $movehereicon = html_writer::empty_tag(
+                'img',
+                array('src' => $this->output->pix_url('movehere'),
+                        'alt' => get_string('moveafterhere', 'block_course_overview', $a),
+                'title' => get_string('movehere'))
+            );
+            $moveurl = html_writer::link($moveurl, $movehereicon);
+            $html .= html_writer::tag('div', $moveurl, array('class' => 'movehere'));
+        }
+
+        return $html;
+    }
 }

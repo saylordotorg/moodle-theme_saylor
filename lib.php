@@ -28,13 +28,16 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+// Check the file is being called internally from within Moodle.
+defined('MOODLE_INTERNAL') || die();
+
 /**
  * Parses CSS before it is cached.
  *
  * This function can make alterations and replace patterns within the CSS.
  *
- * @param string $css The CSS
- * @param theme_config $theme The theme config object.
+ * @param  string       $css   The CSS
+ * @param  theme_config $theme The theme config object.
  * @return string The parsed CSS The parsed CSS.
  */
 function theme_saylor_process_css($css, $theme) {
@@ -46,7 +49,7 @@ function theme_saylor_process_css($css, $theme) {
         $fsize = null;
     }
     $css = theme_saylor_set_fsize($css, $fsize);
-    
+
     // Set the font size
     if (!empty($theme->settings->fpheight)) {
         $fpheight = $theme->settings->fpheight;
@@ -54,7 +57,7 @@ function theme_saylor_process_css($css, $theme) {
         $fpheight = null;
     }
     $css = theme_saylor_set_fpheight($css, $fpheight);
-    
+
     // Set the font size
     if (!empty($theme->settings->intheight)) {
         $intheight = $theme->settings->intheight;
@@ -62,7 +65,7 @@ function theme_saylor_process_css($css, $theme) {
         $intheight = null;
     }
     $css = theme_saylor_set_intheight($css, $intheight);
-	
+
     // Set the link color
     if (!empty($theme->settings->linkcolor)) {
         $linkcolor = $theme->settings->linkcolor;
@@ -71,14 +74,14 @@ function theme_saylor_process_css($css, $theme) {
     }
     $css = theme_saylor_set_linkcolor($css, $linkcolor);
 
-	// Set the link hover color
+    // Set the link hover color
     if (!empty($theme->settings->linkhover)) {
         $linkhover = $theme->settings->linkhover;
     } else {
         $linkhover = null;
     }
     $css = theme_saylor_set_linkhover($css, $linkhover);
-    
+
     // Set the main color
     if (!empty($theme->settings->maincolor)) {
         $maincolor = $theme->settings->maincolor;
@@ -86,8 +89,7 @@ function theme_saylor_process_css($css, $theme) {
         $maincolor = null;
     }
     $css = theme_saylor_set_maincolor($css, $maincolor);
-    
-    
+
      // Set the main color
     if (!empty($theme->settings->secondcolor)) {
         $secondcolor = $theme->settings->secondcolor;
@@ -96,22 +98,20 @@ function theme_saylor_process_css($css, $theme) {
     }
     $css = theme_saylor_set_secondcolor($css, $secondcolor);
 
-   // Set the main headings color
+    // Set the main headings color
     if (!empty($theme->settings->backcolor)) {
         $backcolor = $theme->settings->backcolor;
     } else {
         $backcolor = null;
     }
     $css = theme_saylor_set_backcolor($css, $backcolor);
-    
-    
+
     if (!empty($theme->settings->p1)) {
         $p1 = $theme->settings->p1;
     } else {
         $p1 = null;
     }
     $css = saylor_set_pone($css, $p1, $theme);
-    
 
     // Set custom CSS.
     if (!empty($theme->settings->customcss)) {
@@ -120,7 +120,7 @@ function theme_saylor_process_css($css, $theme) {
         $customcss = null;
     }
     $css = theme_saylor_set_customcss($css, $customcss);
-	
+
     return $css;
 }
 
@@ -128,8 +128,8 @@ function theme_saylor_process_css($css, $theme) {
 /**
  * Adds any custom CSS to the CSS before it is cached.
  *
- * @param string $css The original CSS.
- * @param string $customcss The custom CSS to add.
+ * @param  string $css       The original CSS.
+ * @param  string $customcss The custom CSS to add.
  * @return string The CSS which now contains our custom CSS.
  */
 function theme_saylor_set_customcss($css, $customcss) {
@@ -173,7 +173,7 @@ function theme_saylor_set_intheight($css, $intheight) {
     $css = str_replace($tag, $replacement, $css);
     return $css;
 }
- 
+
 function theme_saylor_set_linkcolor($css, $linkcolor) {
     $tag = '[[setting:linkcolor]]';
     $replacement = $linkcolor;
@@ -237,6 +237,7 @@ function saylor_set_pone($css, $p1, $theme) {
 
 /**
  * Deprecated: Please call theme_saylor_process_css instead.
+ *
  * @deprecated since 2.5.1
  */
 function saylor_process_css($css, $theme) {
@@ -246,6 +247,7 @@ function saylor_process_css($css, $theme) {
 
 /**
  * Deprecated: Please call theme_saylor_set_customcss instead.
+ *
  * @deprecated since 2.5.1
  */
 function saylor_set_customcss($css, $customcss) {
