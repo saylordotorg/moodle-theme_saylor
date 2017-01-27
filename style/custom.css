@@ -606,6 +606,7 @@ input[type="color"],
     width: 100%;
 }
 
+
 @media (max-width: 979px) {
     .navbar {
         float: none !important;
@@ -622,6 +623,14 @@ input[type="color"],
         position: relative;
         text-align: center;
     }
+/*    .navbar .nav-collapse.in>.nav>li {
+        background-color: #25535E;
+    }
+
+    .navbar .nav-collapse.in>.nav .dropdown-menu li>a {
+        color: #fff;
+        font-size: 1em;
+    }  */  
 }
 
 @media (max-width: 768px) {
@@ -818,6 +827,17 @@ div.guestsub {
     width: 12px;
 }
 
+/* change background color to match the www*/
+.container-fluid {
+    background-color: #FDFDFD;
+}
+
+/* change background color of dropdown nav bar*/
+/*.navbar-inner {
+    background-color: #25535E;
+}*/
+
+https://moodle-dev.sylr.org/
 
 /* Custom CSS Settings
 -------------------------*/
