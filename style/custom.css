@@ -812,6 +812,11 @@ div.guestsub {
     display: none;
 }
 }
+/* remove icons after course title*/
+.coursebox .enrolmenticons img {
+    display: none;
+    width: 12px;
+}
 
 
 /* Custom CSS Settings
