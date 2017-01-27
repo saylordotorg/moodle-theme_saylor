@@ -99,6 +99,7 @@ h2.main,
 #page {
     max-width: 3040px;
     padding: 0 0;
+    background-color: #FDFDFD;
 }
 
 #page-content {
@@ -827,10 +828,6 @@ div.guestsub {
     width: 12px;
 }
 
-/* change background color to match the www*/
-.container-fluid {
-    background-color: #FDFDFD;
-}
 
 /* change background color of dropdown nav bar*/
 /*.navbar-inner {
