@@ -99,6 +99,7 @@ h2.main,
 #page {
     max-width: 3040px;
     padding: 0 0;
+    background-color: #FDFDFD;
 }
 
 #page-content {
@@ -606,6 +607,7 @@ input[type="color"],
     width: 100%;
 }
 
+
 @media (max-width: 979px) {
     .navbar {
         float: none !important;
@@ -622,6 +624,14 @@ input[type="color"],
         position: relative;
         text-align: center;
     }
+/*    .navbar .nav-collapse.in>.nav>li {
+        background-color: #25535E;
+    }
+
+    .navbar .nav-collapse.in>.nav .dropdown-menu li>a {
+        color: #fff;
+        font-size: 1em;
+    }  */  
 }
 
 @media (max-width: 768px) {
@@ -812,7 +822,19 @@ div.guestsub {
     display: none;
 }
 }
+/* remove icons after course title*/
+.coursebox .enrolmenticons img {
+    display: none;
+    width: 12px;
+}
 
+
+/* change background color of dropdown nav bar*/
+/*.navbar-inner {
+    background-color: #25535E;
+}*/
+
+https://moodle-dev.sylr.org/
 
 /* Custom CSS Settings
 -------------------------*/
