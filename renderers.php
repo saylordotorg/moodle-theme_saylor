@@ -536,7 +536,7 @@ class theme_saylor_core_renderer extends core_renderer
         foreach ($courses as $course) {
             $courseisincat2 = false; // False = 0
             $coursecount ++;
-        // Checking if course is in whitelist.
+            // Checking if course is in whitelist.
             foreach ($cat2courses as $cat2course) {
                 if ($cat2course == $course['id']) {
                     $courseisincat2 = true;
