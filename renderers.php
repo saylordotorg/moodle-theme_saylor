@@ -469,7 +469,6 @@ class theme_saylor_core_renderer extends core_renderer
         if ($totalcount === null) {
             $totalcount = count($courses);
         }
-        
         if (!$totalcount) {
             // Courses count is cached during courses retrieval.
             return '';
@@ -520,7 +519,6 @@ class theme_saylor_core_renderer extends core_renderer
         }
 
         $coursecount = 0;
-        
         // First, create whitelist of courses in cat 2.
         $options['recursive'] = true;
         $options['coursecontacts'] = false;
@@ -528,7 +526,6 @@ class theme_saylor_core_renderer extends core_renderer
         $options['sort']['idnumber'] = 1;
 
         $cat2courselist = coursecat::get(2)->get_courses($options);
-    
         // Check all courses and put those with id 2 in whitelist.
         foreach ($cat2courselist as $cat2course) {
             $id = $cat2course->__get('id');
@@ -539,7 +536,6 @@ class theme_saylor_core_renderer extends core_renderer
         foreach ($courses as $course) {
             $courseisincat2 = false; // False = 0
             $coursecount ++;
-        
         // Checking if course is in whitelist.
             foreach ($cat2courses as $cat2course) {
                 if ($cat2course == $course['id']) {
@@ -551,7 +547,7 @@ class theme_saylor_core_renderer extends core_renderer
                 continue;
             }
 
-            $classes = ($coursecount%2) ? 'odd' : 'even';
+            $classes = ($coursecount % 2) ? 'odd' : 'even';
             if ($coursecount == 1) {
                 $classes .= ' first';
             }
@@ -570,7 +566,6 @@ class theme_saylor_core_renderer extends core_renderer
 
         $content .= html_writer::end_tag('div'); // .courses
         return $content;
-        }
     }
 }
 
