@@ -1,0 +1,18 @@
+/*News and Updates*/
+
+/*add border to header*/
+.block .header .title h2 {
+  padding: 15px 0px;
+  border-bottom: 5px #25535e solid;
+}
+
+/*add border after every post, align li with h2*/
+.block_rss_client .content li {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  padding: 5px;
+}
+
+/*remove border-bottom from content block*/
+.block {
+  border-bottom: none;
+}
