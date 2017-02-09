@@ -679,6 +679,11 @@ input[type="color"],
     .container {
         width: 95%;
     }
+
+    .block {
+        padding: 1em 0 0 1em;
+
+    }
     .block .header {
         margin: 0 10px !important;
     }
