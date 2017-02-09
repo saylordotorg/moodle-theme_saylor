@@ -1,3 +1,4 @@
+test 2
 <?php
 // This file is part of Moodle - http://moodle.org/
 //
