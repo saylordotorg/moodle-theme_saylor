@@ -694,6 +694,12 @@ class theme_saylor_core_course_renderer extends core_course_renderer
            // Change searchcriteria to only focus on courses from category 2.
     protected function coursecat_courses(coursecat_helper $chelper, $courses, $totalcount = null) {
         global $CFG;
+
+        // Don't use filter is user is admin and skip the filtering
+        if ($CFG->isadmin()) {
+        	break;
+        } 
+
         if ($totalcount === null) {
             $totalcount = count($courses);
         }
@@ -745,6 +751,7 @@ class theme_saylor_core_course_renderer extends core_course_renderer
         if (!empty($pagingbar)) {
             $content .= $pagingbar;
         }
+
 
         $coursecount = 0;
         // First, create whitelist of courses in cat 2.
