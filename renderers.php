@@ -694,14 +694,47 @@ class theme_saylor_core_course_renderer extends core_course_renderer
            // Change searchcriteria to only focus on courses from category 2.
     protected function coursecat_courses(coursecat_helper $chelper, $courses, $totalcount = null) {
         global $CFG;
+ 
+        //New array with filtered courses
+        $coursestorender[] = array();
 
-        // Don't use filter is user is admin and skip the filtering
-        if ($CFG->isadmin()) {
-        	break;
-        } 
+        // First, create whitelist of courses in cat 2.
+        $options['recursive'] = true;
+        $options['coursecontacts'] = false;
+        $options['summary'] = false;
+        $options['sort']['idnumber'] = 1;
+
+        $cat2courselist = coursecat::get(2)->get_courses($options);
+        // Check all courses and put those with id 2 in whitelist.
+        foreach ($cat2courselist as $cat2course) {
+            $id = $cat2course->__get('id');
+            $cat2courses[$id] = $id;
+        }
+
+        // Get list of courses and check if each course is in category 2.
+        foreach ($courses as $course) {
+            $courseisincat2 = false; // False = 0
+            $coursecount ++;
+            // Checking if course is in whitelist.
+            foreach ($cat2courses as $cat2course) {
+                if ($cat2course == $course->id) {
+                    $courseisincat2 = true;
+                    break;
+                }
+            }
+	        
+	        //If you are an admin you can see everything otherwise you see only courses in cat 2    
+            if ($courseisincat2 == false && !is_siteadmin())  {
+                continue;
+            }
+
+            //Add filtered courses from whitelist into a new array
+            $coursestorender[] = $course;
+        }
+
 
         if ($totalcount === null) {
-            $totalcount = count($courses);
+            $totalcount = count($coursestorender);
         }
         if (!$totalcount) {
             // Courses count is cached during courses retrieval.
@@ -754,39 +787,14 @@ class theme_saylor_core_course_renderer extends core_course_renderer
 
 
         $coursecount = 0;
-        // First, create whitelist of courses in cat 2.
-        $options['recursive'] = true;
-        $options['coursecontacts'] = false;
-        $options['summary'] = false;
-        $options['sort']['idnumber'] = 1;
-
-        $cat2courselist = coursecat::get(2)->get_courses($options);
-        // Check all courses and put those with id 2 in whitelist.
-        foreach ($cat2courselist as $cat2course) {
-            $id = $cat2course->__get('id');
-            $cat2courses[$id] = $id;
-        };
-
-        // Get list of courses and check if each course is in category 2.
-        foreach ($courses as $course) {
-            $courseisincat2 = false; // False = 0
-            $coursecount ++;
-            // Checking if course is in whitelist.
-            foreach ($cat2courses as $cat2course) {
-                if ($cat2course == $course->id) {
-                    $courseisincat2 = true;
-                    break;
-                }
-            }
-            if ($courseisincat2 == false) {
-                continue;
-            }
-
+  
+  		// Renders each course that we want rendered
+        foreach ($coursestorender as $course) {
             $classes = ($coursecount % 2) ? 'odd' : 'even';
             if ($coursecount == 1) {
                 $classes .= ' first';
             }
-            if ($coursecount >= count($courses)) {
+            if ($coursecount >= count($coursestorender)) {
                 $classes .= ' last';
             }
             $content .= $this->coursecat_coursebox($chelper, $course, $classes);
