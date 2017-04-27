@@ -695,7 +695,7 @@ class theme_saylor_core_course_renderer extends core_course_renderer
     protected function coursecat_courses(coursecat_helper $chelper, $courses, $totalcount = null) {
         global $CFG;
 
-        //New array with filtered courses.
+        // New array with filtered courses.
         $coursestorender[] = array();
 
         // First, create whitelist of courses in cat 2.
@@ -721,14 +721,14 @@ class theme_saylor_core_course_renderer extends core_course_renderer
                     $courseisincat2 = true;
                     break;
                 }
-			}
+            }
 
-			//If you are an admin you can see everything otherwise you see only courses in cat 2.
-            if ($courseisincat2 == false && !is_siteadmin())  {
+            // If you are an admin you can see everything otherwise you see only courses in cat 2.
+            if ($courseisincat2 == false && !is_siteadmin()) {
                 continue;
             }
 
-            //Add filtered courses from whitelist into a new array.
+            // Add filtered courses from whitelist into a new array.
             $coursestorender[] = $course;
         }
 
@@ -785,13 +785,13 @@ class theme_saylor_core_course_renderer extends core_course_renderer
         }
 
         $coursecount = 0;
-  
-  		// Renders each course that we want rendered.
+
+        // Renders each course that we want rendered.
         foreach ($coursestorender as $course) {
-        	$classes = ($coursecount % 2) ? 'odd' : 'even';
+            $classes = ($coursecount % 2) ? 'odd' : 'even';
             if ($coursecount == 1) {
                 $classes .= ' first';
-        	}
+            }
             if ($coursecount >= count($coursestorender)) {
                 $classes .= ' last';
             }
