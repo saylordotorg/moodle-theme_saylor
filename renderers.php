@@ -694,8 +694,8 @@ class theme_saylor_core_course_renderer extends core_course_renderer
            // Change searchcriteria to only focus on courses from category 2.
     protected function coursecat_courses(coursecat_helper $chelper, $courses, $totalcount = null) {
         global $CFG;
- 
-        //New array with filtered courses
+
+        //New array with filtered courses.
         $coursestorender[] = array();
 
         // First, create whitelist of courses in cat 2.
@@ -721,17 +721,16 @@ class theme_saylor_core_course_renderer extends core_course_renderer
                     $courseisincat2 = true;
                     break;
                 }
-            }
-	        
-	        //If you are an admin you can see everything otherwise you see only courses in cat 2    
+			}
+
+			//If you are an admin you can see everything otherwise you see only courses in cat 2.
             if ($courseisincat2 == false && !is_siteadmin())  {
                 continue;
             }
 
-            //Add filtered courses from whitelist into a new array
+            //Add filtered courses from whitelist into a new array.
             $coursestorender[] = $course;
         }
-
 
         if ($totalcount === null) {
             $totalcount = count($coursestorender);
@@ -754,9 +753,9 @@ class theme_saylor_core_course_renderer extends core_course_renderer
         $paginationurl = $chelper->get_courses_display_option('paginationurl');
         $paginationallowall = $chelper->get_courses_display_option('paginationallowall');
         if ($totalcount > count($courses)) {
-            // there are more results that can fit on one page.
+            // There are more results that can fit on one page.
             if ($paginationurl) {
-                // the option paginationurl was specified, display pagingbar.
+                // The option paginationurl was specified, display pagingbar.
                 $perpage = $chelper->get_courses_display_option('limit', $CFG->coursesperpage);
                 $page = $chelper->get_courses_display_option('offset') / $perpage;
                 $pagingbar = $this->paging_bar($totalcount, $page, $perpage,
@@ -766,13 +765,13 @@ class theme_saylor_core_course_renderer extends core_course_renderer
                             get_string('showall', '', $totalcount)), array('class' => 'paging paging-showall'));
                 }
             } else if ($viewmoreurl = $chelper->get_courses_display_option('viewmoreurl')) {
-                // the option for 'View more' link was specified, display more link.
+                // The option for 'View more' link was specified, display more link.
                 $viewmoretext = $chelper->get_courses_display_option('viewmoretext', new lang_string('viewmore'));
                 $morelink = html_writer::tag('div', html_writer::link($viewmoreurl, $viewmoretext),
                         array('class' => 'paging paging-morelink'));
             }
         } else if (($totalcount > $CFG->coursesperpage) && $paginationurl && $paginationallowall) {
-            // there are more than one page of results and we are in 'view all' mode, suggest to go back to paginated view mode.
+            // There are more than one page of results and we are in 'view all' mode, suggest to go back to paginated view mode.
             $pagingbar = html_writer::tag('div', html_writer::link($paginationurl->out(false, array('perpage' => $CFG->coursesperpage)),
                 get_string('showperpage', '', $CFG->coursesperpage)), array('class' => 'paging paging-showperpage'));
         }
@@ -785,15 +784,14 @@ class theme_saylor_core_course_renderer extends core_course_renderer
             $content .= $pagingbar;
         }
 
-
         $coursecount = 0;
   
-  		// Renders each course that we want rendered
+  		// Renders each course that we want rendered.
         foreach ($coursestorender as $course) {
-            $classes = ($coursecount % 2) ? 'odd' : 'even';
+        	$classes = ($coursecount % 2) ? 'odd' : 'even';
             if ($coursecount == 1) {
                 $classes .= ' first';
-            }
+        	}
             if ($coursecount >= count($coursestorender)) {
                 $classes .= ' last';
             }
