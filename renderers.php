@@ -796,6 +796,7 @@ class theme_saylor_core_course_renderer extends core_course_renderer
                 $classes .= ' last';
             }
             $content .= $this->coursecat_coursebox($chelper, $course, $classes);
+            $coursecount += 1;
         }
 
         if (!empty($pagingbar)) {
