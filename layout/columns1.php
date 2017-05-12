@@ -30,6 +30,7 @@ $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
+    'currentyear' => date('Y'),
     'logo' => $OUTPUT->pix_url('logos/logo_light', 'theme'),
     'footer_logo' => $OUTPUT->pix_url('logos/logo2', 'theme'),
     'ccby' => $OUTPUT->pix_url('logos/cc/ccby', 'theme')
