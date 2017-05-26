@@ -33,6 +33,45 @@ require_once($CFG->dirroot . "/blocks/course_overview/renderer.php");
 
 class theme_saylor_core_renderer extends theme_boost\output\core_renderer
 {
+    /*
+     * This renders the bootstrap top menu.
+     *
+     * This renderer is needed to enable the Bootstrap style navigation.
+     */
+    protected function render_custom_menu(custom_menu $menu) {
+        global $CFG;
+
+        $langs = get_string_manager()->get_list_of_translations();
+        $haslangmenu = $this->lang_menu() != '';
+
+        if (!$menu->has_children() && !$haslangmenu) {
+            return '';
+        }
+
+        if ($haslangmenu) {
+            $strlang = get_string('language');
+            $currentlang = current_language();
+            if (isset($langs[$currentlang])) {
+                $currentlang = $langs[$currentlang];
+            } else {
+                $currentlang = $strlang;
+            }
+            $this->language = $menu->add($currentlang, new moodle_url('#'), $strlang, 10000);
+            foreach ($langs as $langtype => $langname) {
+                $this->language->add($langname, new moodle_url($this->page->url, array('lang' => $langtype)), $langname);
+            }
+        }
+
+        $content = '';
+        foreach ($menu->get_children() as $item) {
+            $context = $item->export_for_template($this);
+            $content .= $this->render_from_template('core/custom_menu_item', $context);
+        }
+
+        return $content;
+    }
+
+
 
 }
 
