@@ -607,6 +607,15 @@ input[type="color"],
     width: 100%;
 }
 
+/*add padding to header in blocks on left nav bar */
+.block .header .title h2 {
+	padding: 0 0 0 10px;
+}
+
+/*add padding to text in blocks on left nav bar */
+.block content {
+	padding: 0 0 0 10px;
+}
 
 @media (max-width: 979px) {
     .navbar {
