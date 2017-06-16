@@ -399,7 +399,7 @@ h2.main,
     border: 1px solid #dadada;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
     margin: 20px auto;
-    padding: 1em;
+    padding: 2em;
     width: 60%;
 }
 
@@ -607,6 +607,36 @@ input[type="color"],
     width: 100%;
 }
 
+	/*add padding to text in blocks on left nav bar */
+.block {
+	padding: 0 0 0 10px;
+	}
+
+/*add padding to header in blocks on left nav bar */
+.block .header .title h2 {
+	padding: 0 0 0 10px;
+}
+
+/*add padding to bottom section of course*/
+.format-flexsections .course-content ul.flexsections-level-1>li.section.main {
+	padding-bottom: 5px;
+}
+
+@media (max-width: 1200px) {
+	.coursebox .content .summary {
+    	width: 100%;
+	}
+
+	.coursebox .content .courseimage {
+    	display: none;
+	}
+
+}
+/* remove icons after course title*/
+.coursebox .enrolmenticons img {
+    display: none;
+    width: 12px;
+}
 
 @media (max-width: 979px) {
     .navbar {
@@ -683,7 +713,7 @@ input[type="color"],
     /* change background color of foreground content in blocks on left (nav & admin) 
     and padding */
     .block {
-        padding: 1em 0 0 1em;
+        padding: 0 0 0 10px;
         background-color: #FFF;
     }
 
@@ -757,7 +787,7 @@ input[type="color"],
     margin-left: 0;
 }
 
-@media screen and (max-width: 30em) {
+@media screen and (max-width: 480px) {
     img.mm-media-adapt-width {
         float: none !important;
         margin: 2px 25%;
@@ -831,20 +861,7 @@ div.guestsub {
     width: 10%;
 }
 
-@media (max-width: 1200px) {
-  .coursebox .content .summary {
-    width: 100%;
-}
 
-.coursebox .content .courseimage {
-    display: none;
-}
-}
-/* remove icons after course title*/
-.coursebox .enrolmenticons img {
-    display: none;
-    width: 12px;
-}
 
 
 
