@@ -617,6 +617,10 @@ input[type="color"],
 	padding: 0 0 0 10px;
 }
 
+/*add padding to bottom section of course*/
+.format-flexsections .course-content ul.flexsections-level-1>li.section.main {
+	padding-bottom: 5px;
+}
 
 @media (max-width: 1200px) {
 	.coursebox .content .summary {
