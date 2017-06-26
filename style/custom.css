@@ -607,6 +607,24 @@ input[type="color"],
     width: 100%;
 }
 
+/* Remove "My Courses" */
+.block_navigation .type_system.depth_2 {
+    visibility: hidden;
+    width: 100px;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+/*But keep child element "Courses"*/
+
+/*type_system.depth_2>p#expandable_branch_0_courses*/
+li.type_system.depth_2.contains_branch.current_branch {
+    visibility: visible;
+    width: 200px;
+    height: 130px;
+    margin: 0;
+    padding: 0;
+}
 
 @media (max-width: 979px) {
     .navbar {
