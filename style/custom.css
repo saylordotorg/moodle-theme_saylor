@@ -619,7 +619,7 @@ input[type="color"],
 
 /*add padding to bottom section of main/central block*/
 .format-flexsections .course-content ul.flexsections-level-1>li.section.main {
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 
 @media (max-width: 1200px) {
