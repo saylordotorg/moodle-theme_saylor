@@ -607,8 +607,8 @@ input[type="color"],
     width: 100%;
 }
 
-	/*add padding to text in blocks on left nav bar */
-.block {
+	/*add padding to content in blocks on left nav bar */
+.block .content {
 	padding: 0 0 0 10px;
 	}
 
