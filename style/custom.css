@@ -144,10 +144,6 @@ h2.main,
     margin: 0 auto;
 }
 
-.logininfo {
-    margin-top: 5px;
-}
-
 #page-header .logo-img {
     background-position: center center;
     background-repeat: no-repeat;
@@ -619,6 +615,7 @@ input[type="color"],
 
 /*Hide message and parentheses login status message on nav bar*/
 .logininfo {
+    margin-top: 5px;
     visibility: hidden;
 }
 
