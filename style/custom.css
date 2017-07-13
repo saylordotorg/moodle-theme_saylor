@@ -612,10 +612,11 @@ input[type="color"],
     display: none; 
 }
 
-/*Padding on content on left navbar*/
-.block {
-    padding: 0 0 0 1em;
+/*Fix padding issue on left nav bar*/
+.block .content{
+        padding: 0.5em 1em !important;
 }
+
 
 @media (max-width: 979px) {
     .navbar {
@@ -687,13 +688,6 @@ input[type="color"],
     #page-content,
     .container {
         width: 95%;
-    }
-
-    /* change background color of foreground content in blocks on left (nav & admin) 
-    and padding */
-    .block {
-        padding: 1em 0 0 1em;
-        background-color: #FFF;
     }
 
     /* change background color of foreground content of central block */
@@ -856,11 +850,6 @@ div.guestsub {
 }
 
 
-
-/* change background color of dropdown nav bar*/
-/*.navbar-inner {
-    background-color: #25535E;
-}*/
 
 https://moodle-dev.sylr.org/
 
