@@ -613,17 +613,6 @@ input[type="color"],
     font-size: 20px;
 }
 
-/*Hide message and parentheses login status message on nav bar*/
-.logininfo {
-    margin-top: 5px;
-    visibility: hidden;
-}
-
-/*But still show the a href hyperlink text*/
-#page-header .socials a {
-visibility: visible;
-}
-
 @media (max-width: 979px) {
     .navbar {
         float: none !important;
