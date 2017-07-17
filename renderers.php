@@ -109,7 +109,7 @@ class theme_saylor_core_renderer extends core_renderer
             } else {
                 $loggedinas = $realuserinfo.get_string('loggedingreeting', 'theme_saylor', $username);
                 if ($withlinks) {
-                    $loggedinas .= " <a href=\"$CFG->wwwroot/login/logout.php?sesskey=".sesskey()."\">".get_string('logouttext', 'theme_saylor').'</a>';
+                    $loggedinas .= " | <a href=\"$CFG->wwwroot/login/logout.php?sesskey=".sesskey()."\">".get_string('logouttext', 'theme_saylor').'</a>';
                 }
             }
         } else {
