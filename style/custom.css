@@ -614,7 +614,11 @@ input[type="color"],
 
 /*Fix padding issue on left nav bar*/
 .block .content{
-        padding: 0.5em 1em !important;
+    padding: 0.5em 1em !important;
+}
+
+.block .header {
+    padding: 0.5em !important;
 }
 
 
@@ -700,9 +704,10 @@ input[type="color"],
         background-color: #E3E3E3;
     }
     
-    .block .header {
+   /* .block .header {
         margin: 0 10px !important;
-    }
+    }*/
+    
     #page-footer {
         margin: 50px 0 0;
     }
