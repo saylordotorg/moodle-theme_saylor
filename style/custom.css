@@ -621,6 +621,10 @@ input[type="color"],
     padding: 0.5em !important;
 }
 
+/*Add bottom padding to each sub-block in central block content*/
+.format-flexsections .course-content ul.flexsections li.section {
+    padding-bottom: 0.5em;
+}
 
 @media (max-width: 979px) {
     .navbar {
