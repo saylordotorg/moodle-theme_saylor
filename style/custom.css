@@ -608,6 +608,20 @@ input[type="color"],
     display: none; 
 }
 
+/*Fix padding issue on left nav bar*/
+.block .content{
+    padding: 0.5em 1em !important;
+}
+
+/*Fix header padding issue on left nav bar*/
+.block .header {
+    padding: 0.5em !important;
+}
+
+/*Add bottom padding to each sub-block in central block content*/
+.format-flexsections .course-content ul.flexsections li.section {
+    padding-bottom: 0.5em;
+
 /*Increase font size of login status message on nav bar*/
 #page-header .socials {
     font-size: 20px;
