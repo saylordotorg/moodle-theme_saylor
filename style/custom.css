@@ -700,13 +700,6 @@ input[type="color"],
         width: 95%;
     }
 
-    /* change background color of foreground content in blocks on left (nav & admin) 
-    and padding */
-    .block {
-        padding: 1em 0 0 1em;
-        background-color: #FFF;
-    }
-
     /* change background color of foreground content of central block */
     .course_category_tree .category>.info {
         background-color: #FFF;
@@ -717,9 +710,10 @@ input[type="color"],
         background-color: #E3E3E3;
     }
     
-    .block .header {
+   /* .block .header {
         margin: 0 10px !important;
-    }
+    }*/
+    
     #page-footer {
         margin: 50px 0 0;
     }
@@ -867,11 +861,6 @@ div.guestsub {
 }
 
 
-
-/* change background color of dropdown nav bar*/
-/*.navbar-inner {
-    background-color: #25535E;
-}*/
 
 https://moodle-dev.sylr.org/
 
