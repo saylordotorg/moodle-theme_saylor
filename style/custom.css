@@ -144,10 +144,6 @@ h2.main,
     margin: 0 auto;
 }
 
-.logininfo {
-    margin-top: 5px;
-}
-
 #page-header .logo-img {
     background-position: center center;
     background-repeat: no-repeat;
@@ -617,6 +613,7 @@ input[type="color"],
     padding: 0.5em 1em !important;
 }
 
+/*Fix header padding issue on left nav bar*/
 .block .header {
     padding: 0.5em !important;
 }
@@ -624,6 +621,11 @@ input[type="color"],
 /*Add bottom padding to each sub-block in central block content*/
 .format-flexsections .course-content ul.flexsections li.section {
     padding-bottom: 0.5em;
+}
+
+/*Increase font size of login status message on nav bar*/
+#page-header .socials {
+    font-size: 20px;
 }
 
 @media (max-width: 979px) {
