@@ -81,75 +81,81 @@ echo $OUTPUT->doctype() ?>
 </head>
 
 <body <?php echo $OUTPUT->body_attributes('two-column'); ?>>
-    <?php echo $OUTPUT->standard_top_of_body_html() ?>
+<?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-    <div id="page" class="container-fluid">
-        <div id="page-header-wrapper" class="clearfix">
-            <header id="page-header" class="clearfix <?php echo "$headerclass"; ?> lalign">
-                <div class="logo-div">
-                    <a class="logo-img" style="background-image: url('<?php echo $OUTPUT->image_url('logo', 'theme')?>');" href="/"></a>
-                </div> 
-                           
-                <div class="navbar pull-left">
-                    <nav role="navigation" class="navbar-inner">
-                        <div class="container-fluid">
-                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </a>
-                            <div class="nav-collapse collapse">
-                                <?php echo $OUTPUT->custom_menu(); ?>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div id="course-header">
-                    <?php echo $OUTPUT->course_header(); ?>
-                </div>
-                <div class="pull-right socials">
-                    <?php
-                        echo $OUTPUT->login_info();
-                        // echo $OUTPUT->lang_menu();
-                        echo $PAGE->headingmenu;
-                ?>    
-                </div>     
-            </header>
-        </div>    
-        <div id="cname" class="container">
-            <h1><?php echo $this->page->course->fullname ?></h1>
-        </div>
-        <div id="navwrap">
-            <div id="page-navbar" class="container clearfix">
-                    <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
-                    <?php echo $OUTPUT->navbar(); ?>
+<div id="page" class="container-fluid">
+
+<div id="page-header-wrapper" class="clearfix">
+    <header id="page-header" class="clearfix <?php echo "$headerclass"; ?> lalign">
+        <div class="logo-div">
+            <a class="logo-img" style="background-image: url('<?php echo $OUTPUT->image_url('logo', 'theme')?>');" href="/"></a>
+        </div> 
+                   
+        <div class="navbar pull-left">
+    <nav role="navigation" class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse">
+                <?php echo $OUTPUT->custom_menu(); ?>
             </div>
         </div>
-         <div id="page-content" class="row-fluid">
-            
-                <section id="region-main" class="span9<?php if ($left) {
-                    echo ' pull-right';
-} ?>">
-                    <?php
-                    echo $OUTPUT->course_content_header();
-                    echo $OUTPUT->main_content();
-                    echo $OUTPUT->course_content_footer();
-                    ?>
-
-                    <!-- share buttons -->
-                    <div id="share-buttons">
-                        <br><p>Share this course!</p>
-                        <?php echo course_share_buttons(); ?>
-                    </div>
-                </section>
-                <?php
-                $classextra = '';
-                if ($left) {
-                    $classextra = ' desktop-first-column';
-                }
-                echo $OUTPUT->blocks('side-pre', 'span3'.$classextra);
-                ?>
+    </nav>
+</div>
+        <div id="course-header">
+            <?php echo $OUTPUT->course_header(); ?>
         </div>
+        
+        
+<div class="pull-right socials">
+                <?php
+                    echo $OUTPUT->login_info();
+                    // echo $OUTPUT->lang_menu();
+                    echo $PAGE->headingmenu;
+            ?>    
+</div>
+        
+        
+    </header>
+</div>    
+
+
+<div id="cname" class="container">
+<h1><?php echo $this->page->course->fullname ?></h1>
+</div>
+
+<div id="navwrap">
+  <div id="page-navbar" class="container clearfix">
+            <nav class="breadcrumb-button"><?php echo $OUTPUT->page_heading_button(); ?></nav>
+            <?php echo $OUTPUT->navbar(); ?>
+    </div>
+</div>
+
+
+ <div id="page-content" class="row-fluid">
+    
+        <section id="region-main" class="span9<?php if ($left) {
+            echo ' pull-right';
+}
+        ?>">
+            <?php
+            echo $OUTPUT->course_content_header();
+            echo $OUTPUT->main_content();
+            echo $OUTPUT->course_content_footer();
+            ?>
+        </section>
+        <?php
+        $classextra = '';
+        if ($left) {
+            $classextra = ' desktop-first-column';
+        }
+        echo $OUTPUT->blocks('side-pre', 'span3'.$classextra);
+        ?>
+    </div>
+
 
     <footer id="page-footer" class="clearfix">
         <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
@@ -157,9 +163,9 @@ echo $OUTPUT->doctype() ?>
         <div class="container">
         
         <div class="span4">
-            <div align="center" class="logo">
-                <a class="logo" style="background-image: url('<?php echo $OUTPUT->image_url('logo2', 'theme')?>');" href="/"></a>
-            </div>
+        <div align="center" class="logo">
+            <a class="logo" style="background-image: url('<?php echo $OUTPUT->image_url('logo2', 'theme')?>');" href="/"></a>
+        </div>
             <div class="footer-share">
                 <a title="Facebook | /SaylorFoundation" target="_blank" href="https://www.facebook.com/SaylorFoundation" class="fa fa-facebook fa-2x"></a>
                 <a title="Twitter | @saylordotorg" target="_blank" href="https://twitter.com/saylordotorg" class="fa fa-twitter fa-2x"></a>
@@ -168,7 +174,9 @@ echo $OUTPUT->doctype() ?>
                 <a title="GitHub | /saylordotorg" target="_blank" href="https://github.com/saylordotorg" class="fa fa-github fa-2x"></a>
             </div>
         </div>
+        
         <div class="span4">
+        
         <div class="textwidget"><p><a href="http://creativecommons.org/licenses/by/3.0/" rel="license"><img src="<?php echo $OUTPUT->image_url('ccby', 'theme')?>" style="border-width:0" alt="Creative Commons License"></a><br>&copy; Saylor Academy 2010-2017 except as otherwise noted. Excluding course final exams, content authored by Saylor Academy is available under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 Unported</a> license. Third-party materials are the copyright of their respective owners and shared under various licenses. See <a href="https://www.saylor.org/open/licensinginformation/" target="_blank">detailed licensing information</a>.</p>
 <p>Saylor Academy and Saylor.org&reg; are trade names of the Constitution Foundation, a 501(c)(3) organization through which our educational activities are conducted.</p>
 <p><a href="http://www.saylor.org/sitemap">Sitemap</a> | <a href="http://www.saylor.org/terms-of-use">Terms of Use</a> | <a href="http://www.saylor.org/privacy-policy">Privacy Policy</a></p>
