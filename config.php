@@ -60,25 +60,25 @@ $THEME->layouts = array(
     ),
     // Standard layout with blocks, this is recommended for most pages with general information.
     'standard' => array(
-        'file' => 'columns2.php',
+        'file' => 'course.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
     // Main course page.
     'course' => array(
-        'file' => 'columns2.php',
+        'file' => 'course.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
         'options' => array('langmenu' => true),
     ),
     'coursecategory' => array(
-        'file' => 'columns2.php',
+        'file' => 'course.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
     // part of course, typical for modules - default page layout if $cm specified in require_login().
     'incourse' => array(
-        'file' => 'columns2.php',
+        'file' => 'course.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
@@ -91,13 +91,13 @@ $THEME->layouts = array(
     ),
     // Server administration scripts.
     'admin' => array(
-        'file' => 'columns2.php',
+        'file' => 'course.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
     // My dashboard page.
     'mydashboard' => array(
-        'file' => 'columns2.php',
+        'file' => 'course.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
         'options' => array('langmenu' => true),
@@ -152,7 +152,7 @@ $THEME->layouts = array(
     ),
     // The pagelayout used for reports.
     'report' => array(
-        'file' => 'columns2.php',
+        'file' => 'course.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),

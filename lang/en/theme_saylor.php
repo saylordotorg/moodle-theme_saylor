@@ -145,3 +145,4 @@ $string['secondcolor'] = 'Secondary Color';
 $string['secondcolordesc'] = 'secondary accent color used for the first block and other places';
 
 $string['noenrolments'] = 'No enrolled courses';
+$string['loginorsignupmessage'] = '<a href="{$a}"> Log in or Sign up</a> to track your course progress, gain access to final exams and get an Accredible certificate!';
