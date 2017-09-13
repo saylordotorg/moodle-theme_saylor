@@ -609,7 +609,8 @@ class theme_saylor_core_renderer extends core_renderer
 
 }
 
-class theme_saylor_block_course_overview_renderer extends block_course_overview_renderer {
+class theme_saylor_block_course_overview_renderer extends block_course_overview_renderer
+{
 
     /**
      * Construct contents of course_overview block
@@ -953,4 +954,3 @@ class theme_saylor_core_course_renderer extends core_course_renderer
         return $content;
     }
 }
-
