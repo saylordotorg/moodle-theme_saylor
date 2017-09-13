@@ -632,7 +632,6 @@ input[type="color"],
 div#enroll-button-container {
     font-size: 1.1em;
     text-align: center;
-    padding-bottom: 5px;
 }
 
 @media (max-width: 979px) {
