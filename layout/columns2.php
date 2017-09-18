@@ -50,9 +50,9 @@ $templatecontext = [
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'currentyear' => date('Y'),
-    'logo' => $OUTPUT->pix_url('logos/logo_light', 'theme'),
-    'footer_logo' => $OUTPUT->pix_url('logos/logo2', 'theme'),
-    'ccby' => $OUTPUT->pix_url('logos/cc/ccby', 'theme')
+    'logo' => $OUTPUT->image_url('logos/logo_light', 'theme'),
+    'footer_logo' => $OUTPUT->image_url('logos/logo2', 'theme'),
+    'ccby' => $OUTPUT->image_url('logos/cc/ccby', 'theme')
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
