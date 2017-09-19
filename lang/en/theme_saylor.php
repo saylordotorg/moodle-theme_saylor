@@ -36,9 +36,11 @@ $string['choosereadme'] = 'Theme Saylor is a child theme of Boost.';
 // Name of the settings pages.                                                                                                      
 $string['configtitle'] = 'Saylor settings';                                                                                          
 // Name of the first settings tab.                                                                                                  
-$string['generalsettings'] = 'General settings';
+$string['generalsettings'] = 'General settings';  
 
-
+$string['logintext'] = 'Log in or Sign up';
+$string['loggedingreeting'] = 'Hi, {$a}!';
+$string['loggedinnotgreeting'] = '';
 $string['loginorsignupmessage'] = '<a href="{$a}"> Log in or Sign up</a> to track your course progress, gain access to final exams, and get a free certificate of completion!';
 
 // The name of our plugin.                                                                                                          
