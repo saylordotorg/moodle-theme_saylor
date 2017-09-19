@@ -41,6 +41,7 @@ $string['generalsettings'] = 'General settings';
 $string['logintext'] = 'Log in or Sign up';
 $string['loggedingreeting'] = 'Hi, {$a}!';
 $string['loggedinnotgreeting'] = '';
+$string['loginorsignupmessage'] = '<a href="{$a}"> Log in or Sign up</a> to track your course progress, gain access to final exams, and get a free certificate of completion!';
 
 // The name of our plugin.                                                                                                          
 $string['pluginname'] = 'Saylor';                                                                                                    
