@@ -31,9 +31,9 @@ $templatecontext = [
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
     'currentyear' => date('Y'),
-    'logo' => $OUTPUT->pix_url('logos/logo_light', 'theme'),
-    'footer_logo' => $OUTPUT->pix_url('logos/logo2', 'theme'),
-    'ccby' => $OUTPUT->pix_url('logos/cc/ccby', 'theme')
+    'logo' => $OUTPUT->image_url('logos/logo_light', 'theme'),
+    'footer_logo' => $OUTPUT->image_url('logos/logo2', 'theme'),
+    'ccby' => $OUTPUT->image_url('logos/cc/ccby', 'theme')
 ];
 
 echo $OUTPUT->render_from_template('theme_saylor/login', $templatecontext);
