@@ -49,3 +49,7 @@
 .prettyprint .atn {
   color: inherit;
 }
+
+.que .formulation .prettyprint, .que .outcome .prettyprint, .que .comment .prettyprint {
+  text-shadow: 0 0 0;
+}
