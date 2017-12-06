@@ -50,11 +50,13 @@ $templatecontext = [
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'currentyear' => date('Y'),
-    'logo' => $OUTPUT->image_url('logos/logo_light', 'theme'),
+    'logodarklarge' => $OUTPUT->image_url('logos/logo_dark_large', 'theme'),
+    'logodarksmall' => $OUTPUT->image_url('logos/logo_dark_small', 'theme'),
+    'logolightlarge' => $OUTPUT->image_url('logos/logo_light_large', 'theme'),
+    'logolightsmall' => $OUTPUT->image_url('logos/logo_light_small', 'theme'),
     'footer_logo' => $OUTPUT->image_url('logos/logo2', 'theme'),
     'ccby' => $OUTPUT->image_url('logos/cc/ccby', 'theme')
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
 echo $OUTPUT->render_from_template('theme_saylor/columns2', $templatecontext);
-
