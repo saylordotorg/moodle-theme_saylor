@@ -12,14 +12,20 @@
     text-align: center;
     padding-bottom: 5px;
 }
+// Add bottom border color
+header.pos-f-t.navbar {
+  border-bottom: 3px solid #5BC0DE;
+}
 
+//Increse width of logo in header
 .container-navbar-logo {
     width: 10vw;
     min-width: 5em;
 }
 
+// Change height, margin and padding to logo
 .navbar-logo img {
   height: 45px;
-  margin-top: -2px;
+  margin-top: -4px;
   padding-bottom: 2px;
 }
