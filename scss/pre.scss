@@ -1,23 +1,23 @@
-// https://docs.moodle.org/dev/Creating_a_theme_based_on_boost#Why_do_we_use_pre_and_post_SCSS.3F
+/* // https://docs.moodle.org/dev/Creating_a_theme_based_on_boost#Why_do_we_use_pre_and_post_SCSS.3F
 // Pre SCSS for the theme.
-
-// Increase font size for user log in/sign up top-right header.
+//
+// Increase font size for user log in/sign up top-right header. */
 .usermenu {
     font-size: 1.2em;
 }
 
 
 #enroll-button-container {
-    font-size: 1.1em;
+    font-size: 1.25em;
     text-align: center;
     padding-bottom: 5px;
 }
-// Add bottom border color
+/* // Add bottom border color */
 header.pos-f-t.navbar {
-  border-bottom: 3px solid #5BC0DE;
+  border-bottom: 5px solid #469DCD;
 }
 
-//Increse width of logo in header
+/* //Increse width of logo in header */
 .container-navbar-logo {
     width: 10vw;
     min-width: 5em;
