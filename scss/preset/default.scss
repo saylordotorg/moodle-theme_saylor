@@ -88,6 +88,15 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
 }
 
+// Change height, margin and padding to navbar logo
+.navbar-brand .icon {
+  height: 52px;
+  width: 10vw;
+  min-width: 5em;
+  margin-top: -4px;
+  padding-bottom: 2px;
+}
+
 .filemanager-container,
 .filepicker-filelist {
     @extend .border;
