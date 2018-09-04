@@ -19,7 +19,7 @@
 }}
 <nav class="fixed-top navbar navbar-light bg-white navbar-expand moodle-has-zindex">
 
-        <div data-region="drawer-toggle" class="d-inline-block mr-3">
+        <div data-region="drawer-toggle" class="d-inline-block">
             <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">{{#pix}}i/menubars{{/pix}}<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></button>
         </div>
 
@@ -31,12 +31,12 @@
         </ul>
         {{! Brand logo }}
         <a href="{{{ config.wwwroot }}}" id="navbar-brand" class="navbar-brand has-logo mx-auto">
-            <span class="logo d-none d-sm-inline">
+            <div class="logo d-inline-flex mx-auto">
                 {{# pix}} logos/logo_dark_large, theme_saylor, {{sitename}}{{/pix}}
-            </span>
+            </div>
         </a>
 
-        <ul class="nav navbar-nav ml-auto">
+        <ul class="nav navbar-nav flex-nowrap">
             <div class="d-none d-lg-block">
             {{{ output.search_box }}}
         </div>

@@ -84,19 +84,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.navbar {
-    box-shadow: 0 3px 0 $primary;
-}
-
-// Change height, margin and padding to navbar logo
-.navbar-brand .icon {
-  height: 52px;
-  width: 10vw;
-  min-width: 5em;
-  margin-top: -4px;
-  padding-bottom: 2px;
-}
-
 .filemanager-container,
 .filepicker-filelist {
     @extend .border;
