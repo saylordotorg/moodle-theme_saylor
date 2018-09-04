@@ -1,2 +1,40 @@
 // https://docs.moodle.org/dev/Creating_a_theme_based_on_boost#Why_do_we_use_pre_and_post_SCSS.3F
 // Post SCSS for the theme.
+
+// Reduce the spacing between the userpicture and the caret.
+img.userpicture {
+    margin-right: -.5rem;
+}
+
+.navbar {
+    box-shadow: 0 3px 0 $primary;
+}
+
+// Change height, margin and padding of navbar logo.
+.navbar-brand .logo .icon {
+    height: auto;
+    width: 100%;
+    max-width: 206px;
+    max-height: 45px;
+}
+
+.navbar-brand .logo {
+	height: $navbar-height;
+	width: 100%;
+}
+
+#navbar-brand {
+	height: $navbar-height;
+	max-width: 206px;
+	width: 100%;
+	padding-right: 4px;
+}
+
+// Increase font size for user log in/sign up top-right header. */
+.usermenu {
+    font-size: 1.2em;
+}
+.usermenu .login {
+	line-height: 0.25rem;
+	text-align: center;
+}
