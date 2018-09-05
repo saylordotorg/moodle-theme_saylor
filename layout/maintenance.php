@@ -13,19 +13,20 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
- * Theme version info
  *
  * @package   theme_saylor
- * @copyright 2018
+ * @copyright 2018 Saylor Academy
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
+defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'theme_saylor';
-$plugin->version   = 2017061000;
-$plugin->maturity = MATURITY_ALPHA;
-$plugin->requires  = 2018051300;
-$plugin->dependencies = ['theme_boost' => '2018051300'];
+$templatecontext = [
+    // We cannot pass the context to format_string, this layout can be used during
+    // installation. At that stage database tables do not exist yet.
+    'sitename' => format_string($SITE->shortname, true, ["escape" => false]),
+    'output' => $OUTPUT
+];
+
+echo $OUTPUT->render_from_template('theme_boost/maintenance', $templatecontext);

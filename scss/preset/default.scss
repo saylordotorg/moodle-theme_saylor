@@ -231,10 +231,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
-}
-
 .filemanager-container,
 .filepicker-filelist {
     @extend .border;
@@ -243,4 +239,9 @@ body {
 // Rounded user pictures
 .userpicture {
     border-radius: 50%;
+}
+
+// Increase font size for user log in/sign up top-right header. */
+.usermenu {
+    font-size: 1.2em;
 }

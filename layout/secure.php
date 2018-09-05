@@ -13,19 +13,26 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
- * Theme version info
  *
  * @package   theme_saylor
- * @copyright 2018
+ * @copyright 2018 Saylor Academy
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die;
+defined('MOODLE_INTERNAL') || die();
 
-$plugin->component = 'theme_saylor';
-$plugin->version   = 2017061000;
-$plugin->maturity = MATURITY_ALPHA;
-$plugin->requires  = 2018051300;
-$plugin->dependencies = ['theme_boost' => '2018051300'];
+$blockshtml = $OUTPUT->blocks('side-pre');
+$hasblocks = strpos($blockshtml, 'data-block=') !== false;
+$bodyattributes = $OUTPUT->body_attributes();
+
+$templatecontext = [
+    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
+    'output' => $OUTPUT,
+    'bodyattributes' => $bodyattributes,
+    'sidepreblocks' => $blockshtml,
+    'hasblocks' => $hasblocks
+];
+
+echo $OUTPUT->render_from_template('theme_boost/secure', $templatecontext);
+
