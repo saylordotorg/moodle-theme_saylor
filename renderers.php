@@ -27,6 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 // course renderer
 require_once($CFG->dirroot . "/theme/boost/classes/output/core_renderer.php");
+require_once($CFG->dirroot . "/course/renderer.php");
 
 class theme_saylor_core_renderer extends theme_boost\output\core_renderer
 {
@@ -230,7 +231,7 @@ class theme_saylor_core_renderer extends theme_boost\output\core_renderer
     }
 }
 
-class theme_saylor_core_course_renderer extends core_course_renderer
+class theme_saylor_core_course_renderer extends \core_course_renderer
 {
            // Change searchcriteria to only focus on courses from category 2.
     protected function coursecat_courses(coursecat_helper $chelper, $courses, $totalcount = null) {
