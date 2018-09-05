@@ -171,7 +171,7 @@ $expand-green-900:     #009400 !default;
 
 
 $primary:       $primary-light-blue !default;
-$secondary:     $primary-orange !default;
+$secondary:     $button-bg-orange !default;
 $success:       $expand-green-500 !default;
 $info:          $expand-teal-500 !default;
 $warning:       $expand-yellow-700 !default;
@@ -229,6 +229,10 @@ $theme-colors: (
 
 body {
     -webkit-font-smoothing: antialiased;
+}
+
+.btn-primary {
+    background-color: #f16505;
 }
 
 .navbar {
