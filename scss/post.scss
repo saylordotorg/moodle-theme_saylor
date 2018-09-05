@@ -35,7 +35,7 @@ img.userpicture {
 	padding-right: 4px;
 }
 
-// Increase font size for user log in/sign up top-right header. */
+// Increase font size for user log in sign up top-right header. */
 .usermenu {
     font-size: 1.2em;
 }
@@ -48,4 +48,27 @@ img.userpicture {
 	background-image: url([[pix:theme_saylor|login_background_ocean]]);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+// Login Page
+.login-container {
+	color: $white;
+	margin-top: 5vw;
+}
+
+.login-container .forgetpass a {
+	color: $primary-orange;
+}
+
+.email-login {
+	margin-bottom: 2rem;
+}
+
+.identityproviders {
+	margin-top: 2rem;
+}
+
+.potentialidp a {
+	width: 15rem;
+	margin-top: .5rem;
 }
