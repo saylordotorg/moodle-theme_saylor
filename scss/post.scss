@@ -15,6 +15,10 @@ img.userpicture {
 	border-color: $gray-200;
 }
 
+.navbar .nav-link .fa-bars {
+	color: $dark;
+}
+
 // Change height, margin and padding of navbar logo.
 .navbar-brand .logo .icon {
     height: auto;
