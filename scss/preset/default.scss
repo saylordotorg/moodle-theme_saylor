@@ -207,7 +207,7 @@ $alert-border-width:                0 !default;
 
 $theme-colors: (
     primary: $primary,
-    secondary: $button-bg-orange,
+    secondary: $secondary,
     success: $success,
     info: $info,
     warning: $warning,
@@ -230,19 +230,6 @@ $theme-colors: (
 body {
     -webkit-font-smoothing: antialiased;
 }
-
-.btn-primary {
-    background-color: $button-bg-orange;
-    border: none;
-    border-radius: 4px;
-}
-
-// Google & Facebook buttons aren't categorized as DEFAULT so this didn't work for them
-// .btn-default{
-//     background-color: $button-bg-orange;
-//     border: none;
-//     border-radius: 4px;
-// }
 
 .filemanager-container,
 .filepicker-filelist {
