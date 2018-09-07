@@ -248,3 +248,13 @@ body {
 .usermenu {
     font-size: 1.2em;
 }
+
+// Button color should be our button orange.
+.btn-primary {
+    background-color: $button-bg-orange;
+    border-color: $button-bg-orange;
+}
+.btn-secondary {
+    background-color: $button-bg-orange;
+    border-color: $button-bg-orange;
+}
