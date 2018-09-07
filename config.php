@@ -31,6 +31,7 @@ $THEME->parents = array('boost');
 // extensions. 
 $THEME->sheets = array();
 $THEME->editor_sheets = array();
+$THEME->javascripts_footer = array('prettify');
 $THEME->enable_dock = false;
 $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
