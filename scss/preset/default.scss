@@ -228,6 +228,28 @@ $theme-colors: (
 // Import Prettify-Solarized CSS
 @import "prettify-solarized";
 
+// Fonts
+@font-face {
+    font-family: 'Comfortaa';
+    src: url([[font:theme|Comfortaa-Regular.ttf]]) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open_Sans';
+    src: url([[font:theme|OpenSans-Regular.ttf]]) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url([[font:theme|Raleway-Regular.ttf]]) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // Preset CSS
 
 body {
