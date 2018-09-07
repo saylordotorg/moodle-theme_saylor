@@ -10,6 +10,15 @@ img.userpicture {
     box-shadow: 0 3px 0 $primary;
 }
 
+.navbar .btn {
+	background-color: $gray-200;
+	border-color: $gray-200;
+}
+
+.navbar .nav-link .fa-bars {
+	color: $dark;
+}
+
 // Change height, margin and padding of navbar logo.
 .navbar-brand .logo .icon {
     height: auto;
