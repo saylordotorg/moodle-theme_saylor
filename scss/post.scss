@@ -1,4 +1,4 @@
-// https://docs.moodle.org/dev/Creating_a_theme_based_on_boost#Why_do_we_use_pre_and_post_SCSS.3F
+ // https://docs.moodle.org/dev/Creating_a_theme_based_on_boost#Why_do_we_use_pre_and_post_SCSS.3F
 // Post SCSS for the theme.
 
 // Reduce the spacing between the userpicture and the caret.
@@ -10,6 +10,10 @@ img.userpicture {
     box-shadow: 0 3px 0 $primary;
 }
 
+#navbar-login {
+	box-shadow: 0 0;
+	margin-bottom: 1rem;
+}
 .navbar .btn {
 	background-color: $gray-200;
 	border-color: $gray-200;
@@ -39,13 +43,47 @@ img.userpicture {
 	padding-right: 4px;
 }
 
-// Increase font size for user log in/sign up top-right header. */
+// Increase font size for user log in sign up top-right header. */
 .usermenu {
     font-size: 1.2em;
 }
 .usermenu .login {
 	line-height: 0.25rem;
 	text-align: center;
+}
+
+#page-login-index #page-wrapper {
+	background-image: url([[pix:theme_saylor|login_background_ocean]]);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+// Login Page
+.login-container {
+	color: $white;
+	margin-top: 5vw;
+}
+
+.login-container .forgetpass a {
+	color: $primary-orange;
+}
+
+.email-login {
+	margin-bottom: 2rem;
+}
+
+.signup .btn {
+	width: 15rem;
+}
+
+.identityproviders {
+	margin-top: 2rem;
+}
+
+.potentialidp a {
+	width: 10rem;
+	margin-top: .5rem;
 }
 
 // Enroll button
