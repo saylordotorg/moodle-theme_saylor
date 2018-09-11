@@ -32,7 +32,7 @@ $string['advancedsettings'] = 'Advanced settings';
 $string['choosereadme'] = 'Theme Saylor is a child theme of Boost.';                
 $string['configtitle'] = 'Saylor theme settings';
 $string['generalsettings'] = 'General settings';
-
+$string['loginorsignupmessage'] = '<a href="{$a}"> Log in or Sign up</a> to track your course progress, gain access to final exams, and get a free certificate of completion!';
 $string['presetfiles'] = 'Additional theme preset files';
 $string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href=https://docs.moodle.org/dev/Boost_Presets>Boost presets</a> for information on creating and sharing your own preset files, and see the <a href=http://moodle.net/boost>Presets repository</a> for presets that others have shared.';
 $string['preset'] = 'Theme preset';
