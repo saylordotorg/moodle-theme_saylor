@@ -235,7 +235,11 @@ class theme_saylor_core_renderer extends theme_boost\output\core_renderer
     */
     public function saylor_custom_enroll_button() {
         global $COURSE, $PAGE;
-        // show nothing if user is already on enroll page.
+        // Show nothing if the page layout is not course or incourse.
+        if (!($PAGE->pagelayout == 'course' || $PAGE->pagelayout == 'incourse')) {
+            return "";
+        }
+        // Show nothing if user is already on enroll page.
         if ($PAGE->pagetype == 'enrol-index') {
                 return "";
         }
