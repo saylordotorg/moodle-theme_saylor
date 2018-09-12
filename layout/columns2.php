@@ -49,6 +49,7 @@ $templatecontext = [
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'saylorcustomenrollbutton' => $saylor_custom_enroll_button,
+    'currentyear' => date('Y'),
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
