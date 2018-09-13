@@ -6,6 +6,10 @@ img.userpicture {
     margin-right: -.5rem;
 }
 
+#nav-drawer {
+	border-right: $card-border-width solid $card-border-color;
+}
+
 .navbar {
     box-shadow: 0 3px 0 $primary;
 }
