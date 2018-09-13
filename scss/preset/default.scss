@@ -252,6 +252,7 @@ $theme-colors: (
     font-style: normal;
 }
 
+
 // Font Additions
 h1 { font-family: Raleway; font-size: 28px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
 
@@ -262,9 +263,18 @@ h3 { font-family: Raleway; font-size: 20px; font-style: normal; font-variant: sm
 
 p { font-family: "Open Sans"; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
 
-li { font-family: Raleway; font-size: 18px; font-style: normal; font-variant: small-caps; font-weight: 600; line-height: 15.4px; }
-
+// a elements if required
 // a { font-family: "Open Sans"; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 20px; }
+
+li {
+    font-family: Raleway; font-size: 18px; 
+    font-style: normal; font-variant: small-caps; 
+    font-weight: 500; line-height: 20px;
+}
+
+.nav-item { font-family: "Open Sans"; font-size: 18px; 
+    font-style: normal; font-variant: normal; 
+    font-weight: 500; line-height: 15.4px; }
 
 
 // Preset CSS
