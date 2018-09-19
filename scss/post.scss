@@ -1,6 +1,10 @@
  // https://docs.moodle.org/dev/Creating_a_theme_based_on_boost#Why_do_we_use_pre_and_post_SCSS.3F
 // Post SCSS for the theme.
 
+.content .sectionname {
+	margin-top: .5rem;
+}
+
 // Reduce the spacing between the userpicture and the caret.
 img.userpicture {
     margin-right: -.5rem;
@@ -97,6 +101,32 @@ img.userpicture {
     padding-bottom: 5px;
 }
 
+/** Course Catalog */
+
+.coursebox .content .summary {
+	width: 100%;
+	padding-left: .5rem;
+	margin: 0;
+}
+
+.coursebox .content .summary p {
+	margin: 0;
+}
+
+.coursebox .enrolmenticons {
+	display: none;
+}
+
+.coursebox .info .coursename a {
+	background-image: none;
+	padding-left: 0;
+}
+
+.coursebox .moreinfo {
+	float: none;
+	padding-top: 6px;
+}
+
 /** Footer */
 #page-footer a {
 	text-decoration: none;
@@ -126,4 +156,18 @@ img.userpicture {
 #id_honestycheckheader .fcontainer .form-group .form-inline {
 	max-width: 100% !important;
 	flex: 0 0 auto !important;
+}
+
+/** Quiz **/
+
+.que .info {
+	background-color: $light;
+	border-color: $card-border-color;
+}
+
+.que .content .formulation {
+	background-color: $white;
+	border: 1px solid $card-border-color;
+	border-radius: 2px;
+	color: #424242;
 }
