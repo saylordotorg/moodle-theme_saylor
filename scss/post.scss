@@ -120,3 +120,17 @@ img.userpicture {
 	width: 80px;
 	height: auto;
 }
+
+/** Quiz **/
+
+.que .info {
+	background-color: $light;
+	border-color: $card-border-color;
+}
+
+.que .content .formulation {
+	background-color: $white;
+	border: 1px solid $card-border-color;
+	border-radius: 2px;
+	color: #424242;
+}
