@@ -151,6 +151,13 @@ img.userpicture {
 	height: auto;
 }
 
+/** Honesty Check */
+
+#id_honestycheckheader .fcontainer .form-group .form-inline {
+	max-width: 100% !important;
+	flex: 0 0 auto !important;
+}
+
 /** Quiz **/
 
 .que .info {
