@@ -218,18 +218,6 @@ $theme-colors: (
     dark: $dark
 );
 
-// Import FontAwesome.
-@import "fontawesome";
-
-// Import All of Bootstrap
-@import "bootstrap";
-
-// Import Core moodle CSS
-@import "moodle";
-
-// Import Prettify-Solarized CSS
-@import "prettify-solarized";
-
 // Fonts
 @font-face {
     font-family: 'Comfortaa';
@@ -252,19 +240,28 @@ $theme-colors: (
     font-style: normal;
 }
 
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-base: "Open_Sans", $font-family-sans-serif !default;
+$font-family-header: "Raleway", $font-family-sans-serif;
+$font-family-buttons: "Comfortaa", $font-family-sans-serif;
 
-// Font Additions
-h1 { font-family: Raleway; font-size: 28px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+// Import FontAwesome.
+@import "fontawesome";
 
-//SMALL CAPS styling for 
-h2 { font-family: Raleway; font-size: 24px; font-style: normal; font-variant: small-caps; font-weight: 500; line-height: 22px; } 
+// Import All of Bootstrap
+@import "bootstrap";
 
-h3 { font-family: Raleway; font-size: 20px; font-style: normal; font-variant: small-caps; font-weight: 600; line-height: 15.4px; } 
+// Import Core moodle CSS
+@import "moodle";
 
-p { font-family: "Open_Sans"; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+// Import Prettify-Solarized CSS
+@import "prettify-solarized";
 
-// a elements if required
-// a { font-family: "Open_Sans"; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 20px; }
+// Preset CSS
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
 
 li {
     font-family: Raleway; font-size: 18px; 
