@@ -281,6 +281,10 @@ h2 { font-family: $font-family-header;
 h1 { font-family: $font-family-header;
 }
 
+.btn {
+    font-family: $font-family-buttons;
+}
+
 .filemanager-container,
 .filepicker-filelist {
     @extend .border;
