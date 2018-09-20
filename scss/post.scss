@@ -18,6 +18,10 @@ img.userpicture {
 #nav-drawer a[data-key="participants"] {
 	display: none;
 }
+// Hide the Grades node
+#nav-drawer a[data-key="grades"] {
+	display: none;
+}
 
 /** Nav Bar */
 .navbar {
