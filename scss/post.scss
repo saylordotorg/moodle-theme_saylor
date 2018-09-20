@@ -22,9 +22,17 @@ img.userpicture {
 	box-shadow: 0 0;
 	margin-bottom: 1rem;
 }
+
 .navbar .btn {
 	background-color: $gray-200;
 	border-color: $gray-200;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.navbar .btn-secondary:not(.disabled):active:focus{
+	box-shadow: none;
+	-webkit-box-shadow: none;
 }
 
 .navbar .nav-link .fa-bars {
