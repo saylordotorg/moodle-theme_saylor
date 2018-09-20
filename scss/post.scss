@@ -189,3 +189,9 @@ img.userpicture {
 	border-radius: 2px;
 	color: #424242;
 }
+
+/** Profile Page */
+
+.userprofile .profile_tree a[href*="/mod/forum"] {
+	display: none;
+}
