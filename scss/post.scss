@@ -14,6 +14,10 @@ img.userpicture {
 #nav-drawer {
 	border-right: $card-border-width solid $card-border-color;
 }
+// Hide the Participants node
+#nav-drawer a[data-key="participants"] {
+	display: none;
+}
 
 /** Nav Bar */
 .navbar {
