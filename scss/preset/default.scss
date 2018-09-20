@@ -261,10 +261,10 @@ h2 { font-family: Raleway; font-size: 24px; font-style: normal; font-variant: sm
 
 h3 { font-family: Raleway; font-size: 20px; font-style: normal; font-variant: small-caps; font-weight: 600; line-height: 15.4px; } 
 
-p { font-family: "Open Sans"; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+p { font-family: "Open_Sans"; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
 
 // a elements if required
-// a { font-family: "Open Sans"; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 20px; }
+// a { font-family: "Open_Sans"; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 20px; }
 
 li {
     font-family: Raleway; font-size: 18px; 
@@ -273,12 +273,12 @@ li {
 }
 
 body {
-    font-family: "Open Sans"; font-size: 16px; 
+    font-family: "Open_Sans"; font-size: 16px; 
     font-style: normal; font-variant: normal; 
     font-weight: 400; line-height: 20px;
 }
 
-.nav-item { font-family: "Open Sans"; font-size: 18px; 
+.nav-item { font-family: "Open_Sans"; font-size: 18px; 
     font-style: normal; font-variant: normal; 
     font-weight: 500; line-height: 15.4px; }
 
@@ -287,7 +287,7 @@ body {
 
 body {
     -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans";
+    font-family: "Open_Sans";
 }
 
 .filemanager-container,
