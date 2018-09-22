@@ -70,13 +70,13 @@
 	padding-right: 4px;
 }
 
-// Increase font size for user log in sign up top-right header. */
-.usermenu {
-    font-size: 1.2em;
+
+.navbar-nav li.usermenu {
+	line-height: 1;
 }
-.usermenu .login {
-	line-height: 0.25rem;
-	text-align: center;
+
+.navbar-nav .usermenu .login {
+    line-height: 1rem;
 }
 
 #page-login-index #page-wrapper {
