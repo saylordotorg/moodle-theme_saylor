@@ -319,3 +319,9 @@ h1 { font-family: $font-family-header;
 #page-wrapper {
     background-color: $light;
 }
+
+// Hide full site name on landing page - aka delete "Saylor Academy"
+.page-context-header .page-header-headings h1 {
+    display: none; 
+} 
+
