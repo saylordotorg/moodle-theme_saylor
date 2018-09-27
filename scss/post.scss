@@ -180,16 +180,22 @@
 
 /** Quiz **/
 
+.path-mod-quiz #mod_quiz_navblock {
+    .qnbutton {
+	    color: $primary;
+	}
+}
+
 .que .info {
 	background-color: $light;
 	border-color: $card-border-color;
 }
 
 .que .content .formulation {
-	background-color: $white;
+	background-color: $card-bg;
 	border: 1px solid $card-border-color;
 	border-radius: 2px;
-	color: #424242;
+	color: $body-color;
 }
 
 /** Profile Page */
