@@ -203,3 +203,10 @@
 .userprofile .profile_tree a[href*="/mod/forum"] {
 	display: none;
 }
+
+/** Front Page */
+
+// Hide combo list "Courses" header
+#frontpage-category-combo>h2 {
+	display: none;
+}
