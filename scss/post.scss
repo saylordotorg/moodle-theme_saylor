@@ -180,6 +180,12 @@
 
 /** Quiz **/
 
+.path-mod-quiz #mod_quiz_navblock {
+    .qnbutton {
+	    color: $primary;
+	}
+}
+
 .que .info {
 	background-color: $light;
 	border-color: $card-border-color;
