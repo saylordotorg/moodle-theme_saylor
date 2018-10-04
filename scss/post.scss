@@ -218,3 +218,12 @@
 	border-radius: .25rem;
 	margin: .25rem 0 0 .25rem;
 }
+
+/** Resources */
+// Hide the resource navigation at the bottom of the resources.
+// It's confusing students.
+// Eventually, override the renderer to go to next unit.
+
+#region-main>.card>.card-body>.m-t-2 {
+	display: none;
+}
