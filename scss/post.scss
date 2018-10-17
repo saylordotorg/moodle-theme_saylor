@@ -80,7 +80,11 @@
     line-height: 1rem;
 }
 
-#page-login-index #page-wrapper {
+#page-login-index #page-wrapper,
+#page-login-verify_age_location #page-wrapper,
+#page-admin-tool-policy-index #page-wrapper,
+#page-admin-tool-policy-view #page-wrapper,
+#page-login-signup #page-wrapper {
 	background-image: url([[pix:theme_saylor|login_background_ocean]]);
     background-size: cover;
     background-repeat: no-repeat;
