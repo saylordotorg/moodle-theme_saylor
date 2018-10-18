@@ -85,7 +85,11 @@
 #page-admin-tool-policy-index #page-wrapper,
 #page-admin-tool-policy-view #page-wrapper,
 #page-login-signup #page-wrapper {
-	background-image: url([[pix:theme_saylor|login_background_ocean]]);
+	// We have to use rgba here in order to use transparency over the image.
+	// It's the rgb value of $primary-dark-blue.
+	background:
+		linear-gradient(rgba(23, 49, 64, 0.5), rgba(23, 49, 64, 0.5)),
+		url([[pix:theme_saylor|backgrounds/login_background_bridge]]);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
