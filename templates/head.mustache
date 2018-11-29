@@ -56,7 +56,17 @@
     src="https://www.facebook.com/tr?id=1336566346389237&ev=PageView&noscript=1"
     /></noscript>
     <!-- DO NOT MODIFY -->
-<!-- End Facebook Pixel Code -->
+    <!-- End Facebook Pixel Code -->
     {{{ output.standard_head_html }}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph -->
+    {{#opengraph}}
+    <meta property="og:title" content="{{opengraph.title}}" />
+    <meta property="og:type" content="{{opengraph.type}}" />
+    <meta property="og:url" content="{{opengraph.url}}" />
+    <meta property="og:image" content="{{opengraph.image}}" />
+    <meta property="og:description" content="{{opengraph.description}}" />
+    <meta property="og:site_name" content="{{sitename}}" />
+    {{/opengraph}}
+    <!-- End Open Graph -->
 </head>
