@@ -27,6 +27,9 @@
     {{^opengraph}}
     <title>{{{ output.page_title }}}
     {{/opengraph}}
+    {{#opengraph.canonical}}
+    <link rel="canonical" href="{{opengraph.canonical}}" />
+    {{/opengraph.canonical}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Open Graph -->
     {{#opengraph}}

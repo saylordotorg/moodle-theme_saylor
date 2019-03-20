@@ -247,8 +247,12 @@ class theme_saylor_core_renderer extends theme_boost\output\core_renderer
         // Show different info in courses, such as the title and images.
         if ($PAGE->pagelayout == 'course' || $PAGE->pagelayout == 'incourse') {
             $title = str_replace("Course: ", "", $PAGE->title)." | ".$SITE->shortname;
+            // Filter out instances where the course name is listed twice 
+            // where a resource has the course name in it (like the final exams).
+            $title = str_replace($COURSE->shortname.": ".$COURSE->shortname.": ", $COURSE->shortname.": ", $title);
             $image = $COURSE->shortname."-1200x1200.png";
             $description = preg_replace('~((\{.*\})|(<.+>.*</.+>))~s', '', $COURSE->summary);
+            $canonical = "/course/".$COURSE->shortname;
         }
 
         $properties = new stdClass();
@@ -257,6 +261,9 @@ class theme_saylor_core_renderer extends theme_boost\output\core_renderer
         $properties->url = $url;
         $properties->image = $imagedomain.$image;
         $properties->description = html_entity_decode($description);
+        if (isset($canonical)) {
+            $properties->canonical = $canonical;
+        }
 
         return $properties;
     }
