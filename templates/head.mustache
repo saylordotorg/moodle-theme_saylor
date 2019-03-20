@@ -20,7 +20,13 @@
 {{{ output.doctype }}}
 <html {{{ output.htmlattributes }}}>
 <head>
+    {{#opengraph}}
     <title>{{opengraph.title}}</title>
+    <meta name="description" content="{{opengraph.description}}">
+    {{/opengraph}}
+    {{^opengraph}}
+    <title>{{{ output.page_title }}}
+    {{/opengraph}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Open Graph -->
     {{#opengraph}}
