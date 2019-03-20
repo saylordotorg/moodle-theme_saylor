@@ -238,7 +238,7 @@ class theme_saylor_core_renderer extends theme_boost\output\core_renderer
         $imagedomain = "https://resources.saylor.org/og/";
 
         // Set default properties.
-        $title = str_replace($SITE->shortname.": ", "", $PAGE->title)." - ".$SITE->shortname;
+        $title = str_replace($SITE->shortname.": ", "", $PAGE->title)." | ".$SITE->shortname;
         $type = "website";
         $url = $PAGE->url;
         $image = "default-1200x1200.png";
@@ -246,7 +246,7 @@ class theme_saylor_core_renderer extends theme_boost\output\core_renderer
 
         // Show different info in courses, such as the title and images.
         if ($PAGE->pagelayout == 'course' || $PAGE->pagelayout == 'incourse') {
-            $title = str_replace("Course: ", "", $PAGE->title)." - ".$SITE->shortname;
+            $title = str_replace("Course: ", "", $PAGE->title)." | ".$SITE->shortname;
             $image = $COURSE->shortname."-1200x1200.png";
             $description = preg_replace('~((\{.*\})|(<.+>.*</.+>))~s', '', $COURSE->summary);
         }
