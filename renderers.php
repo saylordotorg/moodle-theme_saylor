@@ -254,6 +254,10 @@ class theme_saylor_core_renderer extends theme_boost\output\core_renderer
             $description = preg_replace('~((\{.*\})|(<.+>.*</.+>))~s', '', $COURSE->summary);
             $canonical = "/course/".$COURSE->shortname;
         }
+        elseif ($PAGE->pagetype == 'site-index') {
+            // Set canonical url for the frontpage, whether there is ?redirect=0 or not.
+            $canonical = "/";
+        }
 
         $properties = new stdClass();
         $properties->title = html_entity_decode($title);
