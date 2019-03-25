@@ -58,7 +58,6 @@
     {{> /navbar }}
 
     <div id="page" class="container-fluid">
-        {{{ output.full_header }}}
 
         <div id="page-content" class="row">
             <div id="region-main-box" class="col-12">
@@ -74,12 +73,10 @@
                     {{{ output.course_content_header }}}
                     <div id="banner-wrapper" class="box mdl-align">
                         <div id="banner-container" class="container-fluid">
-
                             <img src="{{bannerimageurl}}" alt="Saylor Academy Banner" class="img-fluid">
                         </div>
                         <div id="banner-summary-container" class="mx-auto mdl-align">
                             {{ sitesummary }}
-                            {{OUTPUT.image_url('logos/frontpage', 'theme_saylor')}}
                         </div>
                     </div>
                     {{{ output.main_content }}}
