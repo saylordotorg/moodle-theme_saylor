@@ -53,13 +53,15 @@
 <body {{{ bodyattributes }}} onload="PR.prettyPrint()">
 
 <div id="page-wrapper">
+
     {{{ output.standard_top_of_body_html }}}
     {{> /navbar }}
 
     <div id="page" class="container-fluid">
+        {{{ output.full_header }}}
 
         <div id="page-content" class="row">
-            <div id="region-main-box" class="col-12 mt-3">
+            <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
@@ -70,7 +72,16 @@
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
                     {{{ output.course_content_header }}}
-                    {{{ saylorcustomenrollbutton }}}
+                    <div id="banner-wrapper" class="box mdl-align">
+                        <div id="banner-container" class="container-fluid">
+
+                            <img src="{{bannerimageurl}}" alt="Saylor Academy Banner" class="img-fluid">
+                        </div>
+                        <div id="banner-summary-container" class="mx-auto mdl-align">
+                            {{ sitesummary }}
+                            {{OUTPUT.image_url('logos/frontpage', 'theme_saylor')}}
+                        </div>
+                    </div>
                     {{{ output.main_content }}}
                     {{{ output.activity_navigation }}}
                     {{{ output.course_content_footer }}}
