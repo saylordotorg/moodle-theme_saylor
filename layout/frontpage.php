@@ -40,7 +40,7 @@ $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'sitesummary' => preg_replace('~((\{.*\})|(<.+>.*</.+>))~s', '', $SITE->summary),
+    'sitesummary' => get_string('bannerdescription', 'theme_saylor'),
     'bannerimageurl' => $OUTPUT->image_url('logos/frontpage', 'theme_saylor'),
     'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
