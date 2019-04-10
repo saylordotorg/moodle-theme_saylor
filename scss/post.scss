@@ -233,6 +233,11 @@
 }
 
 /** Progress Bar */
+.block_completion_progress .progressBarCell {
+	border: 1px solid $primary-dark-blue;
+	border-radius: .25rem;
+	margin: .25rem 0 0 .25rem;
+}
 
 .block_progress .progressBarCell {
 	border: 1px solid $primary-dark-blue;
