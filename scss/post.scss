@@ -232,6 +232,20 @@
 	display: none;
 }
 
+#banner-wrapper {
+	margin-bottom: 0;
+	max-width: 600px;
+}
+
+#coursesearch {
+	margin-top: 0 !important;
+}
+
+#category-banner {
+	border-radius: .25rem;
+	max-width: 600px;
+}
+
 /** Progress Bar */
 .block_completion_progress .progressBarCell {
 	border: 1px solid $primary-dark-blue;
