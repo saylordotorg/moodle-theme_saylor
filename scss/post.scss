@@ -234,19 +234,19 @@
 
 #banner-wrapper {
 	margin-bottom: 0;
-}
-
-#banner-container {
-	max-width: 600px;
+	background-image: linear-gradient(to right, $expand-light-blue-800, $expand-dark-blue-900);
 }
 
 #coursesearch {
 	margin-top: 0 !important;
 }
 
-#category-banner {
-	border-radius: .25rem;
+#category-banner-wrapper {
 	max-width: 600px;
+}
+
+#category-banner {
+	border-radius: 2.7rem;
 }
 
 /** Progress Bar */
