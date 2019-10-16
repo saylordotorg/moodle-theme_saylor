@@ -293,6 +293,13 @@ h1 { font-family: $font-family-header;
     @extend .border;
 }
 
+// Small cap course titles
+.course-title
+{
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
 // Rounded user pictures
 .userpicture {
     border-radius: 50%;
