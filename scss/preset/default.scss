@@ -337,3 +337,9 @@ h1 { font-family: $font-family-header;
 #page-wrapper {
     background-color: $light;
 }
+
+/** Progress Bar */
+// Increase progress bar height
+.block .block-cards .progress {
+    height: .75rem;
+}
