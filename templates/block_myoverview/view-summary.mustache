@@ -64,11 +64,10 @@
                 </div>
                 <div class="d-flex mb-1">
                     <a href="{{viewurl}}" class="coursename">
-                        {{> core_course/favouriteicon }}
                         <span class="sr-only">
                             {{#str}}aria:coursename, core_course{{/str}}
                         </span>
-                        <h3 class="course-title">{{{fullname}}}</h3>
+                        <h3 class="course-title">{{> core_course/favouriteicon }}{{{fullname}}}</h3>
                     </a>
                     {{> block_myoverview/course-action-menu }}
                 </div>

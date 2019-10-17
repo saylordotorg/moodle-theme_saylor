@@ -60,11 +60,10 @@
                         {{/showshortname}}
                     </div>
                     <a href="{{viewurl}}" class="coursename">
-                        {{> core_course/favouriteicon }}
                         <span class="sr-only">
                             {{#str}}aria:coursename, core_course{{/str}}
                         </span>
-                        <h3 class="course-title">{{{fullname}}}</h3>
+                        <h3 class="course-title">{{> core_course/favouriteicon }}{{{fullname}}}</h3>
                     </a>
                     {{^visible}}
                         <div class="d-flex flex-wrap">
