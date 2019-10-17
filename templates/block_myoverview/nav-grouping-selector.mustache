@@ -33,7 +33,6 @@
         <span class="d-sm-inline-block" data-active-item-text>
             {{#all}}{{#str}} allexcepthidden, block_myoverview {{/str}}{{/all}}
             {{#inprogress}}{{#str}} inprogress, block_myoverview {{/str}}{{/inprogress}}
-            {{#future}}{{#str}} future, block_myoverview {{/str}}{{/future}}
             {{#past}}{{#str}} completed, theme_saylor {{/str}}{{/past}}
             {{#favourites}}{{#str}} favourites, block_myoverview {{/str}}{{/favourites}}
             {{#hidden}}{{#str}} hiddencourses, block_myoverview {{/str}}{{/hidden}}
@@ -51,11 +50,6 @@
         <li>
             <a class="dropdown-item {{#inprogress}}active{{/inprogress}}" href="#" data-filter="grouping" data-value="inprogress" data-pref="inprogress" aria-label="{{#str}} aria:inprogress, block_myoverview {{/str}}" aria-controls="courses-view-{{uniqid}}">
                 {{#str}} inprogress, block_myoverview {{/str}}
-            </a>
-        </li>
-        <li>
-            <a class="dropdown-item {{#future}}active{{/future}}" href="#" data-filter="grouping" data-value="future" data-pref="future" aria-label="{{#str}} aria:future, block_myoverview {{/str}}" aria-controls="courses-view-{{uniqid}}">
-                {{#str}} future, block_myoverview {{/str}}
             </a>
         </li>
         <li>
