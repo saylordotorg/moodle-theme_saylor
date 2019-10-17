@@ -34,7 +34,7 @@
             {{#all}}{{#str}} allexcepthidden, block_myoverview {{/str}}{{/all}}
             {{#inprogress}}{{#str}} inprogress, block_myoverview {{/str}}{{/inprogress}}
             {{#future}}{{#str}} future, block_myoverview {{/str}}{{/future}}
-            {{#past}}{{#str}} past, block_myoverview {{/str}}{{/past}}
+            {{#past}}{{#str}} completed, theme_saylor {{/str}}{{/past}}
             {{#favourites}}{{#str}} favourites, block_myoverview {{/str}}{{/favourites}}
             {{#hidden}}{{#str}} hiddencourses, block_myoverview {{/str}}{{/hidden}}
         </span>
@@ -60,7 +60,7 @@
         </li>
         <li>
             <a class="dropdown-item {{#past}}active{{/past}}" href="#" data-filter="grouping" data-value="past" data-pref="past" aria-label="{{#str}} aria:past, block_myoverview {{/str}}" aria-controls="courses-view-{{uniqid}}">
-                {{#str}} past, block_myoverview {{/str}}
+                {{#str}} completed, theme_saylor {{/str}}
             </a>
         </li>
         <li class="dropdown-divider" role="presentation">
