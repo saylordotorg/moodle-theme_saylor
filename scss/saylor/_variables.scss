@@ -1,6 +1,6 @@
 // Bootstrap variables
 
-// Saylor Greyscale 
+// Saylor Greyscale
 $white:    #ffffff !default;
 $gray-100: #f5f5f5 !default;
 $gray-200: #eeeeee !default;
@@ -23,7 +23,6 @@ $yellow:  #ff7518 !default;
 $green:   #5cb85c !default;
 $teal:    #20c997 !default;
 $cyan:    #5bc0de !default;
-
 
 //Saylor color guidelines
 //Saylor Primary palette
@@ -170,7 +169,6 @@ $expand-green-700:     #24cc00 !default;
 $expand-green-800:     #00b800 !default;
 $expand-green-900:     #009400 !default;
 
-
 // Theme variables
 $primary:       $primary-light-blue !default;
 $secondary:     $primary-orange !default;
@@ -181,18 +179,26 @@ $danger:        $expand-red-700 !default;
 $light:         $gray-100 !default;
 $dark:          $gray-600 !default;
 
+$info-outline:    #1f7e9a;
+$warning-outline: #a6670e;
+$brand-warning: $warning;
+$brand-danger: $danger;
+
 // Options
 $enable-rounded: true !default;
+$enable-responsive-font-sizes: true !default;
 
 // Body
 $body-color:    $gray-800 !default;
 
 // Fonts
 $font-size-base: 0.9375rem !default;
+$rfs-base-font-size: 0.9rem !default;
 $headings-font-weight:   300 !default;
 
 // Navbar
 $navbar-dark-hover-color:           rgba($white, 1) !default;
+$navbar-light-color:                rgba($black, 0.6) !default;
 $navbar-light-hover-color:          rgba($black, .9) !default;
 
 // Breadcrumbs
@@ -204,142 +210,43 @@ $breadcrumb-bg:                     transparent !default;
 $breadcrumb-divider: "/" !default;
 $breadcrumb-divider-rtl: "/" !default;
 
+// Floating elements positions
+$gototop-bottom-position: 50px !default;
+
 // Alerts
 $alert-border-width:                0 !default;
 
-$theme-colors: (
+$card-group-margin: .25rem;
+
+// Custom control size
+$custom-control-indicator-size: 1.25rem;
+
+$input-btn-focus-color: rgba($primary, .75) !default;
+
+$input-border-color: $gray-500 !default;
+
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: $primary;
+
+// stylelint-disable
+$theme-colors: () !default;
+$theme-colors: map-merge((
     primary: $primary,
     secondary: $secondary,
     success: $success,
     info: $info,
     warning: $warning,
     danger: $danger,
-    light: $light,
-    dark: $dark
-);
+), $theme-colors);
+// stylelint-enable
 
-// Fonts
-@font-face {
-    font-family: 'Comfortaa';
-    src: local('Comfortaa Regular'), local('Comfortaa-Regular'), url([[font:theme|Comfortaa-Regular.woff2]]) format('woff2'), url([[font:theme|Comfortaa-Regular.woff]]) format('woff'), url([[font:theme|Comfortaa-Regular.ttf]]) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: local('Open Sans Regular'), local('OpenSans-Regular'), url([[font:theme|OpenSans-Regular.woff2]]) format('woff2'), url([[font:theme|OpenSans-Regular.woff]]) format('woff'), url([[font:theme|OpenSans-Regular.ttf]]) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: local('Raleway'), local('Raleway-Regular'), url([[font:theme|Raleway-Regular.woff2]]) format('woff2'), url([[font:theme|Raleway-Regular.woff]]) format('woff'), url([[font:theme|Raleway-Regular.ttf]]) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-base: "Open Sans", $font-family-sans-serif !default;
-$font-family-header: "Raleway", $font-family-sans-serif;
-$font-family-buttons: "Comfortaa", $font-family-sans-serif;
-
-// Import FontAwesome.
-@import "fontawesome";
-
-// Import All of Bootstrap
-@import "bootstrap";
-
-// Import Core moodle CSS
-@import "moodle";
-
-// Import Prettify Saylor Gray theming CSS
-@import "prettify-saylor-gray";
-
-// Import SaylorOverview CSS
-@import "sayloroverview";
-
-// Preset CSS
-
-body {
-    -webkit-font-smoothing: antialiased;
-}
-
-h6 { font-family: $font-family-header;
-}
-
-h5 { font-family: $font-family-header;
-}
-
-h4 { font-family: $font-family-header;
-}
-
-h3 { font-family: $font-family-header;
-}
-
-h2 { font-family: $font-family-header;
-}
-
-h1 { font-family: $font-family-header;
-}
-
-.btn {
-    font-family: $font-family-buttons;
-}
-
-.filemanager-container,
-.filepicker-filelist {
-    @extend .border;
-}
-
-// Small cap course titles
-.course-title
-{
-    font-variant: small-caps;
-    text-transform: lowercase;
-}
-
-// Rounded user pictures
-.userpicture {
-    border-radius: 50%;
-}
-
-// Increase font size for user log in/sign up top-right header.
-.usermenu {
-    font-size: 1.2em;
-}
-
-/** Buttons */
-// Button color should be our button orange.
-.btn-primary {
-    @include button-variant($button-bg-orange, darken($button-bg-orange, 7.5%), darken($button-bg-orange, 10%), lighten($button-bg-orange,5%), lighten($button-bg-orange, 10%), darken($button-bg-orange,30%));
-}
-
-.btn-outline-primary {
-    @include button-outline-variant($button-bg-orange, #222222, lighten($button-bg-orange,5%), $button-bg-orange);
-}
-.btn-secondary {
-    @include button-variant($button-bg-orange, darken($button-bg-orange, 7.5%), darken($button-bg-orange, 10%), lighten($button-bg-orange,5%), lighten($button-bg-orange, 10%), darken($button-bg-orange,30%));
-}
-
-.btn-outline-secondary {
-    @include button-outline-variant($button-bg-orange, #222222, lighten($button-bg-orange,5%), $button-bg-orange);
-}
-
-// Button primary and secondary text should always be white.
-// Sometimes it was showing up as the secondary color.
-.btn .btn-primary, .btn .btn-secondary {
-    color: $white;
-}
-
-/** Page Backgrounds */
-#page-wrapper {
-    background-color: $light;
-}
-
-/** Progress Bar */
-// Increase progress bar height
-.block .block-cards .progress {
-    height: .75rem;
-}
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2),
+    6: ($spacer * 3)
+) !default;
