@@ -51,85 +51,84 @@
 {{> /head }}
 
 <body {{{ bodyattributes }}} onload="PR.prettyPrint()">
+{{> core/local/toast/wrapper}}
 
-<div id="page-wrapper">
+<div id="page-wrapper" class="d-print-block">
 
     {{{ output.standard_top_of_body_html }}}
+
     {{> /navbar }}
+    {{> /nav-drawer }}
 
-    <div id="page" class="container-fluid">
+    <div id="page" class="container-fluid d-print-block">
+        {{{ output.full_header }}}
 
-        <div id="page-content" class="row">
+        <div class="container-fluid container-alert">
+                    {{#enable1alert}}
+                        <div class="useralerts alert alert-{{{ alert1type }}} alert-dismissible fade show" role="alert">
+                            <span class="title">
+                                <b> {{{ alert1title }}} </b>
+                            </span>
+                            <p> {{{ alert1text }}} </p>
+                            <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+                                <span aria-hidden="true" class="fa fa-times-circle"></span>
+                            </button>
+                        </div>
+                    {{/enable1alert}}
+                    {{#enable2alert}}
+                        <div class="useralerts alert alert-{{{ alert2type }}} alert-dismissible fade show" role="alert">
+                            <span class="title">
+                                <b> {{{ alert2title }}} </b>
+                            </span>
+                            <p> {{{ alert2text }}} </p>
+                            <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+                                <span aria-hidden="true" class="fa fa-times-circle"></span>
+                            </button>
+                        </div>
+                    {{/enable2alert}}
+                    {{#enable3alert}}
+                        <div class="useralerts alert alert-{{{ alert3type }}} alert-dismissible fade show" role="alert">
+                            <span class="title">
+                                <b> {{{ alert3title }}} </b>
+                            </span>
+                            <p> {{{ alert3text }}} </p>
+                            <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+                                <span aria-hidden="true" class="fa fa-times-circle"></span>
+                            </button>
+                        </div>
+                    {{/enable3alert}}
+        </div>
+
+        <div id="page-content" class="row pb-3 d-print-block">
             <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
-                <section id="region-main" class="{{#hasblocks}}has-blocks {{/hasblocks}}my-3 card">
+                <section id="region-main" {{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}} aria-label="{{#str}}content{{/str}}">
+
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
                     {{{ output.course_content_header }}}
-                    <div id="banner-wrapper" class="container-fluid p-0 d-flex align-items-center rounded">
-                        <div id="banner-summary-container" class="mx-auto my-4 mdl-align text-white">
-                            <h2>{{ sitesummary }}</h2>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid container-alert">
-                                {{#enable1alert}}
-                                    <div class="useralerts alert alert-{{{ alert1type }}} alert-dismissible fade show" role="alert">
-                                        <span class="title">
-                                            <b> {{{ alert1title }}} </b>
-                                        </span>
-                                        <p> {{{ alert1text }}} </p>
-                                        <button class="close" data-dismiss="alert" type="button" aria-label="Close">
-                                            <span aria-hidden="true" class="fa fa-times-circle"></span>
-                                        </button>
-                                    </div>
-                                {{/enable1alert}}
-                                {{#enable2alert}}
-                                    <div class="useralerts alert alert-{{{ alert2type }}} alert-dismissible fade show" role="alert">
-                                        <span class="title">
-                                            <b> {{{ alert2title }}} </b>
-                                        </span>
-                                        <p> {{{ alert2text }}} </p>
-                                        <button class="close" data-dismiss="alert" type="button" aria-label="Close">
-                                            <span aria-hidden="true" class="fa fa-times-circle"></span>
-                                        </button>
-                                    </div>
-                                {{/enable2alert}}
-                                {{#enable3alert}}
-                                    <div class="useralerts alert alert-{{{ alert3type }}} alert-dismissible fade show" role="alert">
-                                        <span class="title">
-                                            <b> {{{ alert3title }}} </b>
-                                        </span>
-                                        <p> {{{ alert3text }}} </p>
-                                        <button class="close" data-dismiss="alert" type="button" aria-label="Close">
-                                            <span aria-hidden="true" class="fa fa-times-circle"></span>
-                                        </button>
-                                    </div>
-                                {{/enable3alert}}
-                    </div>
-
                     {{{ output.main_content }}}
-                    {{{ output.activity_navigation }}}
                     {{{ output.course_content_footer }}}
+
                 </section>
                 {{#hasblocks}}
-                <section data-region="blocks-column" class="d-print-none mt-3">
+                <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepreblocks }}}
                 </section>
                 {{/hasblocks}}
             </div>
         </div>
     </div>
+    {{{ output.standard_after_main_region_html }}}
     {{> /nav-drawer }}
 </div>
 
 {{> /footer }}
-
 </body>
 </html>
 {{#js}}

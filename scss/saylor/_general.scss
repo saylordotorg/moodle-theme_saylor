@@ -129,3 +129,14 @@ h6,
 .standoutbox.standoutbox-gray {
  background-color: $gray-100;
 }
+
+// Frontpage alert styles.
+.useralerts {
+    p:first-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.container-alert {
+  margin-top: 16px;
+}
