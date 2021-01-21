@@ -6,7 +6,7 @@
  // We have to use rgba here in order to use transparency over the image.
  // It's the rgb value of $primary-dark-blue.
  background:
-   linear-gradient(rgba(23, 49, 64, 0.5), rgba(23, 49, 64, 0.5)),
+   linear-gradient(rgba(23, 49, 64, 0.85), rgba(23, 49, 64, 0.85)),
    url([[pix:theme_saylor|backgrounds/login_background_bridge]]);
    background-size: cover;
    background-repeat: no-repeat;
