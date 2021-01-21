@@ -31,3 +31,8 @@
  float: none;
  padding-top: 6px;
 }
+
+.coursename > .aalink:focus {
+  outline: inherit;
+  background-color: inherit;
+}
