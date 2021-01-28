@@ -18,6 +18,10 @@
  color: $body-color;
 }
 
+.editor_atto_content_wrap {
+      border: 1px solid #333;
+  }
+
 // student response area grading background change
 .que.essay .content .formulation .ablock .answer .qtype_essay_editor.qtype_essay_response.readonly{
    background-color: $expand-pink-100;
