@@ -150,3 +150,24 @@ h6,
 .usertour {
   text-align: center;
 }
+
+// Course Container
+
+#region-main {
+  @include media-breakpoint-down(xs) {
+    border: 1px solid rgba(0,0,0,.125);
+    padding: 1.25rem;
+  }
+}
+
+#region-main-settings-menu {
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 1rem;
+  }
+}
+
+.page-context-header {
+  @include media-breakpoint-down(xs) {
+    padding: 0.5rem 0.25rem 0 0.75rem;
+  };
+}
