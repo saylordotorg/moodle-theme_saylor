@@ -13,10 +13,12 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 /**
+ * A two column layout for the saylor theme.
  *
  * @package   theme_saylor
- * @copyright 2018 Saylor Academy
+ * @copyright 2021 Saylor Academy
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -87,14 +89,13 @@ if ($navdraweropen) {
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
-$regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
+$buildregionmainsettings = !$PAGE->include_region_main_settings_in_header_actions();
+// If the settings menu will be included in the header then don't add it here.
+$regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settings_menu() : false;
+$saylor_custom_enroll_button = $OUTPUT->saylor_custom_enroll_button();
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'sitesummary' => get_string('bannerdescription', 'theme_saylor'),
-    'bannerimageurl' => $OUTPUT->image_url('logos/frontpage', 'theme_saylor'),
     'output' => $OUTPUT,
-    'page' => $PAGE,
-    'CFG' => $CFG,
     'sidepreblocks' => $blockshtml,
     'hasblocks' => $hasblocks,
     'bodyattributes' => $bodyattributes,
@@ -103,6 +104,7 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'currentyear' => date('Y'),
     'opengraph' => $OUTPUT->get_open_graph_properties(),
+    'courseproperties' => $OUTPUT->get_course_properties(),
     'enable1alert' => $enable1alert,
     'alert1type' => $alert1type,
     'alert1title' => $alert1title,
@@ -120,4 +122,4 @@ $templatecontext = [
 $nav = $PAGE->flatnav;
 $templatecontext['flatnavigation'] = $nav;
 $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
-echo $OUTPUT->render_from_template('theme_saylor/frontpage', $templatecontext);
+echo $OUTPUT->render_from_template('/mydashboard', $templatecontext);

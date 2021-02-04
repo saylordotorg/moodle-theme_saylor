@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['advancedsettings'] = 'Advanced settings';
+$string['advancedsettings'] = 'User Alerts';
 $string['bannerdescription'] = 'Build new skills or work toward a degree at your own pace with free Saylor Academy college courses.';
 $string['backgroundimage'] = 'Background image';
 $string['backgroundimage_desc'] = 'The image to display as a background of the site. The background image you upload here will override the background image in your theme preset files.';
@@ -53,8 +53,35 @@ $string['region-side-pre'] = 'Right';
 $string['privacy:metadata:preference:draweropennav'] = 'The user\'s preference for hiding or showing the drawer menu navigation.';
 $string['privacy:drawernavclosed'] = 'The current preference for the navigation drawer is closed.';
 $string['privacy:drawernavopen'] = 'The current preference for the navigation drawer is open.';
+$string['tab-alerts'] = 'User Alerts';
 $string['totop'] = 'Go to top';
 $string['signupidps'] = 'Create a new account using:';
 $string['logintext'] = 'Log in or Sign up';
 $string['loggedingreeting'] = 'Hi, {$a}!';
 $string['loggedinnotgreeting'] = '';
+
+// Alerts.
+$string['tab-alert-title'] = '';
+$string['alertsheadingsub'] = 'Display important messages to your users on the front page';
+$string['alertsdesc'] = 'This will display an alert (or multiple) in three different styles to your users on the Moodle frontpage. Please remember to disable these when no longer needed.';
+
+$string['enablealert'] = 'Enable alert';
+$string['enablealertdesc'] = 'Enable or disable this alert.';
+
+$string['alert1'] = 'First alert';
+$string['alert2'] = 'Second alert';
+$string['alert3'] = 'Third alert';
+$string['alertinfodesc'] = 'Enter the settings for your alert.';
+
+$string['alerttitle'] = 'Title';
+$string['alerttitledesc'] = 'Main title/heading for your alert.';
+
+$string['alerttype'] = 'Level';
+$string['alerttypedesc'] = 'Set the appropriate alert level/type to best inform your users.';
+
+$string['alerttext'] = 'Alert text';
+$string['alerttextdesc'] = 'What is the text you wish to display in your alert.';
+
+$string['alert_info'] = 'Information';
+$string['alert_warning'] = 'Warning';
+$string['alert_general'] = 'Announcement';

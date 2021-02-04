@@ -57,7 +57,7 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
-
+    /*
     // Background image setting.
     $name = 'theme_saylor/backgroundimage';
     $title = get_string('backgroundimage', 'theme_saylor');
@@ -74,13 +74,13 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
-
+    */
     // Must add the page after definiting all the settings!
     $settings->add($page);
 
     // Advanced settings.
     $page = new admin_settingpage('theme_saylor_advanced', get_string('advancedsettings', 'theme_saylor'));
-
+    /*
     // Raw SCSS to include before the content.
     $setting = new admin_setting_scsscode('theme_saylor/scsspre',
         get_string('rawscsspre', 'theme_saylor'), get_string('rawscsspre_desc', 'theme_saylor'), '', PARAM_RAW);
@@ -90,6 +90,145 @@ if ($ADMIN->fulltree) {
     // Raw SCSS to include after the content.
     $setting = new admin_setting_scsscode('theme_saylor/scss', get_string('rawscss', 'theme_saylor'),
         get_string('rawscss_desc', 'theme_saylor'), '', PARAM_RAW);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    */
+    // This is the descriptor for alert one.
+    $name = 'theme_saylor/alert1info';
+    $heading = get_string('alert1', 'theme_saylor');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Enable alert.
+    $name = 'theme_saylor/enablealert';
+    $title = get_string('enablealert', 'theme_saylor');
+    $description = get_string('enablealertdesc', 'theme_saylor');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert type.
+    $name = 'theme_saylor/alert1type';
+    $title = get_string('alerttype', 'theme_saylor');
+    $description = get_string('alerttypedesc', 'theme_saylor');
+    $alertinfo = get_string('alert_info', 'theme_saylor');
+    $alertwarning = get_string('alert_warning', 'theme_saylor');
+    $alertgeneral = get_string('alert_general', 'theme_saylor');
+    $default = 'primary';
+    $choices = array('primary' => $alertinfo, 'danger' => $alertwarning, 'success' => $alertgeneral);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert title.
+    $name = 'theme_saylor/alert1title';
+    $title = get_string('alerttitle', 'theme_saylor');
+    $description = get_string('alerttitledesc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert text.
+    $name = 'theme_saylor/alert1text';
+    $title = get_string('alerttext', 'theme_saylor');
+    $description = get_string('alerttextdesc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // This is the descriptor for alert two.
+    $name = 'theme_saylor/alert2info';
+    $heading = get_string('alert2', 'theme_saylor');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+
+    // Enable alert.
+    $name = 'theme_saylor/enable2alert';
+    $title = get_string('enablealert', 'theme_saylor');
+    $description = get_string('enablealertdesc', 'theme_saylor');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert type.
+    $name = 'theme_saylor/alert2type';
+    $title = get_string('alerttype', 'theme_saylor');
+    $description = get_string('alerttypedesc', 'theme_saylor');
+    $alertinfo = get_string('alert_info', 'theme_saylor');
+    $alertwarning = get_string('alert_warning', 'theme_saylor');
+    $alertgeneral = get_string('alert_general', 'theme_saylor');
+    $default = 'primary';
+    $choices = array('primary' => $alertinfo, 'danger' => $alertwarning, 'success' => $alertgeneral);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert title.
+    $name = 'theme_saylor/alert2title';
+    $title = get_string('alerttitle', 'theme_saylor');
+    $description = get_string('alerttitledesc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert text.
+    $name = 'theme_saylor/alert2text';
+    $title = get_string('alerttext', 'theme_saylor');
+    $description = get_string('alerttextdesc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // This is the descriptor for alert three.
+    $name = 'theme_saylor/alert3info';
+    $heading = get_string('alert3', 'theme_saylor');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+
+    // Enable alert.
+    $name = 'theme_saylor/enable3alert';
+    $title = get_string('enablealert', 'theme_saylor');
+    $description = get_string('enablealertdesc', 'theme_saylor');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert type.
+    $name = 'theme_saylor/alert3type';
+    $title = get_string('alerttype', 'theme_saylor');
+    $description = get_string('alerttypedesc', 'theme_saylor');
+    $alertinfo = get_string('alert_info', 'theme_saylor');
+    $alertwarning = get_string('alert_warning', 'theme_saylor');
+    $alertgeneral = get_string('alert_general', 'theme_saylor');
+    $default = 'primary';
+    $choices = array('primary' => $alertinfo, 'danger' => $alertwarning, 'success' => $alertgeneral);
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert title.
+    $name = 'theme_saylor/alert3title';
+    $title = get_string('alerttitle', 'theme_saylor');
+    $description = get_string('alerttitledesc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Alert text.
+    $name = 'theme_saylor/alert3text';
+    $title = get_string('alerttext', 'theme_saylor');
+    $description = get_string('alerttextdesc', 'theme_saylor');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

@@ -29,7 +29,7 @@ require_once(__DIR__ . '/lib.php');
 $THEME->name = 'saylor';
 $THEME->sheets = [];
 $THEME->editor_sheets = [];
-$THEME ->javascripts_footer = array('prettify');
+$THEME ->javascripts_footer = ['prettify', 'custom'];
 $THEME->editor_scss = ['editor'];
 $THEME->usefallback = true;
 $THEME->hidefromselector = false;
@@ -82,7 +82,7 @@ $THEME->layouts = [
     ),
     // My dashboard page.
     'mydashboard' => array(
-        'file' => 'columns2.php',
+        'file' => 'mydashboard.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true, 'langmenu' => true),
