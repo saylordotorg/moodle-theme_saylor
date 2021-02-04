@@ -24,6 +24,10 @@
     color: $white;
 }
 
+.btn-primary:focus, .btn-primary.focus {
+  outline: inherit;
+}
+
 
 /*
 // Reset the default styling back to the bootstrap defaults for
