@@ -3,6 +3,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.input-group > .form-control {
+    border-top-left-radius: .25rem !important;
+    border-bottom-left-radius: .25rem !important;
+}
+
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
 }
