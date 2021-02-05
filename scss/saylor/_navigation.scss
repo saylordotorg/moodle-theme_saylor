@@ -89,13 +89,13 @@
 
 // Round corners for groups in the nav drawer.
 .list-group > ul > li:first-child {
-  border-top-left-rounded: .25rem;
-  border-top-right-rounded: .25rem;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
 }
 
 .list-group > ul > li:last-child {
-  border-bottom-left-rounded: .25rem;
-  border-bottom-right-rounded: .25rem;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
 }
 
 /** Resources */
