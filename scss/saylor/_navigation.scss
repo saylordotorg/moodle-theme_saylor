@@ -87,6 +87,17 @@
    line-height: 1rem;
 }
 
+// Round corners for groups in the nav drawer.
+.list-group > ul > li:first-child {
+  border-top-left-rounded: .25rem;
+  border-top-right-rounded: .25rem;
+}
+
+.list-group > ul > li:last-child {
+  border-bottom-left-rounded: .25rem;
+  border-bottom-right-rounded: .25rem;
+}
+
 /** Resources */
 // Hide the resource navigation at the bottom of the resources.
 // It's confusing students.
