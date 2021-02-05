@@ -93,6 +93,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     */
+    $information = get_string('alertinfodesc', 'theme_saylor');
     // This is the descriptor for alert one.
     $name = 'theme_saylor/alert1info';
     $heading = get_string('alert1', 'theme_saylor');
