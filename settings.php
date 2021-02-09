@@ -96,6 +96,7 @@ if ($ADMIN->fulltree) {
     // This is the descriptor for alert one.
     $name = 'theme_saylor/alert1info';
     $heading = get_string('alert1', 'theme_saylor');
+    $information = get_string('alertinfodesc', 'theme_saylor');
     $setting = new admin_setting_heading($name, $heading, $information);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -189,6 +190,7 @@ if ($ADMIN->fulltree) {
     // This is the descriptor for alert three.
     $name = 'theme_saylor/alert3info';
     $heading = get_string('alert3', 'theme_saylor');
+    $information = get_string('alertinfodesc', 'theme_saylor');
     $setting = new admin_setting_heading($name, $heading, $information);
     $page->add($setting);
 
