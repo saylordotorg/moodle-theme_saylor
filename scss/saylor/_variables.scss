@@ -170,7 +170,7 @@ $expand-green-800:     #00b800 !default;
 $expand-green-900:     #009400 !default;
 
 // Theme variables
-$primary:       $expand-light-blue-900 !default; // Replaced primary-light-blue for ADA purposes
+$primary:       $primary-light-blue;
 $secondary:     $primary-orange !default;
 $success:       $expand-green-900 !default;
 $info:          $expand-teal-700 !default;
