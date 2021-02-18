@@ -228,11 +228,6 @@ $input-border-color: $gray-500 !default;
 $dropdown-link-hover-color: $white;
 $dropdown-link-hover-bg: $primary;
 
-$link-color: $expand-light-blue-900;
-a:visited {
-  color: $link-color;
-}
-
 // stylelint-disable
 $theme-colors: () !default;
 $theme-colors: map-merge((
