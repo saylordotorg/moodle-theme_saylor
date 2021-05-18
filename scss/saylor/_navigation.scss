@@ -116,10 +116,9 @@
 // It's confusing students.
 // Eventually, override the renderer to go to next unit.
 
-.activity-navigation {
- display: none;
+.activity-navigation .row {
+    align-items: normal;
 }
-
 /** Navigation Menu */
 
 .list-group-item.localboostnavigationfirstcustombuttomusers {
