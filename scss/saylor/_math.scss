@@ -1,0 +1,38 @@
+// Styling for the example box from openstax for our study guides
+
+[data-type=example] {
+    margin: 3rem 0;
+    padding: 1.5rem;
+    border: .2rem solid #dcdcdc;
+    background-color: #ededed;
+}
+
+.os-title {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0 1.5rem 1rem;
+    border-bottom: .2rem solid #dcdcdc;
+    color: #424242;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+[data-type=exercise] {
+    border-top: .1rem solid #dcdcdc;
+}
+
+.os-table {
+    margin: 20px 0;
+}
+
+.os-table table {
+    margin: 0;
+}
+
+.os-table table tr td {
+    vertical-align: middle;
+    padding: .5em 1em;
+}
