@@ -76,15 +76,15 @@
         {{/togglecompletion}}
     </div>
     <div class="container-fluid d-flex flex-column flex-sm-row flex-wrap flex-sm-nowrap align-items-center justify-content-center justify-content-md-around">
-        <div class="py-1 px-1 text-nowrap">
+        <div id="activitynavprev" class="py-1 px-1 text-nowrap">
             {{#prevlink}}<a class="btn btn-primary" href="{{ prevlink.url }}" role="button">◄ {{#str}}activitynavprev, theme_saylor{{/str}}</a>{{/prevlink}}
         </div>
 
-        <div class="py-1 px-1 text-nowrap">
+        <div id="activitynavlist" class="py-1 px-1 text-nowrap">
             {{#activitylist}}{{> core/url_select }}{{/activitylist}}
         </div>
 
-        <div class="py-1 px-1 text-nowrap">
+        <div id="activitynavnext" class="py-1 px-1 text-nowrap">
             {{#nextlink}}<a  class="btn btn-primary" href="{{ nextlink.url }}" role="button">{{#str}}activitynavnext, theme_saylor{{/str}} ►</a>{{/nextlink}}
         </div>
     </div>
