@@ -65,31 +65,27 @@
     }
 }}
 <div class="mt-5 mb-1 activity-navigation container-fluid">
-<div id="togglecompletionwrapper" class="container-fluid d-inline-flex flex-wrap align-items-center justify-content-center">
-    {{#togglecompletion}}
-        <div>
-            {{#str}}togglecompletion, theme_saylor{{/str}} 
+    <div id="togglecompletionwrapper" class="container-fluid py-3 d-inline-flex flex-wrap align-items-center justify-content-center">
+        {{#togglecompletion}}
+            <div class="text-nowrap">
+                {{#str}}togglecompletion, theme_saylor{{/str}} 
+            </div>
+            <div class="actions">
+                {{& togglecompletion}}
+            </div>
+        {{/togglecompletion}}
+    </div>
+    <div class="container-fluid d-flex flex-column flex-sm-row flex-wrap flex-sm-nowrap align-items-center justify-content-center justify-content-md-around">
+        <div class="py-1 px-1 text-nowrap">
+            {{#prevlink}}<a class="btn btn-primary" href="{{ prevlink.url }}" role="button">◄ {{#str}}activitynavprev, theme_saylor{{/str}}</a>{{/prevlink}}
         </div>
-        <div class="actions">
-            {{& togglecompletion}}
-        </div>
-    {{/togglecompletion}}
-</div>
-{{< core/columns-1to1to1}}
-    {{$column1}}
-        <div class="float-left">
-            {{#prevlink}}<a class="btn btn-primary" href="{{ prevlink.url }}" role="button">◄ {{#str}}activitynaveprev, theme_saylor{{/str}}</a>{{/prevlink}}
-        </div>
-    {{/column1}}
-    {{$column2}}
-        <div class="mdl-align">
+
+        <div class="py-1 px-1 text-nowrap">
             {{#activitylist}}{{> core/url_select }}{{/activitylist}}
         </div>
-    {{/column2}}
-    {{$column3}}
-        <div class="float-right">
+
+        <div class="py-1 px-1 text-nowrap">
             {{#nextlink}}<a  class="btn btn-primary" href="{{ nextlink.url }}" role="button">{{#str}}activitynavnext, theme_saylor{{/str}} ►</a>{{/nextlink}}
         </div>
-    {{/column3}}
-{{/ core/columns-1to1to1}}
+    </div>
 </div>
