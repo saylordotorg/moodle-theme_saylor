@@ -24,6 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['activitynavnext'] = 'Next';
+$string['activitynavprev'] = 'Previous';
 $string['advancedsettings'] = 'User Alerts';
 $string['bannerdescription'] = 'Build new skills or work toward a degree at your own pace with free Saylor Academy college courses.';
 $string['backgroundimage'] = 'Background image';

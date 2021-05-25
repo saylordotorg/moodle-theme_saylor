@@ -78,7 +78,7 @@
 {{< core/columns-1to1to1}}
     {{$column1}}
         <div class="float-left">
-            {{#prevlink}}<a class="btn btn-primary" href="{{ prevlink.url }}" role="button">◄ Previous</a>{{/prevlink}}
+            {{#prevlink}}<a class="btn btn-primary" href="{{ prevlink.url }}" role="button">◄ {{#str}}activitynaveprev, theme_saylor{{/str}}</a>{{/prevlink}}
         </div>
     {{/column1}}
     {{$column2}}
@@ -88,7 +88,7 @@
     {{/column2}}
     {{$column3}}
         <div class="float-right">
-            {{#nextlink}}<a  class="btn btn-primary" href="{{ nextlink.url }}" role="button">Next ►</a>{{/nextlink}}
+            {{#nextlink}}<a  class="btn btn-primary" href="{{ nextlink.url }}" role="button">{{#str}}activitynavnext, theme_saylor{{/str}} ►</a>{{/nextlink}}
         </div>
     {{/column3}}
 {{/ core/columns-1to1to1}}
