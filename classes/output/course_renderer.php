@@ -24,6 +24,7 @@
 
  namespace theme_saylor\output\core_course;
  use moodle_url;
+ use core;
 
  defined('MOODLE_INTERNAL') || die();
 
@@ -64,13 +65,13 @@ class core_course_renderer extends \core_course_renderer
             return $output;
         }
         if ($completioninfo === null) {
-            $completioninfo = new completion_info($course);
+            $completioninfo = new \completion_info($course);
         }
         $completion = $completioninfo->is_enabled($mod);
 
         if ($completion == COMPLETION_TRACKING_NONE) {
             if ($isediting) {
-                $output .= html_writer::span('&nbsp;', 'filler');
+                $output .= \html_writer::span('&nbsp;', 'filler');
             }
             return $output;
         }
@@ -124,7 +125,7 @@ class core_course_renderer extends \core_course_renderer
 
             if ($isediting || !$istrackeduser || !has_capability('moodle/course:togglecompletion', $mod->context)) {
                 // When editing, the icon is just an image.
-                $completionpixicon = new pix_icon('i/completion-'.$completionicon, $imgalt, '',
+                $completionpixicon = new \pix_icon('i/completion-'.$completionicon, $imgalt, '',
                         array('title' => $imgalt, 'class' => 'iconsmall'));
                 $output .= \html_writer::tag('span', $this->output->render($completionpixicon),
                         array('class' => 'autocompletion'));
@@ -166,7 +167,7 @@ class core_course_renderer extends \core_course_renderer
                 $output .= \html_writer::end_tag('form');
             } else {
                 // In auto mode, the icon is just an image.
-                $completionpixicon = new pix_icon('i/completion-'.$completionicon, $imgalt, '',
+                $completionpixicon = new \pix_icon('i/completion-'.$completionicon, $imgalt, '',
                         array('title' => $imgalt));
                 $output .= \html_writer::tag('span', $this->output->render($completionpixicon),
                         array('class' => 'autocompletion'));
