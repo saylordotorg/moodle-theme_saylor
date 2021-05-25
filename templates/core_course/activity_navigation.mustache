@@ -65,6 +65,16 @@
     }
 }}
 <div class="mt-5 mb-1 activity-navigation container-fluid">
+<div id="togglecompletionwrapper" class="container-fluid d-inline-flex flex-wrap align-items-center justify-content-center">
+    {{#togglecompletion}}
+        <div>
+            {{#str}}togglecompletion, theme_saylor{{/str}} 
+        </div>
+        <div class="actions">
+            {{& togglecompletion}}
+        </div>
+    {{/togglecompletion}}
+</div>
 {{< core/columns-1to1to1}}
     {{$column1}}
         <div class="float-left">
