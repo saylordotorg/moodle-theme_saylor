@@ -4,6 +4,7 @@
 
 .btn-primary {
     @include button-variant($button-bg-orange, darken($button-bg-orange, 7.5%), darken($button-bg-orange, 10%), lighten($button-bg-orange,5%), lighten($button-bg-orange, 10%), darken($button-bg-orange,30%));
+    color: $white !important;
 }
 
 .btn-outline-primary {
@@ -12,6 +13,7 @@
 
 .btn-secondary {
     @include button-variant($button-bg-orange, darken($button-bg-orange, 7.5%), darken($button-bg-orange, 10%), lighten($button-bg-orange,5%), lighten($button-bg-orange, 10%), darken($button-bg-orange,30%));
+    color: $white !important;
 }
 
 .btn-outline-secondary {
