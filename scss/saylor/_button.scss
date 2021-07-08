@@ -64,3 +64,22 @@
    text-align: center;
    padding-bottom: 5px;
 }
+
+/** Book Navigation */
+// Change the book navigation arrows to have buttons and text.
+// This is definitely a hack since we can't override any functions, renderers,
+// or mustache templates in /mod/book/view.php.
+
+.booknext {
+  @extend .btn, .btn-secondary, .btn-sm;
+}
+.booknext::before {
+  content: "Next Page ";
+}
+
+.bookprev {
+  @extend .btn, .btn-secondary, .btn-sm;
+}
+.bookprev::after {
+  content: "Previous Page ";
+}
