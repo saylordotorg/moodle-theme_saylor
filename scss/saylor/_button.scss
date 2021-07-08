@@ -13,7 +13,7 @@
 }
 
 .btn-secondary {
-    @include button-variant($button-bg-orange, darken($button-bg-orange, 7.5%), darken($button-bg-orange, 10%), lighten($button-bg-orange,5%), lighten($button-bg-orange, 10%), darken($button-bg-orange,30%));
+    @include button-variant($primary-dark-blue, $primary-light-blue, darken($primary-light-blue, 7.5%), lighten($primary-dark-blue,5%), lighten($primary-dark-blue, 10%), darken($primary-dark-blue,30%));
     color: $white !important;
     margin: .25rem;
 }
@@ -30,6 +30,10 @@
 }
 
 .btn-primary:focus, .btn-primary.focus {
+  outline: inherit;
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
   outline: inherit;
 }
 
