@@ -23,11 +23,6 @@ a:visited {
   color: $link-color-visited;
 }
 
-// Rounded user pictures
-.userpicture {
-    border-radius: 50%;
-}
-
 h1,
 .h1,
 h2,
@@ -63,7 +58,7 @@ h6,
 
 // Rounded user pictures
 .userpicture {
-    border-radius: 50%;
+    border-radius: 50% !important;
 }
 
 // Increase font size for user log in/sign up top-right header.
