@@ -83,3 +83,8 @@
 .bookprev::after {
   content: "Previous page ";
 }
+
+// Remove the book exit arrow since it's superfluous.
+.bookexit {
+    display: none;
+}
