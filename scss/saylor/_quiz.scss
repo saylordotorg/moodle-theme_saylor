@@ -2,7 +2,7 @@
 
 .path-mod-quiz #mod_quiz_navblock {
    .qnbutton {
-     color: $primary;
+     color: $tertiary;
  }
 }
 
@@ -46,6 +46,7 @@
   padding-top: .5rem;
 }
 
-.qnbutton .trafficlight {
-    margin-top: 30px !important;
+.path-mod-quiz #mod_quiz_navblock .qnbutton .trafficlight {
+  height: 10px;
+  margin-top: 30px;
 }
