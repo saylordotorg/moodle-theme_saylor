@@ -90,6 +90,15 @@ h6,
  margin: .25rem 0 0 .25rem;
 }
 
+.block_completion_progress .progressBarCell.completed {
+  background-color: $success !important;
+}
+
+.block_completion_progress .progressBarCell.futureNotCompleted {
+  background-color: $info !important;
+  opacity: 20%;
+}
+
 /** Honesty Check */
 
 #id_honestycheckheader .fcontainer .form-group .form-inline {
