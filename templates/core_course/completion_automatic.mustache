@@ -47,7 +47,7 @@
     </span>
     {{/statuscompletefail}}
     {{#statusincomplete}}
-    <span class="badge badge-secondary rounded mb-1" role="listitem" {{!
+    <span class="badge badge-info rounded mb-1" role="listitem" {{!
         }}{{#accessibledescription}}{{!
             }}title="{{.}}" {{!
             }}aria-label="{{.}}" {{!
@@ -57,7 +57,7 @@
     {{/statusincomplete}}
 {{/istrackeduser}}
 {{^istrackeduser}}
-    <span class="badge badge-secondary rounded mb-1" role="listitem">
+    <span class="badge badge-info rounded mb-1" role="listitem">
         <span class="font-weight-normal">{{description}}</span>
     </span>
 {{/istrackeduser}}
