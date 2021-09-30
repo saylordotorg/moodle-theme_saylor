@@ -100,3 +100,10 @@
 .bookexit {
     display: none;
 }
+
+/** Quizzes */
+
+// Style the quiz nav buttons.
+.mod_quiz-prev-nav, .mod_quiz-next-nav {
+  @extend .btn, .btn-secondary, .btn-sm;
+}
