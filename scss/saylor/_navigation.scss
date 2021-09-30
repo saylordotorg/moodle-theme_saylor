@@ -111,14 +111,16 @@
   border-top-right-radius: .25rem;
 }
 
-/** Resources */
-// Hide the resource navigation at the bottom of the resources.
-// It's confusing students.
-// Eventually, override the renderer to go to next unit.
-
+/** Activity Navigation */
 .activity-navigation .row {
     align-items: normal;
 }
+
+// Hide activity navigation during quiz attempts.
+#page-mod-quiz-attempt .activity-navigation, #page-mod-quiz-summary .activity-navigation {
+  display: none;
+}
+
 /** Navigation Menu */
 
 .list-group-item.localboostnavigationfirstcustombuttomusers {
