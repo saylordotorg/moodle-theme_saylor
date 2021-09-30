@@ -28,7 +28,7 @@
 }}
 {{#istrackeduser}}
     {{#overallcomplete}}
-        <button class="btn btn-success" data-action="toggle-manual-completion" data-toggletype="manual:undo" data-cmid="{{cmid}}" data-activityname="{{activityname}}" data-withavailability="{{withavailability}}" {{!
+        <button class="btn btn-success btn-sm activity-info-manual-completion-toggle" data-action="toggle-manual-completion" data-toggletype="manual:undo" data-cmid="{{cmid}}" data-activityname="{{activityname}}" data-withavailability="{{withavailability}}" {{!
         }}{{#accessibledescription}}{{!
             }}title="{{.}}" {{!
             }}aria-label="{{.}}" {{!
@@ -41,7 +41,7 @@
         </button>
     {{/overallcomplete}}
     {{#overallincomplete}}
-        <button class="btn btn-info" data-action="toggle-manual-completion" data-toggletype="manual:mark-done" data-cmid="{{cmid}}" data-activityname="{{activityname}}" data-withavailability="{{withavailability}}" {{!
+        <button class="btn btn-info btn-sm activity-info-manual-completion-toggle" data-action="toggle-manual-completion" data-toggletype="manual:mark-done" data-cmid="{{cmid}}" data-activityname="{{activityname}}" data-withavailability="{{withavailability}}" {{!
         }}{{#accessibledescription}}{{!
             }}title="{{.}}" {{!
             }}aria-label="{{.}}" {{!
@@ -55,7 +55,7 @@
     {{/overallincomplete}}
 {{/istrackeduser}}
 {{^istrackeduser}}
-    <button class="btn btn-info" disabled>
+    <button class="btn btn-info btn-sm activity-info-manual-completion-toggle" disabled>
         {{#str}} completion_manual:markdone, theme_saylor {{/str}}
     </button>
 {{/istrackeduser}}

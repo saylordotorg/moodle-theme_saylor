@@ -67,6 +67,11 @@
                         {{/completiondetails}}
                     </div>
                 {{/isautomatic}}
+                {{^isautomatic}}
+                    {{#showmanualcompletion}}
+                        {{> core_course/completion_manual }}
+                    {{/showmanualcompletion}}
+                {{/isautomatic}}
             </div>
         {{/uservisible}}
     {{/hascompletion}}
