@@ -34,10 +34,10 @@
             }}aria-label="{{.}}" {{!
         }}{{/accessibledescription}}{{!
         }}{{^accessibledescription}}{{!
-            }}title="{{#str}}completion_manual:aria:done, course, {{activityname}} {{/str}}" {{!
-            }}aria-label="{{#str}}completion_manual:aria:done, course, {{activityname}} {{/str}}" {{!
+            }}title="{{#str}}completion_manual:aria:done, theme_saylor, {{activityname}} {{/str}}" {{!
+            }}aria-label="{{#str}}completion_manual:aria:done, theme_saylor, {{activityname}} {{/str}}" {{!
         }}{{/accessibledescription}}>
-            <i class="fa fa-check" aria-hidden="true"></i> {{#str}} completion_manual:done, core_course {{/str}}
+            <i class="fa fa-check" aria-hidden="true"></i> {{#str}} completion_manual:done, theme_saylor {{/str}}
         </button>
     {{/overallcomplete}}
     {{#overallincomplete}}
@@ -47,16 +47,16 @@
             }}aria-label="{{.}}" {{!
         }}{{/accessibledescription}}{{!
         }}{{^accessibledescription}}{{!
-            }}title="{{#str}}completion_manual:aria:markdone, course, {{activityname}} {{/str}}" {{!
-            }}aria-label="{{#str}}completion_manual:aria:markdone, course, {{activityname}} {{/str}}" {{!
+            }}title="{{#str}}completion_manual:aria:markdone, theme_saylor, {{activityname}} {{/str}}" {{!
+            }}aria-label="{{#str}}completion_manual:aria:markdone, theme_saylor, {{activityname}} {{/str}}" {{!
         }}{{/accessibledescription}}>
-            {{#str}} completion_manual:markdone, core_course {{/str}}
+            {{#str}} completion_manual:markdone, theme_saylor {{/str}}
         </button>
     {{/overallincomplete}}
 {{/istrackeduser}}
 {{^istrackeduser}}
     <button class="btn btn-info" disabled>
-        {{#str}} completion_manual:markdone, core_course {{/str}}
+        {{#str}} completion_manual:markdone, theme_saylor {{/str}}
     </button>
 {{/istrackeduser}}
 
