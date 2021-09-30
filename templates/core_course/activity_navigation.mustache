@@ -68,13 +68,6 @@
     {{#hascompletion}}
         {{#uservisible}}
             <div data-region="completion-info" class="container-fluid py-3 d-inline-flex flex-wrap align-items-center justify-content-center">
-                {{#isautomatic}}
-                    <div class="automatic-completion-conditions" data-region ="completionrequirements" role="list" aria-label="{{#str}}completionrequirements, core_course, {{activityname}}{{/str}}">
-                        {{#completiondetails}}
-                            {{> core_course/completion_automatic }}
-                        {{/completiondetails}}
-                    </div>
-                {{/isautomatic}}
                 {{^isautomatic}}
                     {{#showmanualcompletion}}
                         {{> core_course/completion_manual }}
