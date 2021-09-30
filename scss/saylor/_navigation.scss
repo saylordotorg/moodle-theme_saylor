@@ -128,6 +128,11 @@
 }
 
 /** Activity Info */
-#page-mod-page-view .activity-info-manual-completion-toggle {
+[role=main]>.activity-information .activity-info-manual-completion-toggle {
   display: none;
+}
+
+[role=main]>.activity-information {
+  padding: 0 !important;
+  border: none !important;
 }
