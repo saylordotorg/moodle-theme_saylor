@@ -107,3 +107,8 @@
 .mod_quiz-prev-nav, .mod_quiz-next-nav {
   @extend .btn, .btn-secondary, .btn-sm;
 }
+
+// Add bottom padding.
+#page-mod-quiz-attempt .submitbtns, #page-mod-quiz-summary .submitbtns, #page-mod-quiz-review .submitbtns {
+  padding-bottom: 2em;
+}
