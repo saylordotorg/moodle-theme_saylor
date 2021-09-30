@@ -46,6 +46,11 @@ h6,
   font-family: $font-family-buttons;
 }
 
+// Search boxes - fix top padding on button
+.input-group-append {
+  margin-top: -4px;
+}
+
 /* Can't find extend yet */
 
 .filemanager-container,
