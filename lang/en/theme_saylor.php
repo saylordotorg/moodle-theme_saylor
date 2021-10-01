@@ -63,6 +63,8 @@ $string['logintext'] = 'Log in or Sign up';
 $string['loggedingreeting'] = 'Hi, {$a}!';
 $string['loggedinnotgreeting'] = '';
 
+$string['aria:allcoursesexcepthidden'] = 'Show all courses except courses removed from view';
+
 $string['completion_automatic:done'] = 'Completed:';
 $string['completion_automatic:failed'] = 'Failed:';
 $string['completion_automatic:todo'] = 'To do:';
