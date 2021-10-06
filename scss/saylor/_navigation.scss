@@ -36,6 +36,10 @@
   color: $link-color;
 }
 
+#nav-drawer .list-group-item.active {
+  color: $white;
+}
+
 /** Nav Bar */
 .navbar {
    box-shadow: 0 3px 0 $primary;
