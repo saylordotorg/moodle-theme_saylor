@@ -227,3 +227,32 @@ h6,
   border-bottom-width: 3px;
   border-bottom-color: $tertiary;
 }
+
+/** Questionnaire */
+.qn-info {
+  border-radius: .25rem;
+  background: $gray-100;
+  border-color: $gray-300;
+  border-style: solid;
+}
+
+.qn-question {
+  border-radius: .25rem;
+  background: $gray-100;
+  border-color: $gray-300;
+  border-style: solid;
+  border-width: thin;
+}
+
+.mod_questionnaire_completepage .surveyPage {
+  border-radius: .25rem;
+  background: $gray-100;
+  border-color: $gray-300;
+  border-style: solid;
+  border-width: thin;
+}
+
+#page-mod-questionnaire-complete .message, #page-mod-questionnaire-preview .message, #page-mod-questionnaire-complete .thankbody, #page-mod-questionnaire-complete .thankhead {
+  border: none;
+}
+
