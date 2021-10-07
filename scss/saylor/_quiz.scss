@@ -1,5 +1,12 @@
 /** Quiz **/
 
+.que .outcome, .que .comment {
+  /* color: black; */
+  background-color: transparent;
+  border-color: $gray-300;
+  border-style: solid;
+  border-width: thin;
+}
 // code runner pre area word wrap
 .que.coderunner div.coderunner-test-results pre, .que.coderunner div.coderunner-examples pre {
   white-space: pre-wrap;       /* Since CSS 2.1 */
