@@ -112,3 +112,8 @@
 #page-mod-quiz-attempt .submitbtns, #page-mod-quiz-summary .submitbtns, #page-mod-quiz-review .submitbtns {
   padding-bottom: 2em;
 }
+
+/** Questionnaire */
+.mod_questionnaire_completepage .buttons>input {
+  @extend .btn-sm;
+}
