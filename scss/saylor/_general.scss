@@ -253,6 +253,12 @@ h6,
   margin-bottom: 0;
 }
 
+.qn-answer>input {
+  max-width: 100%;
+  border-radius: .25rem;
+  border-width: thin;
+}
+
 .qn-content {
   margin-bottom: 2rem;
 }
