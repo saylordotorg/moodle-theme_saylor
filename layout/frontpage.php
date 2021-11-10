@@ -89,6 +89,8 @@ $blockshtml = $OUTPUT->blocks('side-pre');
 $hassideblocks = strpos($blockshtml, 'data-block=') !== false;
 $topblockshtml = $OUTPUT->blocks('top');
 $hastopblocks = strpos($topblockshtml, 'data-block=') !== false;
+$topintblockshtml = $OUTPUT->blocks('top-interior');
+$hastopintblocks = strpos($topintblockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
@@ -101,6 +103,8 @@ $templatecontext = [
     'hassideblocks' => $hassideblocks,
     'topblocks' => $topblockshtml,
     'hastopblocks' => $hastopblocks,
+    'topintblocks' => $topintblockshtml,
+    'hastopintblocks' => $hastopintblocks,
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,

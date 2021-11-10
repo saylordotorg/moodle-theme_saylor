@@ -70,7 +70,7 @@ $THEME->layouts = [
     // The site home page.
     'frontpage' => array(
         'file' => 'frontpage.php',
-        'regions' => array('side-pre'),
+        'regions' => array('side-pre', 'top', 'top-interior'),
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true),
     ),
