@@ -52,7 +52,7 @@ $THEME->layouts = [
     // Main course page.
     'course' => array(
         'file' => 'columns2.php',
-        'regions' => array('side-pre'),
+        'regions' => array('side-pre', 'top'),
         'defaultregion' => 'side-pre',
         'options' => array('langmenu' => true),
     ),
