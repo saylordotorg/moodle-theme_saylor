@@ -56,12 +56,12 @@
 
 @media (max-width: 767.98px) {
 
-  .action-card-context.mt-3 {
-    margin-top: 0 !important;
+  .card-body.p-3 {
+    padding: 0 !important;
   }
 
-  .action-card-body.p-3 {
-    padding: 0 !important;
+  .card-text.content.mt-3 {
+    margin-top: 0 !important;
   }
 
   .action-card-icon-frontpage {
