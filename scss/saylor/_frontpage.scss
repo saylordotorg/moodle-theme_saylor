@@ -100,11 +100,3 @@
 #geography-banner {
  background-image: linear-gradient(to right, $expand-indigo-500, $expand-indigo-900);
 }
-
-/** Main content for wide screens */
-
-@media (min-width: 992px) {
-	.flex-lg-row {
-		flex-direction: column!important;
-	}
-}
