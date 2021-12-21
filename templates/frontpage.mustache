@@ -60,8 +60,8 @@
     <div id="page" class="container-fluid">
 
         <div id="page-content" class="row">
-            <div id="region-main-box" class="col-12 d-flex flex-column flex-lg-row justify-content-center">
-                <section id="region-center">
+            <div id="region-main-box" class="col-12 flex-column flex-lg-row justify-content-center">
+                <section id="region-center" {{#hassideblocks}}class="has-blocks mb-3" {{/hassideblocks}}aria-label="Content">
                 {{#hastopblocks}}
                 <section id="region-top" data-region="blocks-row" class="d-print-none mt-3">
                     {{{ topblocks }}}
