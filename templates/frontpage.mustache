@@ -60,7 +60,7 @@
     <div id="page" class="container-fluid">
 
         <div id="page-content" class="row">
-            <div id="region-main-box" class="col-12 d-flex flex-column justify-content-center">
+            <div id="region-main-box" class="col-12 d-flex flex-column flex-row justify-content-center">
                 <section id="region-center" aria-label="Content">
                 {{#hastopblocks}}
                 <section id="region-top" data-region="blocks-row" class="d-print-none mt-3">
@@ -68,11 +68,11 @@
                 </section>
                 {{/hastopblocks}}
                 {{#hasregionmainsettingsmenu}}
-                <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
+                <div id="region-main-settings-menu" class="d-print-none {{#hassideblocks}}has-blocks{{/hassideblocks}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
-                <section id="region-main" class="{{#hasblocks}}has-blocks {{/hasblocks}}my-3 card">
+                <section id="region-main" class="{{#hassideblocks}}has-blocks {{/hassideblocks}}my-3 card">
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
