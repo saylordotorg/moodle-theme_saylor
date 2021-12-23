@@ -428,8 +428,7 @@ class core_renderer extends \core_renderer {
         $output .= html_writer::start_tag('div', array('id' => 'main-enroll-button', 'class' => 'center-block'));
         $coursecontext = context_course::instance($COURSE->id);
         if (isguestuser() || !isloggedin()) {
-            $link = new moodle_url('/login/index.php');
-            $output .= get_string('loginorsignupmessage', 'theme_saylor', $link->out());
+            $output .= "";
         } elseif (isloggedin($coursecontext) && !is_enrolled($coursecontext)) {
             $link = new moodle_url('/enrol/index.php', array('id' => $COURSE->id));
             $output .= html_writer::link($link->out(), get_string('enrolme', 'core_enrol'), array('class' => 'btn btn-primary btn-lg'));
