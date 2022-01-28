@@ -15,24 +15,24 @@ function renderHtmlParser(htmlParser) {
 
 async function monitorHtmlAreaChange(htmlParser) {
     $(htmlParser).find(".html-parser.html-area").on('change keyup paste input', function () {
-        console.info('HTML Parser HTML Change:', $(htmlParser).find(".html-parser.html-area").val());
+        console.info('Registered HTML Parser HTML area change:', $(htmlParser).find(".html-parser.html-area").val());
         renderHtmlParser(htmlParser);
     });
- }
+}
 
- async function monitorCssAreaChange(htmlParser) {
+async function monitorCssAreaChange(htmlParser) {
     $(htmlParser).find(".html-parser.css-area").on('change keyup paste input', function () {
-        console.info('HTML Parser CSS Change:', $(htmlParser).find(".html-parser.css-area").val());
+        console.info('Registered HTML Parser CSS area change:', $(htmlParser).find(".html-parser.css-area").val());
         renderHtmlParser(htmlParser);
     });
- }
+}
 
- async function monitorJsAreaChange(htmlParser) {
+async function monitorJsAreaChange(htmlParser) {
     $(htmlParser).find(".html-parser.js-area").on('change keyup paste input', function () {
-        console.info('HTML Parser JS Change:', $(htmlParser).find(".html-parser.js-area").val());
+        console.info('Registered HTML Parser JS area change:', $(htmlParser).find(".html-parser.js-area").val());
         renderHtmlParser(htmlParser);
     })
- }
+}
 
 require(['jquery'], function ($) {
     $(window).on('load', function() {
