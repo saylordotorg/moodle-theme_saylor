@@ -1,14 +1,22 @@
 function renderHtmlParser(htmlParser) {
+    // Get the value of the html area.
     let htmlArea = $(htmlParser).find(".html-parser.html-area").val();
-    console.info("html-area: ", htmlArea);
+    // Create style and script objects for the CSS and JS areas. Append values.
     let styleTag = document.createElement("style");
-    styleTag.textContent = $(htmlParser).find(".html-parser.css-area").val();
+    $(styleTag).append($(htmlParser).find(".html-parser.css-area").val());
     let scriptTag = document.createElement("script");
-    scriptTag.textContent = $(htmlParser).find(".html-parser.js-area").val();
+    $(scriptTag).append($(htmlParser).find(".html-parser.js-area").val());
 
-    $(htmlArea).find("html").find("head").append(styleTag);
-    $(htmlArea).find("html").find("body").append(scriptTag);
-    console.info("Rendering HTML area: ", htmlArea);
+    console.info("Rendering HTML Parser: ");
+    console.info("HTML: ", htmlArea);
+    console.info("CSS: ", styleTag);
+    console.info("JS: ", scriptTag);
+
+    // Append the CSS and JS to the document.
+    // Using outerHTML to stringify the object.
+    htmlArea += styleTag.outerHTML;
+    htmlArea += scriptTag.outerHTML;
+    console.info("Rendered HTML Parser: ", htmlArea);
 
     $(htmlParser).find(".rendered-html").attr('srcdoc', htmlArea);
 }
