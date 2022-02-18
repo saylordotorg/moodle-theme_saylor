@@ -82,6 +82,14 @@ require(['jquery'], function ($) {
                   var cssEditor = ace.edit("ace-editor-css" + index);
                   cssEditor.setTheme("ace/theme/saylor");
                   cssEditor.getSession().setMode("ace/mode/css");
+                  cssEditor.setOptions({
+                  fontSize: "16pt",
+                  showLineNumbers: true,
+                  showGutter: true,
+                  vScrollBarAlwaysVisible:true,
+                  //enableBasicAutocompletion: false, 
+                  //enableLiveAutocompletion: false
+                  });
                   cssEditor.getSession().setValue(cssArea.val());
                   cssEditor.getSession().on('change', function() {
                       cssArea.val(cssEditor.getSession().getValue());
@@ -97,6 +105,14 @@ require(['jquery'], function ($) {
                     var jsEditor= ace.edit("ace-editor-js" + index);
                     jsEditor.setTheme("ace/theme/saylor");
                     jsEditor.getSession().setMode("ace/mode/javascript");
+                    jsEditor.setOptions({
+                    fontSize: "16pt",
+                    showLineNumbers: true,
+                    showGutter: true,
+                    vScrollBarAlwaysVisible:true,
+                    //enableBasicAutocompletion: false, 
+                    //enableLiveAutocompletion: false
+                    });
                     jsEditor.getSession().setValue(jsArea.val());
                     jsEditor.getSession().on('change', function() {
                         jsArea.val( jsEditor.getSession().getValue());
