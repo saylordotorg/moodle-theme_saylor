@@ -38,15 +38,27 @@
 
   .que.coderunner .html-parser-wrapper .html-area-title {
       @extend h3;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem;
+      margin-bottom: 0;
   }
   .que.coderunner .html-parser-wrapper .css-area-title {
       @extend h3;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem;
+      margin-bottom: 0;
   }
   .que.coderunner .html-parser-wrapper .js-area-title {
       @extend h3;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem;
+      margin-bottom: 0;
   }
   .que.coderunner .html-parser-wrapper .rendered-html-title {
       @extend h3;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem;
+      margin-bottom: 0;
   }
 
 .html-parser-wrapper {
