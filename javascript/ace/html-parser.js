@@ -66,7 +66,7 @@ require(['jquery'], function ($) {
                             fontSize: "12pt",
                             showLineNumbers: true,
                             showGutter: true,
-                            vScrollBarAlwaysVisible:true,
+                            vScrollBarAlwaysVisible: false,
                             enableBasicAutocompletion: true,
                             enableLiveAutocompletion: true
                         });
@@ -91,7 +91,7 @@ require(['jquery'], function ($) {
                             fontSize: "12pt",
                             showLineNumbers: true,
                             showGutter: true,
-                            vScrollBarAlwaysVisible:true,
+                            vScrollBarAlwaysVisible: false,
                             enableBasicAutocompletion: true,
                             enableLiveAutocompletion: true
                         });
@@ -116,7 +116,7 @@ require(['jquery'], function ($) {
                             fontSize: "12pt",
                             showLineNumbers: true,
                             showGutter: true,
-                            vScrollBarAlwaysVisible:true,
+                            vScrollBarAlwaysVisible: false,
                             enableBasicAutocompletion: true,
                             enableLiveAutocompletion: true
                         });
