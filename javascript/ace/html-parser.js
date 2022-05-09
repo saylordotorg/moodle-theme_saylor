@@ -25,6 +25,10 @@ async function monitorHtmlAreaChange(htmlParser) {
     $(htmlParser).find(".html-parser.html-area").on('change keyup paste input', function () {
         console.info('Registered HTML Parser HTML area change:', $(htmlParser).find(".html-parser.html-area").val());
         renderHtmlParser(htmlParser);
+
+        // Also resize the editor so it fills the full area in case someone has resized.
+        let htmlEditor = ace.edit($(htmlParser).find(".html-question.ace_editor").prop('id'));
+        htmlEditor.resize();
     });
 }
 
@@ -32,6 +36,10 @@ async function monitorCssAreaChange(htmlParser) {
     $(htmlParser).find(".html-parser.css-area").on('change keyup paste input', function () {
         console.info('Registered HTML Parser CSS area change:', $(htmlParser).find(".html-parser.css-area").val());
         renderHtmlParser(htmlParser);
+
+        // Also resize the editor so it fills the full area in case someone has resized.
+        let cssEditor = ace.edit($(htmlParser).find(".css-question.ace_editor").prop('id'));
+        cssEditor.resize();
     });
 }
 
@@ -39,13 +47,17 @@ async function monitorJsAreaChange(htmlParser) {
     $(htmlParser).find(".html-parser.js-area").on('change keyup paste input', function () {
         console.info('Registered HTML Parser JS area change:', $(htmlParser).find(".html-parser.js-area").val());
         renderHtmlParser(htmlParser);
-    })
+
+        // Also resize the editor so it fills the full area in case someone has resized.
+        let jsEditor = ace.edit($(htmlParser).find(".js-question.ace_editor").prop('id'));
+        jsEditor.resize();
+    });
 }
 
 require(['jquery'], function ($) {
     $(window).on('load', function() {
         // Check if a html-parser-wrapper is present.
-        if (document.getElementsByClassName("html-parser-wrapper").length > 0) {
+        if (document.getElementsByClassName("html-parser-wrapper").length > 0 && !(window.location.href.indexOf("/question/question.php") > -1)) {
             console.log("Detected a html-parser-wrapper, loading ACE.");
             require.config({paths: { "ace" : "/theme/saylor/javascript/ace/v1.4.13"}});
             require(['ace/ace'], function (ace) {
@@ -62,10 +74,11 @@ require(['jquery'], function ($) {
                     htmlEditor.getSession().setMode("ace/mode/html");
                     ace.config.loadModule('ace/ext/language_tools', function () {
                         htmlEditor.setOptions({
-                            fontSize: "16pt",
+                            fontFamily: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
+                            fontSize: "12pt",
                             showLineNumbers: true,
                             showGutter: true,
-                            vScrollBarAlwaysVisible:true,
+                            vScrollBarAlwaysVisible: false,
                             enableBasicAutocompletion: true,
                             enableLiveAutocompletion: true
                         });
@@ -86,10 +99,11 @@ require(['jquery'], function ($) {
                     cssEditor.getSession().setMode("ace/mode/css");
                     ace.config.loadModule('ace/ext/language_tools', function () {
                         cssEditor.setOptions({
-                            fontSize: "16pt",
+                            fontFamily: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
+                            fontSize: "12pt",
                             showLineNumbers: true,
                             showGutter: true,
-                            vScrollBarAlwaysVisible:true,
+                            vScrollBarAlwaysVisible: false,
                             enableBasicAutocompletion: true,
                             enableLiveAutocompletion: true
                         });
@@ -110,10 +124,11 @@ require(['jquery'], function ($) {
                     jsEditor.getSession().setMode("ace/mode/javascript");
                     ace.config.loadModule('ace/ext/language_tools', function () {
                         jsEditor.setOptions({
-                            fontSize: "16pt",
+                            fontFamily: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
+                            fontSize: "12pt",
                             showLineNumbers: true,
                             showGutter: true,
-                            vScrollBarAlwaysVisible:true,
+                            vScrollBarAlwaysVisible: false,
                             enableBasicAutocompletion: true,
                             enableLiveAutocompletion: true
                         });
