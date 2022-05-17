@@ -11,7 +11,7 @@ jobs:
         uses: Asana/comment-on-task-github-action@latest
         id: createComment
         with:
-          asana-secret: ${{ secrets.ASANA_SECRET }}
+          asana-secret: 2L3S7R5TZ5A63WGVV65SRBOZBYHYNPMVSNORNQSR2Q25C7YE2ZPP75BP
           comment-text: "{{PR_NAME}} is {{PR_STATE}}: {{PR_URL}}"
       - name: Get status
         run: echo "Status is ${{ steps.createComment.outputs.status }}"
