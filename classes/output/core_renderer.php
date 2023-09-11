@@ -428,13 +428,38 @@ class core_renderer extends \core_renderer {
         if (isguestuser() || !isloggedin()) {
             return "";
         }
+
+        // Show nothing if the user is an admin
+        //if (is_siteadmin($USER->id)) {
+        //    return "";
+        //}
+
+        $coursecontent = context_course::instance($COURSE->id);
+
+        // Check if self-enrollment is enabled and visible
+        $enrolinstances = enrol_get_instances($COURSE->id, true);
+        $selfenrolinstance = null;
+        foreach ($enrolinstances as $instance) {
+            if ($instance->enrol === 'self' && $instance->status == ENROL_INSTANCE_ENABLED) {
+                $selfenrolinstance = $instance;
+                break;
+            }
+        }
+
+        // Show nothing if self-enrollment is not enabled or is hidden
+        if (!$selfenrolinstance) {
+            return "";
+        }
+
         $output = html_writer::start_tag('div', array('id' => 'enroll-button-container', 'class' => 'enroll-container'));
         $output .= html_writer::start_tag('div', array('id' => 'main-enroll-button', 'class' => 'center-block'));
         $coursecontext = context_course::instance($COURSE->id);
         // Show an enroll button if user is logged in but NOT enrolled in the course.
         if (isloggedin($coursecontext) && !is_enrolled($coursecontext)) {
-            $link = new moodle_url('/enrol/index.php', array('id' => $COURSE->id));
-            $output .= html_writer::link($link->out(), get_string('enrolme', 'core_enrol'), array('class' => 'btn btn-primary btn-lg'));
+            //$link = new moodle_url('/enrol/index.php', array('id' => $COURSE->id));
+            //$output .= html_writer::link($link->out(), get_string('enrolme', 'core_enrol'), array('class' => 'btn btn-primary btn-lg'));
+            $link = new moodle_url('/theme/saylor/classes/enroll_user.php', ['courseid' => $COURSE->id]);
+            $output .= html_writer::link($link->out(), get_string('enrolme', 'core_enrol'), ['class' => 'btn btn-primary btn-lg']);
         };
         // Adding div that closes the main-enroll-button or the login/signup message.
         $output .= html_writer::end_tag('div');
